@@ -55,33 +55,54 @@ public class LoginController : Controller
     [Route("Register")]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Register(LoginVM loginVM)
+    public async Task<IActionResult> Register(RegistrationVM registrationVM)
     {
         debug("REGISTER POST RECEIVED");
         if (ModelState.IsValid)
         {
             debug("LOGIN MODEL VALID");
-            Login? newLogin = await _context.Login.FirstOrDefaultAsync(x => x.Email == loginVM.Email);
+            Login? newLogin = await _context.Login.FirstOrDefaultAsync(x => x.Email == registrationVM.Email);
             if(newLogin != null){
                 debug("EMAIL ALREADY EXISTS IN DB");
                 ModelState.AddModelError("EmailExists", "Email already registered.");
-                return View(new LoginVM {Email = loginVM.Email});
-            } else if(loginVM.Password != loginVM.PasswordConfirm){
+                return View(new RegistrationVM {Email = registrationVM.Email});
+            } else if(registrationVM.Password != registrationVM.PasswordConfirm){
                 debug("LOGIN PASSWORD NO MATCH");
                 ModelState.AddModelError("PasswordNoMatch", "Passwords do not match.");
-                return View(new LoginVM {Email = loginVM.Email});
-            } else if(loginVM.Password == null){
+                return View(new RegistrationVM {Email = registrationVM.Email});
+            } else if(registrationVM.Password == null){
                 debug("LOGIN PASSWORD NO MATCH");
                 ModelState.AddModelError("PasswordBlank", "Passwords can not be blank.");
-                return View(new LoginVM {Email = loginVM.Email});
+                return View(new RegistrationVM {Email = registrationVM.Email});
             }
 
-            newLogin = new Login{
-                Email = loginVM.Email,
-                PasswordHash = s_simpleHash.Compute(loginVM.Password)
-            };
-            _context.Add(newLogin);
-            await _context.SaveChangesAsync();
+            using var transaction = _context.Database.BeginTransaction();
+            try
+            {
+                newLogin = new Login{
+                    Email = registrationVM.Email,
+                    PasswordHash = s_simpleHash.Compute(registrationVM.Password)
+                };
+                _context.Add(newLogin);
+                await _context.SaveChangesAsync();
+
+                Patient newAccount = new Patient{
+                    Email = registrationVM.Email,
+                    FirstName = registrationVM.FirstName,
+                    LastName = registrationVM.LastName,
+                    Location = registrationVM.Location,
+                    PostCode = registrationVM.PostCode,
+                    PhoneNum = registrationVM.PhoneNum,
+                    Age = registrationVM.Age
+                };
+                _context.Add(newAccount);
+                await _context.SaveChangesAsync();
+
+                transaction.Commit();
+            } catch
+            {
+                // handle error
+            }
             return RedirectToAction(nameof(Index));
         }
         debug("LOGIN MODEL NOT VALID");
