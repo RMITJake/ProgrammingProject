@@ -13,4 +13,5 @@ public class RegistrationVM
     public int PhoneNum { get; set; }
     public int ProviderNumber { get; set; }
     public string? Specialty { get; set; }
+    public bool IsDoctor { get; set; }
 }

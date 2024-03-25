@@ -86,16 +86,30 @@ public class LoginController : Controller
                 _context.Add(newLogin);
                 await _context.SaveChangesAsync();
 
-                Patient newAccount = new Patient{
-                    Email = registrationVM.Email,
-                    FirstName = registrationVM.FirstName,
-                    LastName = registrationVM.LastName,
-                    Location = registrationVM.Location,
-                    PostCode = registrationVM.PostCode,
-                    PhoneNum = registrationVM.PhoneNum,
-                    Age = registrationVM.Age
-                };
-                _context.Add(newAccount);
+                if(registrationVM.IsDoctor){
+                    Doctor newAccount = new Doctor{
+                        Email = registrationVM.Email,
+                        FirstName = registrationVM.FirstName,
+                        LastName = registrationVM.LastName,
+                        Location = registrationVM.Location,
+                        PostCode = registrationVM.PostCode,
+                        PhoneNum = registrationVM.PhoneNum,
+                        Specialty = registrationVM.Specialty,
+                        ProviderNumber = registrationVM.ProviderNumber
+                    };
+                    _context.Add(newAccount);
+                } else {
+                    Patient newAccount = new Patient{
+                        Email = registrationVM.Email,
+                        FirstName = registrationVM.FirstName,
+                        LastName = registrationVM.LastName,
+                        Location = registrationVM.Location,
+                        PostCode = registrationVM.PostCode,
+                        PhoneNum = registrationVM.PhoneNum,
+                        Age = registrationVM.Age
+                    };
+                    _context.Add(newAccount);
+                }
                 await _context.SaveChangesAsync();
 
                 transaction.Commit();
