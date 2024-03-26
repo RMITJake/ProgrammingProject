@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect\\PatientConnect.csproj": {}
+    "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect\\PatientConnect.csproj": {
+    "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect\\PatientConnect.csproj",
+        "projectUniqueName": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect.csproj",
         "projectName": "PatientConnect",
-        "projectPath": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect\\PatientConnect.csproj",
+        "projectPath": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect.csproj",
         "packagesPath": "C:\\Users\\vigme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect\\obj\\",
+        "outputPath": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vigme\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -26,8 +26,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -38,8 +38,14 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,6 +57,14 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
