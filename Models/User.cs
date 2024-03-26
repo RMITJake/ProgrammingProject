@@ -8,7 +8,7 @@ namespace PatientConnect.Models;
 public abstract class User
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int CustomerID { get; set; }
+    public int UserID { get; set; }
 
     [StringLength(50)]
     public string Name { get; set; }
