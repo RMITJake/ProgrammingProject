@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tg0m1d928wxHT378sLZ7mCbLMcdFDPcIMonj8CrkNTISGuab76Isn73nX/vdG0zjDYZhz+BeZLNvNTM/trt42g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vigme\\Desktop\\Uni\\PP\\PatientConnect\\PatientConnect.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vigme\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
