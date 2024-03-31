@@ -11,7 +11,7 @@ namespace PatientConnect.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
                     UserID = table.Column<int>(type: "int", nullable: false)
@@ -26,11 +26,17 @@ namespace PatientConnect.Migrations
                     Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
                     ProviderNumber = table.Column<int>(type: "int", nullable: true),
                     Speciality = table.Column<int>(type: "int", nullable: true),
-                    Age = table.Column<int>(type: "int", nullable: true)
+                    Age = table.Column<int>(type: "int", nullable: true),
+                    DoctorUserID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserID);
+                    table.PrimaryKey("PK_User", x => x.UserID);
+                    table.ForeignKey(
+                        name: "FK_User_User_DoctorUserID",
+                        column: x => x.DoctorUserID,
+                        principalTable: "User",
+                        principalColumn: "UserID");
                 });
 
             migrationBuilder.CreateTable(
@@ -45,9 +51,9 @@ namespace PatientConnect.Migrations
                 {
                     table.PrimaryKey("PK_Logins", x => x.Email);
                     table.ForeignKey(
-                        name: "FK_Logins_Users_UserID",
+                        name: "FK_Logins_User_UserID",
                         column: x => x.UserID,
-                        principalTable: "Users",
+                        principalTable: "User",
                         principalColumn: "UserID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -66,9 +72,9 @@ namespace PatientConnect.Migrations
                 {
                     table.PrimaryKey("PK_Profiles", x => x.ProfileID);
                     table.ForeignKey(
-                        name: "FK_Profiles_Users_UserID",
+                        name: "FK_Profiles_User_UserID",
                         column: x => x.UserID,
-                        principalTable: "Users",
+                        principalTable: "User",
                         principalColumn: "UserID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -83,6 +89,11 @@ namespace PatientConnect.Migrations
                 name: "IX_Profiles_UserID",
                 table: "Profiles",
                 column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_DoctorUserID",
+                table: "User",
+                column: "DoctorUserID");
         }
 
         /// <inheritdoc />
@@ -95,7 +106,7 @@ namespace PatientConnect.Migrations
                 name: "Profiles");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
         }
     }
 }

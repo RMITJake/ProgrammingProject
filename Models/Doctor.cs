@@ -17,4 +17,6 @@ public class Doctor : User
     public int ProviderNumber { get; set; }
 
     public SpecialityType Speciality { get; set; }
+
+    public virtual List<Patient> Patients { get; set; }
 }

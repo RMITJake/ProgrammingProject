@@ -9,7 +9,7 @@ public enum UserType
     Doctor = 2
 }
 
-public class User
+public abstract class User
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

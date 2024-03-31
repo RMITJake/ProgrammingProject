@@ -9,7 +9,7 @@ public static class SeedData
         var context = serviceProvider.GetRequiredService<PatientConnectContext>();
 
         // Look for customers.
-        if (context.Users.Any())
+        if (context.Logins.Any())
             return; // DB has already been seeded.
 
         // Seed Users
