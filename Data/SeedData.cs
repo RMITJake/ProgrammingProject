@@ -15,20 +15,21 @@ public static class SeedData
         // Seed Users
         context.Patients.Add(new Patient
         {
+            Email = "matthew.bloger@rmit.edu.au",
             Firstname = "Matthew",
             Lastname = "Bloger",
-            Email = "matthew.bloger@rmit.edu.au",
             Location = "Melbourne",
             UserType =  UserType.Patient,
             Postcode = 3000,
             PhoneNum = "0412 345 676",
-            Age = 25,
-            Login = 
-            {
-                Email = "matthew.bloger@rmit.edu.au",
-                PasswordHash = "Rfc2898DeriveBytes$50000$MrW2CQoJvjPMlynGLkGFrg==$x8iV0TiDbEXndl0Fg8V3Rw91j5f5nztWK1zu7eQa0EE="
-                // abc123
-            }
+            Age = 25
+        });
+
+        context.Logins.Add(new Login
+        {
+            Email = "matthew.bloger@rmit.edu.au",
+            PasswordHash = "Rfc2898DeriveBytes$50000$MrW2CQoJvjPMlynGLkGFrg==$x8iV0TiDbEXndl0Fg8V3Rw91j5f5nztWK1zu7eQa0EE="
+            // abc123
         });
 
         context.Patients.Add(new Patient

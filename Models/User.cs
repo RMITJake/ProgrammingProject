@@ -20,9 +20,11 @@ public class User
     public string Email { get; set; }
 
     [Required]
+    [StringLength(50)]
     public string Firstname { get; set; }
 
     [Required]
+    [StringLength(50)]
     public string Lastname { get; set; }
 
     [StringLength(40)]
@@ -33,7 +35,6 @@ public class User
 
     [StringLength(12)]
     [RegularExpression(@"^(^04([\d]{2}) [\d]{3} [\d]{3})$", ErrorMessage = "Must be of the format: 04xx xxx xxx")]
-    [DisplayFormat(NullDisplayText = "")]
     public string PhoneNum { get; set; }
 
     public UserType UserType { get; set; }
