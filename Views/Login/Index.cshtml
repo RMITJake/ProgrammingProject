@@ -1,7 +1,7 @@
 ﻿@model Login
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Login";
 }
 
 
@@ -14,28 +14,31 @@
         </div>
         <div style="width: 556px; height: 614px; left: 0px; top: 152px; position: absolute">
             <div style="width: 556px; height: 614px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 50px"></div>
-            <img style="width: 276px; height: 219.63px; left: 122px; top: 197px; position: absolute" src="https://via.placeholder.com/276x220" />
+            <img style="width: 276px; height: 219.63px; left: 122px; top: 197px; position: absolute" src="/img/User.png" />
         </div>
         <div style="width: 308px; height: 72px; left: 480px; top: 35px; position: absolute; color: black; font-size: 55px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login</div>
-        @* --------- Form ---------*@
-        <form asp-action="Index">
-            <div class="form-group">
-                <label asp-for="Email" class="control-label">Email</label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="Password" class="control-label">Password</label>
-                <input id="Password" name="Password" type="password" class="form-control"
-                       data-val="true" data-val-required="The Password field is required." />
-                @Html.ValidationMessage("Password", new { @class = "text-danger" })
-            </div>
-
-            @* --------- Buttons ---------*@
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
-            </div>
-            @Html.ValidationMessage("LoginFailed", new { @class = "text-danger" })
-        </form>
+        <div style="width: 737px; height: 552.71px; left: 548px; top: 229px; position: absolute">
+            <form asp-action="Index">
+                <div style="width: 463px; height: 84px; left: 0px; top: 0px; position: absolute">
+                    <input asp-for="Email" style="width: 362px; height: 84px; left: 99px; top: 0px; position: absolute; text-align: center; color: #787878; font-size: 45px; font-family: Inter; font-weight: 700; border: 0px" placeholder="Email" />
+                    <div style="width: 364px; height: 0px; left: 99px; top: 63px; position: absolute; border: 4px #787878 solid"></div>
+                </div>
+                <div style="width: 463px; height: 84px; left: 0px; top: 140px; position: absolute">
+                    <input asp-for="PasswordHash" style="width: 362px; height: 84px; left: 99px; top: 0px; position: absolute; text-align: center; color: #787878; font-size: 45px; font-family: Inter; font-weight: 700; border: 0px" placeholder="Password" type="password"/>
+                    <div style="width: 364px; height: 0px; left: 99px; top: 63px; position: absolute; border: 4px #787878 solid"></div>
+                </div>
+                <div style="width: 262px; height: 52px; left: 87px; top: 240px; position: absolute; text-align: center; color: #0500FF; font-size: 25px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">Forgot password?</div>
+                <div style="width: 626px; height: 181.71px; left: 111px; top: 371px; position: absolute">
+                    <input style="width: 363px; height: 105px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 70px color: white; font-size: 50px; font-family: Inter; font-weight: 700;" type="submit" value="LOGIN" />
+                    @Html.ValidationMessage("LoginFailed", new { @class = "text-danger" })
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+</div></div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
