@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<PatientConnectContext>(options =>
+builder.Services.AddDbContext<PatientConnectDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
+    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectDbContext)));
 
     // Enable lazy loading.
     options.UseLazyLoadingProxies();

@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace PatientConnect.Models;
 
@@ -8,24 +8,19 @@ public enum UserType
     Patient = 1,
     Doctor = 2
 }
-
-public abstract class User
+public class User
 {
-    [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int UserID { get; set; }
 
-    [Required]
-    [StringLength(100)]
-    public string Email { get; set; }
-
-    [Required]
     [StringLength(50)]
     public string Firstname { get; set; }
 
-    [Required]
     [StringLength(50)]
     public string Lastname { get; set; }
+
+    [StringLength(100)]
+    public string Email { get; set; }
 
     [StringLength(40)]
     public string Location { get; set; }

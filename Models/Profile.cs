@@ -11,7 +11,7 @@ public class Profile
 
     public List<string> CurrentMedications { get; set; }
 
-    public int UserID { get; set; }
-    public virtual User User { get; set; }
+    public int PatientID { get; set; }
+    public virtual User Patient { get; set; }
 
 }
