@@ -18,4 +18,3 @@ namespace PatientConnect.DTOs
         public UserType UserType { get; set; }
     }
 }
-}
