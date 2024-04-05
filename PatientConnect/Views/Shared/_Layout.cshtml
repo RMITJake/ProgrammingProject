@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@* @{
+    if (Context.Session.GetInt32("UserID") == null)
+    {
+        <p>UserID = null</p>
+    }
+    else
+    {
+        <p>@Context.Session.GetInt32("UserID")</p>
+    }
+
+} *@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +23,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-           <div class="container-fluid">
+            <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img style="width: 350px; height: 65.84px; left: 0px; top: 0px; position: absolute" src="/img/logo-new.png" />
                 </a>
@@ -22,18 +34,40 @@
                 <div style="width: 1440px; height: 100px; padding-top: 30px; padding-bottom: 0px; padding-left: 36px; padding-right: 30px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
                     <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-end; display: inline-flex">
                         <div style="width: 1374px; height: 67px; position: relative">
-                            <div style="width: 143px; height: 64px; left: 1085px; top: 3px; position: absolute">
-                                <div style="width: 125px; height: 64px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 4px #61D094 solid"></div>
-                                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Login">
-                                    <div style="width: 115px; height: 39px; left: 28px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login</div>
-                                </a>
-                            </div>
-                            <div style="width: 146px; height: 64px; left: 1228px; top: 3px; position: absolute">
-                                <div style="width: 146px; height: 64px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 20px; border: 4px #61D094 solid"></div>
-                                <a class="navbar-brand" asp-area="" asp-controller="Register" asp-action="Register">
-                                    <div style="width: 115px; height: 39px; left: 22px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Register</div>
-                                </a>
-                            </div>
+
+                            @{
+                                if (Context.Session.GetInt32("UserID") == null)
+                                {
+                                    <div style="width: 143px; height: 64px; left: 1085px; top: 3px; position: absolute">
+                                        <div style="width: 125px; height: 64px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 4px #61D094 solid"></div>
+                                        <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Login">
+                                            <div style="width: 115px; height: 39px; left: 28px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login</div>
+                                        </a>
+                                    </div>
+                                    <div style="width: 146px; height: 64px; left: 1228px; top: 3px; position: absolute">
+                                        <div style="width: 146px; height: 64px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 20px; border: 4px #61D094 solid"></div>
+                                        <a class="navbar-brand" asp-area="" asp-controller="Register" asp-action="Register">
+                                            <div style="width: 115px; height: 39px; left: 22px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Register</div>
+                                        </a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div style="width: 143px; height: 64px; left: 1085px; top: 3px; position: absolute">
+                                        <div style="width: 125px; height: 64px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 4px #61D094 solid"></div>
+                                        <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Logout">
+                                            <div style="width: 115px; height: 39px; left: 28px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Logout</div>
+                                        </a>
+                                    </div>
+                                    <div style="width: 146px; height: 64px; left: 1228px; top: 3px; position: absolute">
+                                        <div style="width: 146px; height: 64px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 20px; border: 4px #61D094 solid"></div>
+                                        <a class="navbar-brand" asp-area="" asp-controller="Profile" asp-action="Index">
+                                            <div style="width: 115px; height: 39px; left: 22px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Profile</div>
+                                        </a>
+                                    </div>
+                                }
+                            }
+
                             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">
                                 <div style="width: 183px; height: 39px; left: 487px; top: 19px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">About Us  |</div>
                             </a>
