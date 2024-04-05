@@ -6,11 +6,6 @@
 }
 <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
 
-@* <searchbar>
-    <searchlabel>Search symptoms & diseases</searchlabel>
-    <input type="textarea" class="searchbox" placeholder="Search"></input>
-</searchbar> *@
-
 <banner>
     <bannertext>Your Health,<br />Our Connection:<br />
         <subtitle>Find Your Perfect Doctor Match</subtitle>
@@ -19,12 +14,12 @@
 </banner>
 
 <specialtyselection>
-    <specialtygrouplabel>Find a doctor or Specialty</specialtygrouplabel>
+    <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
     <specialtyselectionicons>
         @for(int i=0; i < specialties.Length; i++){
             <specialtygroup>
                 <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
-                <specialtylabel>@specialties[i]</specialtylabel>
+                <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
             </specialtygroup>
         }
     </specialtyselectionicons>

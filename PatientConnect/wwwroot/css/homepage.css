@@ -44,6 +44,12 @@ specialtygroup{
     justify-items: center;
 }
 
+specialtygrouplabel{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 chatnowoutercontainer{
     display: grid;
     grid-area: chatnow;
