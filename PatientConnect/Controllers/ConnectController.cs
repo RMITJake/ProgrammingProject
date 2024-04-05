@@ -15,6 +15,7 @@ public class ConnectController : Controller
 
     public ConnectController(PatientConnectContext context) => _context = context;
 
+    [Route("/connect")]
     public async Task<IActionResult> Index()
     {
         // Lazy loading.

@@ -9,12 +9,16 @@ namespace PatientConnect.Controllers;
 public class HomeController : Controller
 {
     public IActionResult Index() => View();
+    [Route("/alt")]
     public IActionResult Index2() => View();
 
+    [Route("/aboutus")]
     public IActionResult AboutUs() => View();
 
+    [Route("/howitworks")]
     public IActionResult HowItWorks() => View();
 
+    [Route("/contact")]
     public IActionResult Contact() => View();
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
