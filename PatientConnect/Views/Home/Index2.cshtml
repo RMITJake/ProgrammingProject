@@ -5,6 +5,7 @@
     String bannerimage = "banner-image.jpg";
 }
 <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
 
 <banner>
     <bannertext>Your Health,<br />Our Connection:<br />
@@ -17,10 +18,12 @@
     <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
     <specialtyselectionicons>
         @for(int i=0; i < specialties.Length; i++){
-            <specialtygroup>
-                <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
-                <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
-            </specialtygroup>
+            <a asp-area="" asp-controller="Home" asp-action="Specialty">
+                <specialtygroup>
+                    <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
+                    <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
+                </specialtygroup>
+            </a>
         }
     </specialtyselectionicons>
 </specialtyselection>
