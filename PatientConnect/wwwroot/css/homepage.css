@@ -1,0 +1,88 @@
+:root{
+    --bg-pri: white;
+    --bg-sec: #61D094;
+}
+
+main {
+    display: grid;
+    grid-template: 
+    "searchbar" 200px
+    "specialtyselection" 300px
+    "chatnow";
+}
+
+searchbar{
+    display: grid;
+    grid-area: "searchbar";
+    width: 100%;
+    /*height: 179px;*/
+    background: var(--bg-sec);
+    justify-items: center;
+    align-items: center;
+    grid-template:
+    "searchlabel" 4fr
+    "searchbox" 5fr;
+}
+
+searchlabel{
+    font-size: 2rem;
+    align-self: flex-end;
+    color: var(--bg-pri);
+}
+
+input.searchbox{
+    display: grid;
+    background-color: var(--bg-pri);
+    border-radius: 50px;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    align-self: flex-start;
+}
+
+specialtyselection{
+    display: grid;
+    grid-area: "specialtyselection";
+    grid-template:
+    "specialtyselectionlabel"
+    "specialtyselectionicons";
+}
+
+specialtyselectionicons{
+    display: grid;
+    grid-area: specialtyselectionicons;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+specialtygroup{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    justify-items: center;
+}
+
+chatnowoutercontainer{
+    display: grid;
+    grid-area: chatnow;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 600px;
+    padding: 20px
+}
+
+chatnowinnercontainer{
+    display: grid;
+    border: 1px solid blue;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--bg-sec);
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+chatnowcard{
+    display: grid;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: var(--bg-pri);
+}

@@ -9,6 +9,7 @@ namespace PatientConnect.Controllers;
 public class HomeController : Controller
 {
     public IActionResult Index() => View();
+    public IActionResult Index2() => View();
 
     public IActionResult AboutUs() => View();
 

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
+    String[] imagepaths = {"Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
+}
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+
+<searchbar>
+    <searchlabel>Search symptoms & diseases</searchlabel>
+    <input type="textarea" class="searchbox" placeholder="Search"></input>
+</searchbar>
+
+<specialtyselection>
+    <specialtygrouplabel>Find a doctor or Specialty</specialtygrouplabel>
+    <specialtyselectionicons>
+        @for(int i=0; i < specialties.Length; i++){
+            <specialtygroup>
+                <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
+                <specialtylabel>@specialties[i]</specialtylabel>
+            </specialtygroup>
+        }
+    </specialtyselectionicons>
+</specialtyselection>
+
+<chatnowoutercontainer>
+    <chatnowinnercontainer>
+        @for(int i=0; i < 6; i++){
+            <chatnowcard>Card @i</chatnowcard>
+        }
+    </chatnowinnercontainer>
+</chatnowoutercontainer>
