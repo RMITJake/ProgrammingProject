@@ -37,8 +37,8 @@ namespace PatientConnect.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Logins", x => x.LoginID);
-                    table.CheckConstraint("CH_Login_LoginID", "len(LoginID) = 8");
-                    table.CheckConstraint("CH_Login_PasswordHash", "len(PasswordHash) = 94");
+                    table.CheckConstraint("CH_Login_LoginID", "length(LoginID) = 8");
+                    table.CheckConstraint("CH_Login_PasswordHash", "length(PasswordHash) = 94");
                     table.ForeignKey(
                         name: "FK_Logins_Users_UserID",
                         column: x => x.UserID,

@@ -6,7 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<PatientConnectContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
+    //options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
+
+    // alternative local db development using sqlite
+    options.UseSqlite(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
 
     // Enable lazy loading.
     options.UseLazyLoadingProxies();

@@ -23,7 +23,7 @@ public class LoginController : Controller
     public async Task<IActionResult> Login(string loginID, string password)
     {
         var login = await _context.Logins.FindAsync(loginID);
-        if(login == null || string.IsNullOrEmpty(password) || !s_simpleHash.Verify(password, login.PasswordHash))
+        if (login == null || string.IsNullOrEmpty(password) || !s_simpleHash.Verify(password, login.PasswordHash))
         { 
             ModelState.AddModelError("LoginFailed", "Login failed, please try again.");
             return View(new Login { LoginID = loginID });
@@ -35,7 +35,7 @@ public class LoginController : Controller
 
         Console.WriteLine("Login Success!");
 
-        return RedirectToAction("Index", "Connect");
+        return RedirectToAction("Index", "Home");
     }
 
     [Route("LogoutNow")]
