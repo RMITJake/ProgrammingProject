@@ -47,15 +47,12 @@ specialtygroup{
 chatnowoutercontainer{
     display: grid;
     grid-area: chatnow;
-    border: 1px solid black;
     border-radius: 20px;
-    height: 600px;
     padding: 20px
 }
 
 chatnowinnercontainer{
     display: grid;
-    border: 1px solid blue;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--sec-hi);
     border-radius: 20px;
@@ -66,7 +63,47 @@ chatnowinnercontainer{
 
 chatnowcard{
     display: grid;
-    border: 1px solid red;
+    grid-template:
+    "profilephoto profiledescription"
+    "profilephoto chatbutton";
     border-radius: 20px;
     background-color: var(--pri-bg);
+    padding: 0.3rem;
+}
+
+profilephoto{
+    display: grid;
+    grid-area: profilephoto;
+    border: 1px solid var(--black);
+    border-radius: 20px;
+}
+
+profiledescription{
+    display: grid;
+    grid-area: profiledescription;
+    margin: 0 2px;
+}
+
+chatbutton{
+    display: grid;
+    grid-area: chatbutton;
+    margin: 0 2px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+a.chatbutton{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 115px;
+    background: var(--pri-hi);
+    border-radius: 20px;
+    color: var(--pri-bg);
+    border: 4px var(--pri-hi) solid;
+}
+
+a.chatbutton:hover{
+    background: var(--pri-bg);
+    color: var(--pri-hi);
 }
