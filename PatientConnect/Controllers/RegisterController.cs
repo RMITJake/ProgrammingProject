@@ -9,7 +9,7 @@ namespace PatientConnect.Controllers;
 
 // Bonus Material: Implement global authorisation check.
 //[AllowAnonymous]
-[Route("/Mcba/Register")]
+[Route("/Register")]
 public class RegisterController : Controller
 {
     private static readonly ISimpleHash s_simpleHash = new SimpleHash();

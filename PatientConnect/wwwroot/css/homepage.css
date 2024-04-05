@@ -1,0 +1,69 @@
+main {
+    display: grid;
+    grid-template: 
+    "banner" 200px
+    "specialtyselection" 300px
+    "chatnow";
+}
+
+banner{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: var(--ter-hi);
+    color: var(--pri-bg);
+    font-size: 2rem;
+}
+
+bannertext{
+    display: grid;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+banner img{
+    height: 200px;
+}
+
+specialtyselectionicons > a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+specialtyselection{
+    display: grid;
+    grid-area: "specialtyselection";
+    grid-template:
+    "specialtyselectionlabel"
+    "specialtyselectionicons";
+}
+
+specialtyselectionicons{
+    display: grid;
+    grid-area: specialtyselectionicons;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+specialtygroup{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+}
+
+specialtylabel{
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+specialtygrouplabel{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+chatnowoutercontainer{
+    display: grid;
+    grid-area: chatnow;
+    border-radius: 20px;
+    padding: 20px
+}
