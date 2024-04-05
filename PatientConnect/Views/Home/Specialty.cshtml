@@ -18,15 +18,17 @@
 </section2>
 
 <section3>
-    @for(int i=0; i<12; i++){
-        <chatnowcard>
-            <profilephoto>photo</profilephoto>
-            <profiledescription>
-                <h3>Dr Card @i</h3>
-                <p>Dr's specialty</p>
-                <p>X years | 100% rating</p>
-            </profiledescription>
-            <chatbutton><a class="chatbutton">Chat</a></chatbutton>
-        </chatnowcard>
-    }
+    <chatnowinnercontainer>
+        @for(int i=0; i<12; i++){
+            <chatnowcard>
+                <profilephoto>photo</profilephoto>
+                <profiledescription>
+                    <h3>Dr Card @i</h3>
+                    <p>Dr's specialty</p>
+                    <p>X years | 100% rating</p>
+                </profiledescription>
+                <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+            </chatnowcard>
+        }
+    </chatnowinnercontainer>
 </section3>

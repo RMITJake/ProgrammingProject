@@ -67,13 +67,3 @@ chatnowoutercontainer{
     border-radius: 20px;
     padding: 20px
 }
-
-chatnowinnercontainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: var(--sec-hi);
-    border-radius: 20px;
-    height: 100%;
-    padding: 20px;
-    grid-gap: 20px;
-}
