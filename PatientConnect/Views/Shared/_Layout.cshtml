@@ -6,45 +6,27 @@
     <title>@ViewData["Title"] - PatientConnect</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/root.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PatientConnect.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/nav.css" asp-append-version="true" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
            <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img style="width: 350px; height: 65.84px; left: 0px; top: 0px; position: absolute" src="/img/logo-new.png" />
+                    <img class="patientconnectlogo" src="~/img/logo-new.png" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div style="width: 1440px; height: 100px; padding-top: 30px; padding-bottom: 0px; padding-left: 36px; padding-right: 30px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-end; display: inline-flex">
-                        <div style="width: 1374px; height: 67px; position: relative">
-                            <div style="width: 143px; height: 64px; left: 1085px; top: 3px; position: absolute">
-                                <div style="width: 125px; height: 64px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 4px #61D094 solid"></div>
-                                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Login">
-                                    <div style="width: 115px; height: 39px; left: 28px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login</div>
-                                </a>
-                            </div>
-                            <div style="width: 146px; height: 64px; left: 1228px; top: 3px; position: absolute">
-                                <div style="width: 146px; height: 64px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 20px; border: 4px #61D094 solid"></div>
-                                <a class="navbar-brand" asp-area="" asp-controller="Register" asp-action="Register">
-                                    <div style="width: 115px; height: 39px; left: 22px; top: 16px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">Register</div>
-                                </a>
-                            </div>
-                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">
-                                <div style="width: 183px; height: 39px; left: 487px; top: 19px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">About Us  |</div>
-                            </a>
-                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">
-                                <div style="width: 242px; height: 39px; left: 666px; top: 19px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">How It Works  |</div>
-                            </a>
-                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">
-                                <div style="width: 131px; height: 39px; left: 901px; top: 19px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">Contact</div>
-                            </a>
-                        </div>
-                    </div>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">AboutUs</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                <div class="flex-end">
+                    <a class="navbar-brand loginbutton" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+                    <a class="navbar-brand registerbutton" asp-area="" asp-controller="Register" asp-action="Register">Register</a>
                 </div>
             </div>
         </nav>

@@ -2,13 +2,21 @@
     ViewData["Title"] = "Home";
     String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
     String[] imagepaths = {"Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
+    String bannerimage = "banner-image.jpg";
 }
 <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
 
-<searchbar>
+@* <searchbar>
     <searchlabel>Search symptoms & diseases</searchlabel>
     <input type="textarea" class="searchbox" placeholder="Search"></input>
-</searchbar>
+</searchbar> *@
+
+<banner>
+    <bannertext>Your Health,<br />Our Connection:<br />
+        <subtitle>Find Your Perfect Doctor Match</subtitle>
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
 
 <specialtyselection>
     <specialtygrouplabel>Find a doctor or Specialty</specialtygrouplabel>
