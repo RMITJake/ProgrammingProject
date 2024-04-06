@@ -26,8 +26,38 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                 <div class="flex-end">
                     <a class="navbar-brand loginbutton" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-                    <a class="navbar-brand registerbutton" asp-area="" asp-controller="Register" asp-action="Register">Register</a>
+                    @* <a class="navbar-brand registerbutton" asp-area="" asp-controller="Register" asp-action="Register">Register</a> *@
+                    <button type="button" class="registerbutton" onclick="showRegister" data-toggle="modal" data-target="#registerModal">
+                        Register
+                    </button>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="registerModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Details</h4>
+                            </div><!-- modal-header-->
+                            <div class="modal-body"></div><!-- modal-body-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div><!-- modal-footer-->
+                        </div><!-- modal-content-->
+                    </div><!-- modal-dialog-->
+                </div><!-- registerModal -->
+                @section scripts{
+                    <script>
+                        function showRegister(){
+                            $.get("@Url.Action("Register", "RegisterPartial")",
+                            function(data){
+                                $('.moday-body').html(data);
+                            });
+                            $("#registerModal").modal("show");
+                        }
+                    </script>
+                }
             </div>
         </nav>
     </header>

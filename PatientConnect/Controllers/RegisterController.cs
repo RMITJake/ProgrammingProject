@@ -19,6 +19,9 @@ public class RegisterController : Controller
 
     public RegisterController(PatientConnectContext context) => _context = context;
 
+    [Route("/RegisterPartial")]
+    public IActionResult RegisterPartial() => PartialView();
+
     [Route("/Register")]
     public IActionResult Register() => View();
 

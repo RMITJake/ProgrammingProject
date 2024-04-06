@@ -30,9 +30,10 @@
     font-size: 25px;
     font-family: Inter;
     font-weight: 700;
+    border: 4px var(--pri-hi) solid;
 }
 
 .registerbutton:hover{
     background: var(--pri-bg);
-    border: 4px var(--pri-hi) solid;
+    /* border: 4px var(--pri-hi) solid; */
 }
