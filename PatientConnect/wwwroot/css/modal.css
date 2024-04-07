@@ -8,6 +8,8 @@
     display: grid;
     grid-area: modal-header;
     border: 1px solid red;
+    justify-content: center;
+    align-content: center;
 }
 
 .modal-left{
