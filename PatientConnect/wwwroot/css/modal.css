@@ -1,0 +1,23 @@
+.modal-grid{
+    display: grid;
+    grid-template:
+    "modal-header modal-header" 1fr
+    "modal-left modal-right" 3fr / 1fr 1fr;
+}
+.modal-header{
+    display: grid;
+    grid-area: modal-header;
+    border: 1px solid red;
+}
+
+.modal-left{
+    display: grid;
+    grid-area: modal-left;
+    border: 1px solid blue;
+}
+
+.modal-right{
+    display: grid;
+    grid-area: modal-right;
+    border: 1px solid green;
+}
