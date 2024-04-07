@@ -8,3 +8,8 @@
     --black: black;
 }
 
+.btn-pri-hi{
+    color: var(--pri-bg);
+    background-color: var(--pri-hi);
+    border-color: var(--pri-hi);
+}

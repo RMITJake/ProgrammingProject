@@ -26,7 +26,6 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                 <div class="flex-end">
-                    @* <a class="navbar-brand loginbutton" asp-area="" asp-controller="Login" asp-action="Login">Login</a> *@
                     <button type="button" class="loginbutton" data-toggle="modal" data-target="#loginModal">
                         Login
                     </button>
@@ -38,7 +37,7 @@
                 <div class="modal fade" id="loginModal" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            @Html.Partial("Login")
+                            <partial name="_LoginPartial.cshtml"></partial>
                         </div><!-- modal-content-->
                     </div><!-- modal-dialog-->
                 </div><!-- loginModal -->
@@ -47,7 +46,7 @@
                 <div class="modal fade" id="registerModal" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            @Html.Partial("Register")
+                            <partial name="_RegisterPartial.cshtml"></partial>
                         </div><!-- modal-content-->
                     </div><!-- modal-dialog-->
                 </div><!-- registerModal -->
