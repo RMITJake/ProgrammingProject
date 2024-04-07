@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PatientConnect.Data;
 
@@ -10,9 +11,11 @@ using PatientConnect.Data;
 namespace PatientConnect.Migrations
 {
     [DbContext(typeof(PatientConnectContext))]
-    partial class PatientConnectContextModelSnapshot : ModelSnapshot
+    [Migration("20240407035241_AddedFieldsToUserModel")]
+    partial class AddedFieldsToUserModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

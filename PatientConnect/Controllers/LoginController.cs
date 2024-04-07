@@ -31,7 +31,7 @@ public class LoginController : Controller
 
         // Login customer.
         HttpContext.Session.SetInt32(nameof(Models.User.UserID), login.UserID);
-        HttpContext.Session.SetString(nameof(Models.User.Name), login.User.Name);
+        HttpContext.Session.SetString(nameof(Models.User.FirstName), login.User.FirstName);
 
         Console.WriteLine("Login Success!");
 

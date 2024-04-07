@@ -19,27 +19,35 @@ public class RegisterController : Controller
 
     public RegisterController(PatientConnectContext context) => _context = context;
 
-    [Route("/RegisterPartial")]
-    public IActionResult RegisterPartial() => PartialView();
-
     [Route("/Register")]
     public IActionResult Register() => View();
 
     [HttpPost]
     [Route("/Register")]
-    public IActionResult Register(UserDto dto)
+    public IActionResult Register(User newUser)
     {
         if (ModelState.IsValid)
         {
             // Map the DTO to the User model
+            int id = _context.Users.OrderByDescending(id => id.UserID).FirstOrDefault().UserID+1;
             var user = new User
             {
-                Name = dto.Name,
-                Email = dto.Email,
-                City = dto.City,
-                PostCode = dto.PostCode,
-                UserType = dto.UserType
+                UserID = id,
+                FirstName = newUser.FirstName,
+                LastName = newUser.LastName,
+                Email = newUser.Email,
+                City = newUser.City,
+                PostCode = newUser.PostCode,
+                PhoneNumber = newUser.PhoneNumber,
+                UserType = newUser.UserType
             };
+
+            try{
+                _context.Add(user);
+                _context.SaveChanges();
+            } catch(Exception e){
+                Console.WriteLine(e);
+            }
 
             SmtpClient smtpClient = new SmtpClient("smtp.elasticemail.com"){};
             smtpClient.Port = 2525;
@@ -49,16 +57,16 @@ public class RegisterController : Controller
             MailMessage message = new MailMessage{
                 From = new MailAddress("patientconnect@protonmail.com"),
                 Subject = "Patient Connect Registration Confirmation",
-                Body = "Thank you " + dto.Name + " for registering with Patient Connect!"
+                Body = "Thank you " + user.FirstName + " for registering with Patient Connect!"
             };
 
-            message.To.Add(dto.Email);
+            message.To.Add(user.Email);
 
             smtpClient.Send(message);
 
             return RedirectToAction("RegistrationSuccess");
         }   
 
-        return View(dto);
+        return View(newUser);
     }
 }

@@ -16,8 +16,9 @@ public static class SeedData
             new User
             {
                 UserID = 2100,
-                Name = "Matthew Bolger",
-                Email = "matthew.bloger@rmit.edu.au",
+                FirstName = "Matthew",
+                LastName = "Bolger",
+                Email = "matthew.bloger@test.patientconnect.dev",
                 City = "Melbourne",
                 PostCode = "3000",
                 UserType = UserType.Patient
@@ -25,8 +26,9 @@ public static class SeedData
             new User
             {
                 UserID = 2200,
-                Name = "Rodney Cocker",
-                Email = "Rodney.Cocker@rmit.edu.au",
+                FirstName = "Rodney",
+                LastName = "Cocker",
+                Email = "Rodney.Cocker@test.patientconnect.dev",
                 City = "Melbourne",
                 PostCode = "3005",
                 UserType = UserType.Doctor
@@ -34,7 +36,8 @@ public static class SeedData
             new User
             {
                 UserID = 2300,
-                Name = "Shekhar Kalra",
+                FirstName = "Shekhar",
+                LastName = "Kalra",
                 UserType = UserType.Doctor
             });
 

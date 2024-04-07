@@ -10,8 +10,12 @@
     <div class="modal-right">
         <form asp-action="Register" asp-controller="Register">
             <div class="form-group">
-                @* <label for="Name">Full name</label> *@
-                <input asp-for="Name" class="form-control" placeholder="Full Name">
+                @* <label for="Name">First name</label> *@
+                <input asp-for="FirstName" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                @* <label for="Name">Last name</label> *@
+                <input asp-for="LastName" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
                 @* <label asp-for="Email">Email</label> *@
@@ -24,6 +28,10 @@
             <div class="form-group">
                 @* <label asp-for="PostCode">Post Code</label> *@
                 <input asp-for="PostCode" class="form-control" placeholder="Post Code">
+            </div>
+            <div class="form-group">
+                @* <label for="Name">Phone number</label> *@
+                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
             </div>
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-success">

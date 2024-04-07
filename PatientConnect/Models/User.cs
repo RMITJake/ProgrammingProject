@@ -14,7 +14,10 @@ public class User
     public int UserID { get; set; }
 
     [Required, StringLength(50)]
-    public string Name { get; set; }
+    public string FirstName { get; set; }
+
+    [Required, StringLength(50)]
+    public string LastName { get; set; }
 
     [StringLength(150)]
     public string Email { get; set; }
@@ -25,5 +28,10 @@ public class User
     [StringLength(4)]
     public string PostCode { get; set; }
 
+    [RegularExpression("^(?:\\+?(61))? ?(?:\\((?=.*\\)))?(0?[2-57-8])\\)? ?(\\d\\d(?:[- ](?=\\d{3})|(?!\\d\\d[- ]?\\d[- ]))\\d\\d[- ]?\\d[- ]?\\d{3})$")]
+    public string PhoneNumber { get; set; }
+
     public UserType UserType { get; set; }
+
+    // appointments list
 }
