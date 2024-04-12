@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KP24/kkT/Ko4B6fYo3PfA261HvGOCQgdsxXHuMejrRA=",
+  "Hash": "P/hYYe3TQB2MuJPzVr0VQvscWzXyMYQokl7csTemJaI=",
   "Source": "PatientConnect",
   "BasePath": "_content/PatientConnect",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PatientConnect/wwwroot",
       "Source": "PatientConnect",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/card.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/card.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/card.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/css/card.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/chatcard.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/chatcard.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/chatcard.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/css/chatcard.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/homepage.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/homepage.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/homepage.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/css/homepage.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/modal.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/modal.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/modal.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/css/modal.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/nav.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/nav.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/nav.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/css/nav.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/root.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/root.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/root.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/css/root.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/site.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/site.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/css/specialty.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/css/specialty.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "css/specialty.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/css/specialty.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/favicon.ico",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/favicon.ico",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/banner-image.jpg",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/banner-image.jpg",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/banner-image.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/img/banner-image.jpg"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/chatnow.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/chatnow.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/chatnow.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/img/chatnow.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/Doctor.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/Doctor.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/Doctor.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/img/Doctor.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/logo-new.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/logo-new.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/logo-new.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/img/logo-new.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/OBGYN.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/OBGYN.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/OBGYN.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/img/OBGYN.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/Pediatrics.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/Pediatrics.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/Pediatrics.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/img/Pediatrics.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/profile-icon.svg",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/profile-icon.svg",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/profile-icon.svg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/img/profile-icon.svg"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/Psychiatry.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/Psychiatry.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/Psychiatry.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/img/Psychiatry.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/search.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/search.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/search.png",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/img/search.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/Surgery.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/Surgery.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/Surgery.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/img/Surgery.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/img/User.png",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/img/User.png",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "img/User.png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/img/User.png"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/js/site.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/js/site.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/bootstrap/LICENSE",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "PatientConnect",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/wwwroot/",
+      "ContentRoot": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/wwwroot/",
       "BasePath": "_content/PatientConnect",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

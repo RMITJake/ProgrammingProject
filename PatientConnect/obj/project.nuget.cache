@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NTBqTfJaN30FpHh5WBa5h8U1eoe3NnBZ3MCt4+G0qpHp4y6kyP6aZchuxU2BMwZ81PE+qW8bh2xAh0rNSpth2g==",
+  "dgSpecHash": "hGRaklc2dSspiPAHbv+mUaJCfj72T9yNWyk5jEbAtjj7rPc8jHHByhDNJ5w0I0SPADBNh8uvbRjqj67++K47Jg==",
   "success": true,
-  "projectFilePath": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/PatientConnect.csproj",
+  "projectFilePath": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj",
   "expectedPackageFiles": [
     "/Users/tannypark/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/tannypark/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

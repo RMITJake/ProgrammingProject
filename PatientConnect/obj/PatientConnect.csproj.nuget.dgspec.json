@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/PatientConnect.csproj": {}
+    "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj": {}
   },
   "projects": {
-    "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/PatientConnect.csproj": {
+    "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/PatientConnect.csproj",
+        "projectUniqueName": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj",
         "projectName": "PatientConnect",
-        "projectPath": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/PatientConnect.csproj",
+        "projectPath": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj",
         "packagesPath": "/Users/tannypark/.nuget/packages/",
-        "outputPath": "/Users/tannypark/Downloads/ProgrammingProject-main/PatientConnect/obj/",
+        "outputPath": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tannypark/.nuget/NuGet/NuGet.Config"
