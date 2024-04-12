@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
+    String[] imagepaths = {"Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
+    String bannerimage = "banner-image.jpg";
+}
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+
+<banner>
+    <bannertext>Your Health,<br />Our Connection:<br />
+        <subtitle>Find Your Perfect Doctor Match</subtitle>
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
+
+<specialtyselection>
+    <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
+    <specialtyselectionicons>
+        @for(int i=0; i < specialties.Length; i++){
+            <a asp-area="" asp-controller="Home" asp-action="Specialty">
+                <specialtygroup>
+                    <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
+                    <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
+                </specialtygroup>
+            </a>
+        }
+    </specialtyselectionicons>
+</specialtyselection>
+
+<chatnowoutercontainer>
+    <chatnowinnercontainer>
+        @for(int i=0; i < 6; i++){
+            <chatnowcard>
+                <profilephoto>photo</profilephoto>
+                <profiledescription>
+                    <h3>Dr Card @i</h3>
+                    <p>Dr's specialty</p>
+                    <p>X years | 100% rating</p>
+                </profiledescription>
+                <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+            </chatnowcard>
+        }
+    </chatnowinnercontainer>
+</chatnowoutercontainer>

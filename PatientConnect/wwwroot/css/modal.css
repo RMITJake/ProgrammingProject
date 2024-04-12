@@ -1,0 +1,40 @@
+.modal-content{
+    border-radius: 20px;
+}
+
+.modal-grid{
+    display: grid;
+    grid-template:
+    "modal-header modal-header" 1fr
+    "modal-left modal-right" 3fr / 1fr 1fr;
+}
+.modal-header{
+    display: grid;
+    grid-area: modal-header;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-left{
+    display: grid;
+    grid-area: modal-left;
+    border-radius: 20px;
+    background-color: var(--pri-hi);
+    align-items: center;
+    justify-items: center;
+}
+
+.modal-right{
+    display: grid;
+    grid-area: modal-right;
+}
+
+.profile-icon{
+    width: 50%;
+    filter: invert(96%) sepia(97%) saturate(0%) hue-rotate(33deg) brightness(105%) contrast(103%);
+}
+
+.form-group.submit{
+    display: grid;
+    justify-content: center;
+}
