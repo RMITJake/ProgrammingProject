@@ -2,23 +2,74 @@
 <link rel="stylesheet" href="~/css/aboutus.css" asp-append-version="true" />
 
 @{
-    ViewData["Title"] = "AboutUS";
+    ViewData["Title"] = "About Us";
 }
+
+@{
+    ViewData["Title"] = "Home";
+    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
+    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
+    String bannerimage = "banner-image.jpg";
+}
+
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+
+<banner>
+    <bannertext>
+        How it works
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
 
 <div class="aboutuscontainer">
     <div class="box mission-vision">
         <div class="box-content">
             <div class="text">Mission & Vision</div>
+            <specialtyselection>
+                <profiledescription>
+                    PatientConnect is developed by the dedicated team at MediByte, driven by a passion for improving healthcare accessibility.
+                    Sponsored by Mr. Bill Client, CEO of Rich Uncle Capital Investment Limited, our mission is to connect patients in remote areas with volunteer
+                    healthcare professionals. With a focus on inclusivity and eliminating geographical barriers, our web-based platform facilitates secure virtual
+                    appointments. We strive to ensure prompt medical attention, fostering good health and well-being for all individuals, regardless of their location.
+                    Join us in our journey to reduce inequalities in healthcare services and create a more inclusive healthcare landscape for communities across Australia.
+                </profiledescription>
+            </specialtyselection>
         </div>
     </div>
     <div class="box our-team">
         <div class="box-content">
             <div class="text">Our Team</div>
+            <specialtyselection>
+                <profiledescription>
+                    The development and operation of PatientConnect are spearheaded by a diverse and passionate group of individuals at MediByte. 
+                    Comprising skilled developers, healthcare professionals, and project managers, our team is committed to revolutionizing healthcare 
+                    accessibility through technology. With expertise in software development, healthcare management, and user experience design, we collaborate
+                    tirelessly to ensure PatientConnect meets the highest standards of functionality, security, and user-friendliness. Driven by a shared vision
+                    of improving healthcare access for individuals in remote and underserved areas, each member brings a unique set of skills and experiences to
+                    the table. Together, we are dedicated to making a positive impact on communities by breaking down barriers to medical care and fostering a 
+                    more inclusive healthcare landscape. Join us as we continue to innovate and strive towards our goal of making quality healthcare available 
+                    to all, regardless of geographical location or socioeconomic status.
+                </profiledescription>
+            </specialtyselection>
         </div>
     </div>
     <div class="box sponsors-partners">
         <div class="box-content">
             <div class="text">Sponsors & Partners</div>
+            <specialtyselection>
+                <profiledescription>
+                    PatientConnect is made possible through the generous support and collaboration of esteemed sponsors and partners who share our commitment 
+                    to improving healthcare access. Our primary sponsor, Mr. Bill Client, CEO of Rich Uncle Capital Investment Limited, has provided invaluable 
+                    financial backing and resources, enabling us to develop and deploy the PatientConnect platform. Their dedication to social impact and healthcare
+                    innovation aligns perfectly with our mission, and we are grateful for their ongoing support. In addition to our sponsor, we collaborate with 
+                    a network of partners across the healthcare industry, including non-profit organizations, medical institutions, and technology providers. 
+                    These partnerships enable us to leverage expertise, access additional resources, and expand our reach to serve more individuals in need. 
+                    Together with our sponsors and partners, we are working tirelessly to make PatientConnect a success and create a lasting impact on healthcare
+                    accessibility. We are proud to be part of a collaborative effort that is making a difference in the lives of patients and healthcare providers alike.
+                </profiledescription>
+            </specialtyselection>
+            
         </div>
     </div>
 </div>
