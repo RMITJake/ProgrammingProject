@@ -1,26 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home";
-    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
-    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
-    String bannerimage = "banner-image.jpg";
+﻿
+<link rel="stylesheet" href="~/css/aboutus.css" asp-append-version="true" />
+
+@{
+    ViewData["Title"] = "AboutUS";
 }
-<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
-<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
 
-<banner>
-    <bannertext>
-        About Us
-    </bannertext>
-    <img src="~/img/@bannerimage" />
-</banner>
+<div class="aboutuscontainer">
+    <div class="box mission-vision">
+        <div class="box-content">
+            <div class="text">Mission & Vision</div>
+        </div>
+    </div>
+    <div class="box our-team">
+        <div class="box-content">
+            <div class="text">Our Team</div>
+        </div>
+    </div>
+    <div class="box sponsors-partners">
+        <div class="box-content">
+            <div class="text">Sponsors & Partners</div>
+        </div>
+    </div>
+</div>
 
-<specialtyselection>
-    <profiledescription>
-        PatientConnect is developed by the dedicated team at MediByte, driven by a passion for improving healthcare accessibility. 
-        Sponsored by Mr. Bill Client, CEO of Rich Uncle Capital Investment Limited, our mission is to connect patients in remote areas with volunteer
-        healthcare professionals. With a focus on inclusivity and eliminating geographical barriers, our web-based platform facilitates secure virtual 
-        appointments. We strive to ensure prompt medical attention, fostering good health and well-being for all individuals, regardless of their location.
-        Join us in our journey to reduce inequalities in healthcare services and create a more inclusive healthcare landscape for communities across Australia.
-    </profiledescription>
-
-</specialtyselection>
