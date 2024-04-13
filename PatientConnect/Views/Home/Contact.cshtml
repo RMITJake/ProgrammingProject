@@ -1,13 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Contact Us";
+    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
+    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
+    String bannerimage = "banner-image.jpg";
 }
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
 
-<div style="width: 1440px; height: 1926px; padding-top: 192px; padding-bottom: 531px; padding-left: 40px; padding-right: 47px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-    <div style="width: 1353px; height: 1203px; position: relative">
-        <div style="width: 387px; height: 525px; left: 0px; top: 122px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 387px; height: 525px; left: 966px; top: 678px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 936px; height: 525px; left: 417px; top: 122px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 936px; height: 525px; left: 0px; top: 678px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 400px; height: 208px; left: 529px; top: 0px; position: absolute; color: black; font-size: 60px; font-family: Yaldevi Colombo SemiBold; font-weight: 600; word-wrap: break-word">Contact Us</div>
-    </div>
-</div>
+<banner>
+    <bannertext>
+        Contact Us
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
+
+<specialtyselection>
+    <profiledescription>
+        Contact us using the email provided - developers@medibyte.com.au
+    </profiledescription>
+
+</specialtyselection>

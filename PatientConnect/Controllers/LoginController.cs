@@ -29,8 +29,6 @@ public class LoginController : Controller
             return View(new Login { LoginID = loginID });
         }
 
-        // Login customer
-
         return RedirectToAction("Index", "Connect");
     }
 

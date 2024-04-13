@@ -8,12 +8,12 @@
     <div class="modal-right">
         <form asp-action="Login">
             <div class="form-group">
-                <input asp-for="LoginID" class="form-control" />
+                <input asp-for="LoginID" class="form-control" placeholder="Login ID (e.g 12345678)"/>
                 <span asp-validation-for="LoginID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input id="Password" name="Password" type="password" class="form-control"
-                       data-val="true" data-val-required="The Password field is required." />
+                       data-val="true" data-val-required="The Password field is required." placeholder="Password"/>
                 @Html.ValidationMessage("Password", new { @class = "text-danger" })
             </div>
             <div class="form-group">
