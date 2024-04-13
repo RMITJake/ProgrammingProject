@@ -19,19 +19,24 @@
     display: grid;
     grid-area: modal-left;
     border-radius: 20px;
-    background-color: var(--pri-hi);
+    background-color: var(--pri-bg);
     align-items: center;
     justify-items: center;
 }
 
-.modal-right{
+.modal-right {
     display: grid;
     grid-area: modal-right;
+    border-radius: 20px;
+    background-color: var(--pri-bg);
+    align-items: center;
+    justify-items: center;
 }
 
-.profile-icon{
-    width: 50%;
-    filter: invert(96%) sepia(97%) saturate(0%) hue-rotate(33deg) brightness(105%) contrast(103%);
+.profile-icon {
+    width: 80%;
+    background-color: var(--pri-hi);
+    border-radius: 20px;
 }
 
 .form-group.submit{

@@ -1,14 +1,26 @@
-﻿<div style="width: 1440px; height: 2504px; position: relative; background: white">
-    <div style="width: 1367px; height: 615px; left: 32px; top: 175px; position: absolute">
-        <div style="width: 1367px; height: 615px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 589px; height: 244px; left: 41px; top: 40px; position: absolute; color: black; font-size: 60px; font-family: Inria Serif; font-style: italic; font-weight: 700; word-wrap: break-word">Mission & Vision</div>
-    </div>
-    <div style="width: 1367px; height: 615px; left: 32px; top: 826px; position: absolute">
-        <div style="width: 1367px; height: 615px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 589px; height: 237px; left: 41px; top: 47px; position: absolute; color: black; font-size: 60px; font-family: Inria Serif; font-style: italic; font-weight: 700; word-wrap: break-word">Our Team</div>
-    </div>
-    <div style="width: 1367px; height: 615px; left: 41px; top: 1477px; position: absolute">
-        <div style="width: 1367px; height: 615px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-        <div style="width: 589px; height: 237px; left: 41px; top: 47px; position: absolute; color: black; font-size: 60px; font-family: Inria Serif; font-style: italic; font-weight: 700; word-wrap: break-word">Sponsors & Partners</div>
-    </div>
-</div>
+﻿@{
+    ViewData["Title"] = "Home";
+    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
+    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
+    String bannerimage = "banner-image.jpg";
+}
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+
+<banner>
+    <bannertext>
+        About Us
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
+
+<specialtyselection>
+    <profiledescription>
+        PatientConnect is developed by the dedicated team at MediByte, driven by a passion for improving healthcare accessibility. 
+        Sponsored by Mr. Bill Client, CEO of Rich Uncle Capital Investment Limited, our mission is to connect patients in remote areas with volunteer
+        healthcare professionals. With a focus on inclusivity and eliminating geographical barriers, our web-based platform facilitates secure virtual 
+        appointments. We strive to ensure prompt medical attention, fostering good health and well-being for all individuals, regardless of their location.
+        Join us in our journey to reduce inequalities in healthcare services and create a more inclusive healthcare landscape for communities across Australia.
+    </profiledescription>
+
+</specialtyselection>

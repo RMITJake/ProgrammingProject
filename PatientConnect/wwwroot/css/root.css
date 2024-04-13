@@ -1,7 +1,7 @@
 :root{
     --pri-bg: white;
-    --sec-bg: ;
-    --ter-bg: ;
+    --sec-bg: blue;
+    --ter-bg: yellow;
     --pri-hi: #61D094;
     --sec-hi: #30C675;
     --ter-hi: #004F24;
