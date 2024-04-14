@@ -15,20 +15,7 @@ public class HomeController : Controller
 
     public HomeController(PatientConnectContext context) => _context = context;
 
-    public IActionResult Index()
-    {
-        // Get the list of available doctors from your data source
-        List<User> availableDoctors = _context.Users.Where(u => u.UserType == UserType.Doctor && u.IsAvailable == true).ToList();
-
-        // Create an instance of HomeViewModel and set the AvailableDoctors property
-        var viewModel = new HomeViewModel
-        {
-            AvailableDoctors = availableDoctors
-        };
-
-        // Pass the viewModel object to the view
-        return View(viewModel);
-    }
+    public IActionResult Index() => View();
 
     [Route("/aboutus")]
     public IActionResult AboutUs() => View();
