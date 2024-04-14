@@ -11,7 +11,7 @@ using PatientConnect.Data;
 namespace PatientConnect.Migrations
 {
     [DbContext(typeof(PatientConnectContext))]
-    [Migration("20240402115905_InitialCreate")]
+    [Migration("20240414072258_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -58,6 +58,9 @@ namespace PatientConnect.Migrations
                     b.Property<int>("UserID")
                         .HasColumnType("int");
 
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
                     b.Property<string>("City")
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
@@ -66,14 +69,31 @@ namespace PatientConnect.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PostCode")
                         .HasMaxLength(4)
                         .HasColumnType("nvarchar(4)");
+
+                    b.Property<int>("ProviderNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Specialisation")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserType")
                         .HasColumnType("int");

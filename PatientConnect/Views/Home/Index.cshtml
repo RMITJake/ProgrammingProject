@@ -1,4 +1,6 @@
-﻿@{
+﻿@model PatientConnect.ViewModels.HomeViewModel
+
+@{
     ViewData["Title"] = "Home";
     String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
     String[] imagepaths = {"InternalMedicine.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
@@ -30,25 +32,33 @@
 <chatnowoutercontainer>
     <specialtygrouplabel><h2>Available Doctors</h2></specialtygrouplabel>
     <chatnowinnercontainer>
-        @for(int i=1; i <= 6; i++){
-            <chatnowcard>
-                <profilephoto><img src="/img/Doctor.png" /></profilephoto>
-                <profiledescription>
-                    <h3>Dr Card @i</h3>
-                    <p>Dr's specialty</p>
-                    <p>X years | 100% rating</p>
-                </profiledescription>
-                <chatbutton><a class="chatbutton" data-toggle="modal" data-target="#loginModal">Chat</a></chatbutton>
-                <!-- Login Modal -->
-                <div class="modal fade" id="loginModal" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <partial name="../Login/Login.cshtml"></partial>
-                        </div><!-- modal-content-->
-                    </div><!-- modal-dialog-->
-                </div><!-- loginModal -->
-            </chatnowcard>
+        @if (Model.AvailableDoctors.Count > 0)
+        {
+            @foreach (var doctor in Model.AvailableDoctors)
+            {
+                <chatnowcard>
+                    <profilephoto><img src="/img/Doctor.png" /></profilephoto>
+                    <profiledescription>
+                        <h3>@doctor.FirstName</h3>
+                        <p>@doctor.Specialisation</p>
+                    </profiledescription>
+                    <chatbutton><a class="chatbutton" data-toggle="modal" data-target="#loginModal">Chat</a></chatbutton>
+                    <!-- Login Modal -->
+                    <div class="modal fade" id="loginModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <partial name="../Login/_LoginPartial.cshtml"></partial>
+                            </div><!-- modal-content-->
+                        </div><!-- modal-dialog-->
+                    </div><!-- loginModal -->
+                </chatnowcard>
+            }
+        }
+        else
+        {
+            <p>No doctors available.</p>
         }
     </chatnowinnercontainer>
 </chatnowoutercontainer>
+
 
