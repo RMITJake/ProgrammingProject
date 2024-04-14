@@ -18,10 +18,11 @@ chatnowcard{
     padding: 0.3rem;
 }
 
-profilephoto{
+profilephoto {
     display: grid;
     grid-area: profilephoto;
     border: 1px solid var(--black);
+    padding: 0.3rem;
     border-radius: 20px;
 }
 

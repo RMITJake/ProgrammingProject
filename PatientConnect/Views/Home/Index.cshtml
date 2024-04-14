@@ -1,8 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home";
     String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
-    String[] imagepaths = {"Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
-    String bannerimage = "banner-image.jpg";
+    String[] imagepaths = {"InternalMedicine.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
 }
 <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
@@ -11,7 +10,7 @@
     <bannertext>Your Health,<br />Our Connection<br />
         <subtitle>Find Your Perfect Doctor Match</subtitle>
     </bannertext>
-    <img src="~/img/@bannerimage" />
+    <img src="/img/banner-image.png" />
 </banner>
 
 <specialtyselection>
@@ -33,7 +32,7 @@
     <chatnowinnercontainer>
         @for(int i=1; i <= 6; i++){
             <chatnowcard>
-                <profilephoto>photo</profilephoto>
+                <profilephoto><img src="/img/Doctor.png" /></profilephoto>
                 <profiledescription>
                     <h3>Dr Card @i</h3>
                     <p>Dr's specialty</p>

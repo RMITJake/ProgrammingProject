@@ -17,6 +17,15 @@ public enum UserType
     Doctor = 2
 }
 
+public enum SpecialisationType
+{
+    InternalMedicine = 1,
+    Pediatrics = 2,
+    Psychiatry = 3,
+    Surgery = 4,
+    OBGYN = 5
+}
+
 // User is a class that represents a user in the system
 public class User
 {
@@ -51,5 +60,16 @@ public class User
     // UserType is the user's type
     public UserType UserType { get; set; }
 
-    // appointments list
+    // if doctor - Specialisation is doctor's specialisation
+    public SpecialisationType Specialisation { get; set; }
+
+    // if doctor - ProviderNumber is doctor's provider number
+    public int ProviderNumber { get; set; }
+
+    // if patient - Age is patient's age
+    public int Age { get; set; }
+
+    // available -- logged in
+    public bool IsAvailable { get; set; }
+
 }

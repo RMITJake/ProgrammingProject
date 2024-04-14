@@ -31,9 +31,60 @@
                 @* <label for="Name">Phone number</label> *@
                 <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
             </div>
+            <div class="form-group">
+                <select class="form-control" id="Role" name="Role" onchange="toggleSpecializationField()" required>
+                    <option value="Default">Select Role</option>
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+            </div>
+            <div class="form-group" id="SpecializationField" style="display: none;">
+                <select class="form-control" id="Specialization" name="Specialization">
+                    <option value="Default">Select Specialisation</option>
+                    <option value="InternalMedicine">Internal Medicine</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Psychiatry">Psychiatry</option>
+                    <option value="Surgery">Surgery</option>
+                    <option value="OBGYN">OB/GYN</option>
+                </select>
+            </div>
+            <div class="form-group" id="AgeField" style="display: none;">
+                <input type="text" class="form-control" id="Age" name="Age" placeholder="Age">
+            </div>
+             <div class="form-group" id="ProviderNumberField" style="display: none;">
+                <input type="text" class="form-control" id="ProviderNumber" name="ProviderNumber" placeholder="Provider Number">
+            </div>
             <div class="form-group submit">
                 <input type="submit" value="Register" class="btn btn-pri-hi">
             </div>
         </form>
     </div><!-- modal-right-->
 </div>
+
+<script>
+    function toggleSpecializationField() {
+        var roleSelect = document.getElementById("Role");
+        var specializationField = document.getElementById("SpecializationField");
+        var ageField = document.getElementById("AgeField");
+        var providerNumberField = document.getElementById("ProviderNumberField");
+
+
+        if (roleSelect.value === 'Doctor') {
+            specializationField.style.display = "block";
+            providerNumberField.style.display = "none";
+            ageField.style.display = "none";
+        }
+        else if (roleSelect.value === 'Patient') {
+            ageField.style.display = "block";
+            specializationField.style.display = "none";
+            providerNumberField.style.display = "none";
+        } 
+        else {
+            providerNumberField.style.display = "none";
+            specializationField.style.display = "none";
+            ageField.style.display = "none";
+
+        }
+    }
+</script>
+
