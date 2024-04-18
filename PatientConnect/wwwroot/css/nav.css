@@ -3,37 +3,38 @@
     justify-content: flex-end;
 }
 
-.loginbutton{
+.loginbutton {
     display: grid;
     align-items: center;
     width: 125px;
-    background: var(--pri-bg);
+    background: var(--pri-hi);
     border-radius: 20px;
     border: 4px var(--pri-hi) solid;
     font-size: 25px;
     font-family: Inter;
-    font-weight: 700;
+    font-weight: 600;
+    color: var(--white);
 }
 
 .loginbutton:hover{
-    background: var(--pri-hi);
+    background: var(--pri-bg);
     border: 4px var(--pri-hi) solid;
 }
 
-.registerbutton{
+.registerbutton {
     display: grid;
     align-items: center;
     width: 115px;
     background: var(--pri-hi);
     border-radius: 20px;
-    color: var(--black);
+    color: var(--white);
     font-size: 25px;
     font-family: Inter;
-    font-weight: 700;
+    font-weight: 600;
     border: 4px var(--pri-hi) solid;
 }
 
-.registerbutton:hover{
-    background: var(--pri-bg);
-    /* border: 4px var(--pri-hi) solid; */
-}
+    .registerbutton:hover {
+        background: var(--pri-bg);
+        /* border: 4px var(--pri-hi) solid; */
+    }
