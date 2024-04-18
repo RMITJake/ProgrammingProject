@@ -1,4 +1,4 @@
-chatnowinnercontainer{
+chatnowinnercontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--sec-hi);
@@ -8,13 +8,13 @@ chatnowinnercontainer{
     grid-gap: 20px;
 }
 
-chatnowcard{
+chatnowcard {
     display: grid;
     grid-template:
-    "profilephoto profiledescription"
-    "profilephoto chatbutton";
+        "profilephoto profiledescription"
+        "profilephoto chatbutton";
     border-radius: 20px;
-    background-color: var(--pri-bg);
+    background-color: var(--white);
     padding: 0.3rem;
 }
 
@@ -32,15 +32,16 @@ profiledescription{
     margin: 0 2px;
 }
 
-chatbutton{
+chatbutton {
     display: grid;
     grid-area: chatbutton;
     margin: 0 2px;
     justify-content: flex-end;
     align-items: flex-end;
+    color: var(--white);
 }
 
-a.chatbutton{
+a.chatbutton {
     display: grid;
     align-items: center;
     justify-items: center;
@@ -53,5 +54,5 @@ a.chatbutton{
 
 a.chatbutton:hover{
     background: var(--pri-bg);
-    color: var(--pri-hi);
+    color: var(--ter-hi);
 }
