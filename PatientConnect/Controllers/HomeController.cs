@@ -15,7 +15,15 @@ public class HomeController : Controller
 
     public HomeController(PatientConnectContext context) => _context = context;
 
-    public IActionResult Index() => View();
+    // public IActionResult Index() => View();
+    public IActionResult Index()
+    {
+        var doctors = _context.Users.Where(x => x.UserType == UserType.Doctor).ToList();
+        Console.WriteLine("doctor length " + doctors.Count);
+        ViewBag.Doctors = doctors;
+
+        return View();
+    }
 
     [Route("/aboutus")]
     public IActionResult AboutUs() => View();

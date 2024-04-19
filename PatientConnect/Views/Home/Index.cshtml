@@ -32,7 +32,11 @@
 <chatnowoutercontainer>
     <specialtygrouplabel><h2>Available Doctors</h2></specialtygrouplabel>
     <chatnowinnercontainer>
-        <p>No doctors available.</p>
+        @if(@ViewBag.Doctors.Count == 0){
+            <p>No doctors available.</p>
+        } else {
+            @ViewBag.Doctors.Count
+        }
     </chatnowinnercontainer>
 </chatnowoutercontainer>
 

@@ -11,8 +11,8 @@ using PatientConnect.Data;
 namespace PatientConnect.Migrations
 {
     [DbContext(typeof(PatientConnectContext))]
-    [Migration("20240414072258_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240419145245_UserModelUpdated")]
+    partial class UserModelUpdated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
