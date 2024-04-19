@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using PatientConnect.Data;
 using PatientConnect.Models;
+using PatientConnect.ViewModels;
 
 namespace PatientConnect.Controllers;
 
@@ -8,6 +10,11 @@ namespace PatientConnect.Controllers;
 //[AllowAnonymous]
 public class HomeController : Controller
 {
+
+    private readonly PatientConnectContext _context;
+
+    public HomeController(PatientConnectContext context) => _context = context;
+
     public IActionResult Index() => View();
 
     [Route("/aboutus")]
@@ -21,6 +28,7 @@ public class HomeController : Controller
 
     [Route("/internalmedicine")]
     public IActionResult Specialty() => View();
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error() =>

@@ -15,11 +15,17 @@ namespace PatientConnect.Migrations
                 columns: table => new
                 {
                     UserID = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     City = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
                     PostCode = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: true),
-                    UserType = table.Column<int>(type: "int", nullable: false)
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserType = table.Column<int>(type: "int", nullable: false),
+                    Specialisation = table.Column<int>(type: "int", nullable: false),
+                    ProviderNumber = table.Column<int>(type: "int", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

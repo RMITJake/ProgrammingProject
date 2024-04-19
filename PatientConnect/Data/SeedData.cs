@@ -21,7 +21,9 @@ public static class SeedData
                 Email = "matthew.bloger@test.patientconnect.dev",
                 City = "Melbourne",
                 PostCode = "3000",
-                UserType = UserType.Patient
+                UserType = UserType.Doctor,
+                Specialisation = SpecialisationType.InternalMedicine,
+                IsAvailable = true
             },
             new User
             {
@@ -31,16 +33,34 @@ public static class SeedData
                 Email = "Rodney.Cocker@test.patientconnect.dev",
                 City = "Melbourne",
                 PostCode = "3005",
-                UserType = UserType.Doctor
+                UserType = UserType.Doctor,
+                Specialisation = SpecialisationType.OBGYN,
+                IsAvailable = true
             },
             new User
             {
                 UserID = 2300,
-                FirstName = "Shekhar",
-                LastName = "Kalra",
-                UserType = UserType.Doctor
+                FirstName = "Stephen",
+                LastName = "Chung",
+                Email = "stephen.chung@test.patientconnect.dev",
+                City = "Melbourne",
+                PostCode = "3000",
+                UserType = UserType.Doctor,
+                Specialisation = SpecialisationType.Surgery,
+                IsAvailable = true
+            },
+            new User
+            {
+                UserID = 2400,
+                FirstName = "Gregory",
+                LastName = "Lang",
+                Email = "gregory.lang@test.patientconnect.dev",
+                City = "Brisbane",
+                PostCode = "4000",
+                UserType = UserType.Doctor,
+                Specialisation = SpecialisationType.Pediatrics,
+                IsAvailable = true
             });
-
         context.Logins.AddRange(
             new Login
             {

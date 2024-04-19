@@ -20,8 +20,9 @@ bannertext{
     margin-left: 2rem;
 }
 
-banner img{
+banner img {
     height: 200px;
+    border-radius: 20px;
 }
 
 specialtyselectionicons > a{

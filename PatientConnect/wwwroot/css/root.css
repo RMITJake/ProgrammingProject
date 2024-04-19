@@ -1,11 +1,12 @@
-:root{
-    --pri-bg: white;
-    --sec-bg: ;
-    --ter-bg: ;
-    --pri-hi: #61D094;
-    --sec-hi: #30C675;
-    --ter-hi: #004F24;
+:root {
+    --pri-bg: #03045E;
+    --sec-bg: #BBE7FF;
+    --ter-bg: yellow;
+    --pri-hi: #003779;
+    --sec-hi: #4399FF;
+    --ter-hi: #BBE7FF;
     --black: black;
+    --white: white;
 }
 
 .btn-pri-hi{

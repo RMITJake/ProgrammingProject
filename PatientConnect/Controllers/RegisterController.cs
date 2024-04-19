@@ -39,7 +39,10 @@ public class RegisterController : Controller
                 City = newUser.City,
                 PostCode = newUser.PostCode,
                 PhoneNumber = newUser.PhoneNumber,
-                UserType = newUser.UserType
+                UserType = newUser.UserType,
+                Age = newUser.Age,
+                ProviderNumber = newUser.ProviderNumber,
+                Specialisation = newUser.Specialisation
             };
 
             try{

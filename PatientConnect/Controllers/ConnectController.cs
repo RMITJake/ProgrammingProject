@@ -19,9 +19,9 @@ public class ConnectController : Controller
     public async Task<IActionResult> Index()
     {
         // Lazy loading.
-        var customer = await _context.Users.FindAsync(UserID);
+        var user = await _context.Users.FindAsync(UserID);
 
-        return View(customer);
+        return View(user);
     }
 
     

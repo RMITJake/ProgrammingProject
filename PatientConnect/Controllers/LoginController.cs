@@ -23,17 +23,11 @@ public class LoginController : Controller
     public async Task<IActionResult> Login(string loginID, string password)
     {
         var login = await _context.Logins.FindAsync(loginID);
-        if(login == null || string.IsNullOrEmpty(password) || !s_simpleHash.Verify(password, login.PasswordHash))
-        { 
+        if (login == null || string.IsNullOrEmpty(password) || !s_simpleHash.Verify(password, login.PasswordHash))
+        {
             ModelState.AddModelError("LoginFailed", "Login failed, please try again.");
             return View(new Login { LoginID = loginID });
         }
-
-        // Login customer.
-        HttpContext.Session.SetInt32(nameof(Models.User.UserID), login.UserID);
-        HttpContext.Session.SetString(nameof(Models.User.FirstName), login.User.FirstName);
-
-        Console.WriteLine("Login Success!");
 
         return RedirectToAction("Index", "Connect");
     }
