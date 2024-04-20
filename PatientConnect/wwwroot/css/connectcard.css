@@ -1,0 +1,75 @@
+connectcontainer{
+    display: grid;
+    grid-template:
+    'connectheader'
+    'cardcontainer';
+    background: var(--white);
+    border: 1px solid var(--cardgrey);
+    border-radius: 20px;
+    margin: 0 20px;
+    box-shadow: 2px 5px 11px 0px var(--boxshadow);
+}
+
+connectheader{
+    display: grid;
+    grid-area: connectheader;
+}
+
+connectheader > header{
+    border-bottom: 2px solid black;
+}
+
+specialtyicon, specialtytitle{
+    display: grid;
+    justify-content: center;
+}
+
+specialtyicon > img{
+    height: 160px;
+}
+
+cardcontainer{
+    display: grid;
+    grid-area: cardcontainer;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+    margin: 0 2.5em;
+    padding: 2em 0;
+}
+
+cardouter{
+    display: grid;
+    grid-template:
+    'cardtop' 1fr
+    'cardbottom' 1fr;
+    border: 1px dotted blue;
+    border-radius: 20px;
+    box-shadow: 2px 5px 11px 0px var(--boxshadow);
+    width: 320px;
+    height: 420px
+}
+
+cardtop{
+    display: grid;
+    grid-area: cardtop;
+    background: rgb(211,231,240);
+    background: linear-gradient(45deg, rgba(211,231,240,1) 38%, rgba(187,217,253,1) 57%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+cardbottom{
+    display: grid;
+    grid-area: cardbottom;
+    justify-items: center;
+    background: var(--cardgrey);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 2px;
+}
+
+profiledescription{
+    display: grid;
+    justify-content: center;
+}

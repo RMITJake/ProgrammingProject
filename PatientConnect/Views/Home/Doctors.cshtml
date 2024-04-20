@@ -1,13 +1,29 @@
-@* @model List<User> *@
+<link rel="stylesheet" href="~/css/connectcard.css" asp-append-version="true" />
 
-@foreach(var doctor in ViewBag.Doctors){
-    <chatnowcard>
-        <profilephoto>photo</profilephoto>
-        <profiledescription>
-            <h3>Dr @doctor.FirstName @doctor.LastName</h3>
-            <p>Specialty: @doctor.Specialisation</p>
-            <p>X years | 100% rating</p>
-        </profiledescription>
-        <chatbutton><a class="chatbutton">Chat</a></chatbutton>
-    </chatnowcard>
-}
+<connectcontainer>
+    <connectheader>
+        <header>head</header>
+        @{var logo = "/img/" + @ViewBag.Doctors[0].Specialisation + ".png";}
+        <specialtyicon><img src="@logo" /></specialtyicon>
+        <specialtytitle>@ViewBag.Doctors[0].Specialisation</specialtytitle>
+    </connectheader>
+    <cardcontainer>
+        @foreach(var doctor in ViewBag.Doctors){
+            @for(int i=0; i<6; i++){
+            <cardouter>
+                <cardtop>
+                    <profilephoto>photo</profilephoto>
+                </cardtop>
+                <cardbottom>
+                    <profiledescription>
+                        <h4>Dr @doctor.FirstName @doctor.LastName</h4>
+                        <p>Specialty: @doctor.Specialisation</p>
+                        <p>X years | 100% rating</p>
+                    </profiledescription>
+                    <button class="registerbutton">Connect</button>
+                </cardbottom>
+            </cardouter>
+            }
+        }
+    </cardcontainer>
+</connectcontainer>
