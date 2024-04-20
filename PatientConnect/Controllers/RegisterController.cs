@@ -13,7 +13,7 @@ namespace PatientConnect.Controllers;
 //[AllowAnonymous]
 public class RegisterController : Controller
 {
-    private static readonly ISimpleHash s_simpleHash = new SimpleHash();
+    private static readonly ISimpleHash _simpleHash = new SimpleHash();
 
     private readonly PatientConnectContext _context;
 
@@ -47,18 +47,19 @@ public class RegisterController : Controller
                 user.Specialisation = newUser.Specialisation;
             }
 
-            String rawPassword = s_simpleHash.hash("123456");
+            String rawPassword = "123456";
 
-            int loginId = _context.Login.OrderByDescending(id => id.LoginID).FirstOrDefault().LoginID+1;
-            var login = new login
+            int loginId = _context.Logins.OrderByDescending(id => id.LoginID).FirstOrDefault().LoginID+1;
+            var login = new Login
             {
                 LoginID = loginId,
                 UserID = userId,
-                PasswordHash = rawPassword
+                PasswordHash = _simpleHash.Compute(rawPassword)
             };
 
             try{
                 _context.Add(user);
+                _context.Add(login);
                 _context.SaveChanges();
             } catch(Exception e){
                 Console.WriteLine(e);
@@ -79,6 +80,8 @@ public class RegisterController : Controller
 
             smtpClient.Send(message);
 
+            // login.PasswordHash = rawPassword;
+            // return RedirectToAction("Login", "Login", login);
             return RedirectToAction("Index", "Home");
         }   
 

@@ -27,9 +27,8 @@ namespace PatientConnect.Migrations
 
             modelBuilder.Entity("PatientConnect.Models.Login", b =>
                 {
-                    b.Property<string>("LoginID")
-                        .HasMaxLength(8)
-                        .HasColumnType("char");
+                    b.Property<int>("LoginID")
+                        .HasColumnType("int");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()

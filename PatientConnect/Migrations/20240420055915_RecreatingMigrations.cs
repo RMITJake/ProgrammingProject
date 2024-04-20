@@ -5,7 +5,7 @@
 namespace PatientConnect.Migrations
 {
     /// <inheritdoc />
-    public partial class UserModelUpdated : Migration
+    public partial class RecreatingMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,10 +22,10 @@ namespace PatientConnect.Migrations
                     PostCode = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: true),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserType = table.Column<int>(type: "int", nullable: false),
-                    Specialisation = table.Column<int>(type: "int", nullable: false),
-                    ProviderNumber = table.Column<int>(type: "int", nullable: false),
-                    Age = table.Column<int>(type: "int", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "bit", nullable: false)
+                    Specialisation = table.Column<int>(type: "int", nullable: true),
+                    ProviderNumber = table.Column<int>(type: "int", nullable: true),
+                    Age = table.Column<int>(type: "int", nullable: true),
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -36,7 +36,7 @@ namespace PatientConnect.Migrations
                 name: "Logins",
                 columns: table => new
                 {
-                    LoginID = table.Column<string>(type: "char(8)", maxLength: 8, nullable: false),
+                    LoginID = table.Column<int>(type: "int", nullable: false),
                     UserID = table.Column<int>(type: "int", nullable: false),
                     PasswordHash = table.Column<string>(type: "char(94)", maxLength: 94, nullable: false)
                 },

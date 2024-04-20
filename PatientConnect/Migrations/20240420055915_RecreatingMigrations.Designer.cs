@@ -12,8 +12,8 @@ using PatientConnect.Data;
 namespace PatientConnect.Migrations
 {
     [DbContext(typeof(PatientConnectContext))]
-    [Migration("20240420023732_RemovedMandatoryRequiredFieldsFromUser")]
-    partial class RemovedMandatoryRequiredFieldsFromUser
+    [Migration("20240420055915_RecreatingMigrations")]
+    partial class RecreatingMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,9 +30,8 @@ namespace PatientConnect.Migrations
 
             modelBuilder.Entity("PatientConnect.Models.Login", b =>
                 {
-                    b.Property<string>("LoginID")
-                        .HasMaxLength(8)
-                        .HasColumnType("char");
+                    b.Property<int>("LoginID")
+                        .HasColumnType("int");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()

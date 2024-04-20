@@ -8,12 +8,9 @@ namespace PatientConnect.Models;
 
 public class Login
 {
-    // LoginID is a unique identifier for the login
-    [Column(TypeName = "char")]
-    [StringLength(8)]
-
     // LoginID is required
-    public string LoginID { get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    public int LoginID { get; set; }
 
     // UserID is a foreign key to the User table
     public int UserID { get; set; }
