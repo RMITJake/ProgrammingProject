@@ -7,34 +7,35 @@
     display: grid;
     align-items: center;
     width: 125px;
-    background: var(--pri-hi);
+    background: var(--white);
     border-radius: 20px;
-    border: 4px var(--pri-hi) solid;
+    border: 4px var(--pri-bg) solid;
     font-size: 25px;
     font-family: Inter;
     font-weight: 600;
-    color: var(--white);
+    color: var(--pri-bg);
+    margin-right: .25em;
 }
 
 .loginbutton:hover{
     background: var(--pri-bg);
-    border: 4px var(--pri-hi) solid;
+    color: var(--white);
 }
 
 .registerbutton {
     display: grid;
     align-items: center;
     width: 115px;
-    background: var(--pri-hi);
+    background: var(--pri-bg);
     border-radius: 20px;
     color: var(--white);
     font-size: 25px;
     font-family: Inter;
     font-weight: 600;
-    border: 4px var(--pri-hi) solid;
+    border: 4px var(--pri-bg) solid;
 }
 
-    .registerbutton:hover {
-        background: var(--pri-bg);
-        /* border: 4px var(--pri-hi) solid; */
-    }
+.registerbutton:hover {
+    background: var(--white);
+    color: var(--pri-bg);
+}

@@ -13,15 +13,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar">
            <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img class="patientconnectlogo" src="~/img/logo-new.png" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
@@ -53,16 +49,33 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    @* <div class="container"> *@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    @* </div> *@
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - PatientConnect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <banner>
+            <bannertext>
+                <h2>PatientConnect</h2>
+                Your Health, Our Connection<br />
+            </bannertext>
+            <bannertext>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">Terms of Service</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">Privacy Policy</a>
+            </banner>
+        </banner>
+        <socialmedia>
+            <a>Facebook</a>
+            <a>X</a>
+            <a>Instagram</a>
+            <a>LinkedIn</a>
+            <p>&copy; 2024 - PatientConnect, All Rights Reserved</p>
+        </socialmedia>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

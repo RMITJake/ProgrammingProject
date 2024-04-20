@@ -9,7 +9,7 @@ main {
 banner{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: var(--ter-hi);
+    /* background-color: var(--ter-hi); */
     color: var(--pri-bg);
     font-size: 2rem;
 }
@@ -36,6 +36,7 @@ specialtyselection{
     grid-template:
     "specialtyselectionlabel"
     "specialtyselectionicons";
+    background: var(--white);
 }
 
 specialtyselectionicons{
@@ -65,6 +66,6 @@ specialtygrouplabel{
 chatnowoutercontainer{
     display: grid;
     grid-area: chatnow;
-    border-radius: 20px;
-    padding: 20px
+    padding: 20px;
+    background: var(--white);
 }
