@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    String logo = "/img/blue_logo.png";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,7 +19,7 @@
         <nav class="navbar">
            <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img class="patientconnectlogo" src="~/img/logo-new.png" />
+                    <img class="patientconnectlogo" src="@logo" />
                 </a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="HowItWorks">How It Works</a>

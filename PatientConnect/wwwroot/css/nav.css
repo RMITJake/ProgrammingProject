@@ -3,6 +3,17 @@
     justify-content: flex-end;
 }
 
+.navbar-brand{
+    display: grid;
+    align-items: center;
+    height: 50px;
+}
+
+a img{
+    height: 50px;
+    /* height: 100%; */
+}
+
 .loginbutton {
     display: grid;
     align-items: center;
