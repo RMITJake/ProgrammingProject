@@ -29,10 +29,10 @@ public class RegisterController : Controller
         if (ModelState.IsValid)
         {
             // Map the DTO to the User model
-            int id = _context.Users.OrderByDescending(id => id.UserID).FirstOrDefault().UserID+1;
+            int userId = _context.Users.OrderByDescending(id => id.UserID).FirstOrDefault().UserID+1;
             var user = new User
             {
-                UserID = id,
+                UserID = userId,
                 FirstName = newUser.FirstName,
                 LastName = newUser.LastName,
                 Email = newUser.Email,
@@ -46,6 +46,16 @@ public class RegisterController : Controller
                 user.ProviderNumber = newUser.ProviderNumber;
                 user.Specialisation = newUser.Specialisation;
             }
+
+            String rawPassword = s_simpleHash.hash("123456");
+
+            int loginId = _context.Login.OrderByDescending(id => id.LoginID).FirstOrDefault().LoginID+1;
+            var login = new login
+            {
+                LoginID = loginId,
+                UserID = userId,
+                PasswordHash = rawPassword
+            };
 
             try{
                 _context.Add(user);
