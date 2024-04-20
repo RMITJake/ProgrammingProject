@@ -5,8 +5,8 @@
 .modal-grid{
     display: grid;
     grid-template:
-    "modal-header modal-header" 1fr
-    "modal-left modal-right" 3fr / 1fr 1fr;
+    "modal-header" 1fr
+    "modal-body" 3fr;
 }
 .modal-header{
     display: grid;
@@ -15,22 +15,8 @@
     align-content: center;
 }
 
-.modal-left{
+.modal-body{
     display: grid;
-    grid-area: modal-left;
-    border-radius: 20px;
-    background-color: var(--pri-bg);
-    align-items: center;
-    justify-items: center;
-}
-
-.modal-right {
-    display: grid;
-    grid-area: modal-right;
-    border-radius: 20px;
-    background-color: var(--pri-bg);
-    align-items: center;
-    justify-items: center;
 }
 
 .profile-icon {

@@ -4,8 +4,8 @@
     <div class="modal-header">
         <h4 class="modal-title">Register</h4>
     </div><!-- modal-header-->
-    <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left-->
-    <div class="modal-right">
+    @* <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left--> *@
+    <div class="modal-body">
         <form asp-action="Register" asp-controller="Register">
             <div class="form-group">
                 @* <label for="Name">First name</label> *@
@@ -55,10 +55,10 @@
                 <input type="text" class="form-control" id="ProviderNumber" name="ProviderNumber" placeholder="Provider Number">
             </div>
             <div class="form-group submit">
-                <input type="submit" value="Register" class="btn btn-pri-hi">
+                <input type="submit" value="Register" class="btn registerbutton">
             </div>
         </form>
-    </div><!-- modal-right-->
+    </div><!-- modal-body-->
 </div>
 
 <script>

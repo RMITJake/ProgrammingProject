@@ -4,8 +4,7 @@
     <div class="modal-header">
         <h4 class="modal-title">Login</h4>
     </div><!-- modal-header-->
-    <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left-->
-    <div class="modal-right">
+    <div class="modal-body">
         <form asp-action="Login">
             <div class="form-group">
                 <input asp-for="LoginID" class="form-control" placeholder="Login ID (e.g 12345678)"/>
@@ -16,10 +15,10 @@
                        data-val="true" data-val-required="The Password field is required." placeholder="Password"/>
                 @Html.ValidationMessage("Password", new { @class = "text-danger" })
             </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-pri-hi" />
+            <div class="form-group submit">
+                <input type="submit" value="Login" class="btn registerbutton" />
             </div>
             @Html.ValidationMessage("LoginFailed", new { @class = "text-danger" })
         </form>
-    </div><!-- modal-right-->
+    </div><!-- modal-body-->
 </div>
