@@ -61,15 +61,15 @@ public class User
     public UserType UserType { get; set; }
 
     // if doctor - Specialisation is doctor's specialisation
-    public SpecialisationType Specialisation { get; set; }
+    public SpecialisationType? Specialisation { get; set; }
 
     // if doctor - ProviderNumber is doctor's provider number
-    public int ProviderNumber { get; set; }
+    public int? ProviderNumber { get; set; }
 
     // if patient - Age is patient's age
-    public int Age { get; set; }
+    public int? Age { get; set; }
 
     // available -- logged in
-    public bool IsAvailable { get; set; }
+    public bool? IsAvailable { get; set; }
 
 }

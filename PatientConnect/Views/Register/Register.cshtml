@@ -32,10 +32,8 @@
                 <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
             </div>
             <div class="form-group">
-                <select class="form-control" id="Role" name="Role" onchange="toggleSpecializationField()" required>
-                    <option value="Default">Select Role</option>
-                    <option value="Patient">Patient</option>
-                    <option value="Doctor">Doctor</option>
+                <p>I am a: </p>
+                <select asp-for="UserType" asp-items="Html.GetEnumSelectList<UserType>()" class="form-control" id="Role" onchange="toggleSpecializationField()" required>
                 </select>
             </div>
             <div class="form-group" id="SpecializationField" style="display: none;">
@@ -48,7 +46,7 @@
                     <option value="OBGYN">OB/GYN</option>
                 </select>
             </div>
-            <div class="form-group" id="AgeField" style="display: none;">
+            <div class="form-group" id="AgeField">
                 <input type="text" class="form-control" id="Age" name="Age" placeholder="Age">
             </div>
              <div class="form-group" id="ProviderNumberField" style="display: none;">
@@ -69,12 +67,12 @@
         var providerNumberField = document.getElementById("ProviderNumberField");
 
 
-        if (roleSelect.value === 'Doctor') {
+        if (roleSelect.value === '2') {
             specializationField.style.display = "block";
             providerNumberField.style.display = "none";
             ageField.style.display = "none";
         }
-        else if (roleSelect.value === 'Patient') {
+        else if (roleSelect.value === '1') {
             ageField.style.display = "block";
             specializationField.style.display = "none";
             providerNumberField.style.display = "none";
@@ -83,7 +81,6 @@
             providerNumberField.style.display = "none";
             specializationField.style.display = "none";
             ageField.style.display = "none";
-
         }
     }
 </script>

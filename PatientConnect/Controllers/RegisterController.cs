@@ -41,9 +41,11 @@ public class RegisterController : Controller
                 PhoneNumber = newUser.PhoneNumber,
                 UserType = newUser.UserType,
                 Age = newUser.Age,
-                ProviderNumber = newUser.ProviderNumber,
-                Specialisation = newUser.Specialisation
             };
+            if(newUser.UserType == UserType.Doctor){
+                user.ProviderNumber = newUser.ProviderNumber;
+                user.Specialisation = newUser.Specialisation;
+            }
 
             try{
                 _context.Add(user);
@@ -67,7 +69,7 @@ public class RegisterController : Controller
 
             smtpClient.Send(message);
 
-            return RedirectToAction("RegistrationSuccess");
+            return RedirectToAction("Index", "Home");
         }   
 
         return View(newUser);
