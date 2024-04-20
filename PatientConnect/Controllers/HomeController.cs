@@ -19,7 +19,6 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         var doctors = _context.Users.Where(x => x.UserType == UserType.Doctor).ToList();
-        Console.WriteLine("doctor length " + doctors.Count);
         ViewBag.Doctors = doctors;
 
         return View();

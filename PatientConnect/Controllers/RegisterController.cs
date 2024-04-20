@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PatientConnect.Data;
 using PatientConnect.DTOs;
 using PatientConnect.Models;
@@ -28,6 +29,11 @@ public class RegisterController : Controller
     {
         if (ModelState.IsValid)
         {
+            var userCheck = _context.Users.Where(u => u.Email == newUser.Email).FirstOrDefault();
+            if(userCheck != null){
+                return View();
+            }
+
             // Map the DTO to the User model
             int userId = _context.Users.OrderByDescending(id => id.UserID).FirstOrDefault().UserID+1;
             var user = new User
