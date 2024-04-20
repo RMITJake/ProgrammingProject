@@ -9,7 +9,7 @@
     height: 50px;
 }
 
-a img{
+a > img{
     height: 50px;
     /* height: 100%; */
 }

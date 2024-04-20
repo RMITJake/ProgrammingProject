@@ -1,6 +1,7 @@
 chatnowinnercontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
     background-color: var(--sec-hi);
     border-radius: 20px;
     height: 100%;
@@ -12,10 +13,11 @@ chatnowcard {
     display: grid;
     grid-template:
         "profilephoto profiledescription"
-        "profilephoto chatbutton";
+        "profilephoto chatbutton" / 2fr 3fr;
     border-radius: 20px;
     background-color: var(--white);
     padding: 0.3rem;
+    max-width: 500px;
 }
 
 profilephoto {
@@ -24,6 +26,8 @@ profilephoto {
     border: 1px solid var(--black);
     padding: 0.3rem;
     border-radius: 20px;
+    width: 140px;
+    height: 200px;
 }
 
 profiledescription{

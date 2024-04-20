@@ -1,0 +1,13 @@
+@* @model List<User> *@
+
+@foreach(var doctor in ViewBag.Doctors){
+    <chatnowcard>
+        <profilephoto>photo</profilephoto>
+        <profiledescription>
+            <h3>Dr @doctor.FirstName @doctor.LastName</h3>
+            <p>Specialty: @doctor.Specialisation</p>
+            <p>X years | 100% rating</p>
+        </profiledescription>
+        <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+    </chatnowcard>
+}

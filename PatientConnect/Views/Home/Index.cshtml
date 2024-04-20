@@ -17,12 +17,12 @@
 <specialtyselection>
     <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
     <specialtyselectionicons>
-        @for (int i = 0; i < specialties.Length; i++)
-        {
-            <a asp-area="" asp-controller="Home" asp-action="Specialty">
+        @foreach(int i in Enum.GetValues(typeof(SpecialisationType))){
+            <a asp-controller="Home" asp-action="Doctors" asp-route-specialty="@Enum.GetName(typeof(SpecialisationType), i)">
                 <specialtygroup>
-                    <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
-                    <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
+                    @{var logo = "/img/" + @Enum.GetName(typeof(SpecialisationType), i) + ".png";}
+                    <specialtyicon><img src="@logo" /></specialtyicon>
+                    <specialtylabel><h4>@Enum.GetName(typeof(SpecialisationType), i)</h4></specialtylabel>
                 </specialtygroup>
             </a>
         }
@@ -35,6 +35,7 @@
         @if(@ViewBag.Doctors.Count == 0){
             <p>No doctors available.</p>
         } else {
+            <partial name="ChatCards.cshtml" model="ViewBag.Doctors"></partial>
         }
     </chatnowinnercontainer>
 </chatnowoutercontainer>
