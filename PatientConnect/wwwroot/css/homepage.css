@@ -12,6 +12,8 @@ banner{
     /* background-color: var(--ter-hi); */
     color: var(--pri-bg);
     font-size: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 bannertext{
@@ -37,6 +39,7 @@ specialtyselection{
     "specialtyselectionlabel"
     "specialtyselectionicons";
     background: var(--white);
+    margin-top: 10px;
 }
 
 specialtyselectionicons{
