@@ -50,7 +50,7 @@ public class HomeController : Controller
                 index = i;
             }
         }
-        var doctors = _context.Users.Where(d => d.Specialisation == (SpecialisationType)index).ToList();
+        var doctors = _context.Users.Where(d => d.Specialisation == (SpecialisationType)index).OrderByDescending(d => d.Rating).ToList();
         ViewBag.Doctors = doctors;
         return View();
     }
