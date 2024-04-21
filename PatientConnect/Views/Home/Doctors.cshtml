@@ -2,7 +2,7 @@
 
 <connectcontainer>
     <connectheader>
-        <header>head</header>
+        @* <header>head</header> *@
         @{var logo = "/img/" + @ViewBag.Doctors[0].Specialisation + ".png";}
         <specialtyicon><img src="@logo" /></specialtyicon>
         <specialtytitle>@ViewBag.Doctors[0].Specialisation</specialtytitle>
@@ -12,13 +12,20 @@
             @for(int i=0; i<6; i++){
             <cardouter>
                 <cardtop>
-                    <profilephoto>photo</profilephoto>
+                    <profilephoto>
+                        @if(doctor.ProfilePicture == null)
+                        {
+                            <img src="/img/doctor.png" />
+                        } else{
+                            <img src="@doctor.ProfilePicture" />
+                        }
+                    </profilephoto>
                 </cardtop>
                 <cardbottom>
                     <profiledescription>
                         <h4>Dr @doctor.FirstName @doctor.LastName</h4>
-                        <p>Specialty: @doctor.Specialisation</p>
-                        <p>X years | 100% rating</p>
+                        @* <p>Specialty: @doctor.Specialisation</p> *@
+                        <p>@doctor.Rating% Rating</p>
                     </profiledescription>
                     <button class="registerbutton">Connect</button>
                 </cardbottom>

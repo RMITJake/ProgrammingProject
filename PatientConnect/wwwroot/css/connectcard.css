@@ -43,7 +43,6 @@ cardouter{
     grid-template:
     'cardtop' 1fr
     'cardbottom' 1fr;
-    border: 1px dotted blue;
     border-radius: 20px;
     box-shadow: 2px 5px 11px 0px var(--boxshadow);
     width: 320px;
@@ -69,7 +68,25 @@ cardbottom{
     margin-bottom: 2px;
 }
 
+profilephoto{
+    height: 210px;
+    width: 320px;
+}
+
+profilephoto > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 profiledescription{
+    display: grid;
+    justify-content: center;
+}
+
+profiledescription > p{
     display: grid;
     justify-content: center;
 }

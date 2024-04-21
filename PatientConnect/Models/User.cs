@@ -19,6 +19,7 @@ public enum UserType
 
 public enum SpecialisationType
 {
+    [Display(Name = "Internal Medicine")]
     InternalMedicine = 1,
     Pediatrics = 2,
     Psychiatry = 3,
@@ -72,4 +73,7 @@ public class User
     // available -- logged in
     public bool? IsAvailable { get; set; }
 
+    public string? ProfilePicture { get; set; }
+
+    public int? Rating { get; set; }
 }
