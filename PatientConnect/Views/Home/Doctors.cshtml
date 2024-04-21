@@ -5,7 +5,7 @@
         @* <header>head</header> *@
         @{var logo = "/img/" + @ViewBag.Doctors[0].Specialisation + ".png";}
         <specialtyicon><img src="@logo" /></specialtyicon>
-        <specialtytitle>@ViewBag.Doctors[0].Specialisation</specialtytitle>
+        <specialtytitle><h2>@ViewBag.Doctors[0].Specialisation</h2></specialtytitle>
     </connectheader>
     <cardcontainer>
         @foreach(var doctor in ViewBag.Doctors){
