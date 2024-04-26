@@ -1,11 +1,17 @@
-<div class="container">
+<activechat>
+    <chatwindow>
+        <ul id="messagesList"></ul>
+    </chatwindow>
+    <messagepane>
+        <input type="text" id="messageInput" />
+    </messagepane>
+    <!-- <div class="row p-1">
+        <div class="col-1">Message</div>
+        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+    </div> -->
     <div class="row p-1">
         <div class="col-1">User</div>
         <div class="col-5"><input type="text" id="userInput" /></div>
-    </div>
-    <div class="row p-1">
-        <div class="col-1">Message</div>
-        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
     </div>
     <div class="row p-1">
         <div class="col-6 text-end">
@@ -17,11 +23,6 @@
             <hr />
         </div>
     </div>
-    <div class="row p-1">
-        <div class="col-6">
-            <ul id="messagesList"></ul>
-        </div>
-    </div>
-</div>
+</activechat>
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>

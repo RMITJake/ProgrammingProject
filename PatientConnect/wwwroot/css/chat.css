@@ -1,0 +1,41 @@
+chat, chatlist, chatrow{
+    display: grid;
+}
+
+chat{
+    grid-template-columns: 1fr 3fr;
+}
+
+/* Left hand side */
+chatlist{
+    border-right: 1px dotted black;
+}
+
+chatrow{
+    grid-template-columns: 1fr 2fr;
+}
+
+/* Right hand side */
+chatwindow{
+    display: block;
+    background-color: var(--white);
+    height: 200px;
+    overflow-y: scroll;
+}
+
+ul{
+    padding: 0 6px
+}
+
+li.received{
+    list-style: none;
+}
+
+li.sent{
+    text-align: right;
+}
+
+messagepane, messagepane input{
+    display: block;
+    width: 100%;
+}
