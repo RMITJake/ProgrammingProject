@@ -1,17 +1,19 @@
+using PatientConnect.Hubs;
 using PatientConnect.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("AllowAll", builder =>
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader());
-    });
+{
+    options.AddPolicy("AllowAll", builder =>
+    builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
-// Add services to the container.
+builder.Services.AddSignalR();
+
 builder.Services.AddDbContext<PatientConnectContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
@@ -57,6 +59,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.UseSession();
+app.MapHub<ChatHub>("/chatHub");
 
 app.MapDefaultControllerRoute();
 
