@@ -15,10 +15,11 @@ public class ChatHub : Hub
         _connections = connections;
     }
 
-    public async Task SendMessage(string user, string message)
+    public async Task SendMessage(string roomId, string user, string message)
     {
-        // await Clients.All.SendAsync("ReceiveMessage", user, message);
-        await Clients.Group(_connections[Context.ConnectionId].Room).SendAsync("ReceiveMessage", user, message);
+        // validate that user is part of the room
+        // await Clients.Group(_connections[Context.ConnectionId].Room).SendAsync("ReceiveMessage", user, message);
+        await Clients.Group(roomId).SendAsync("ReceiveMessage", user, message);
     }
 
     public async Task JoinRoom(Connection userConnection)
@@ -36,7 +37,6 @@ public class ChatHub : Hub
 
     public Task SendUsersConnected(string room)
     {
-        // var users = _connections.Values.Where(u => u.Room == room).Select(u => u.UserId);
         var users = _connections.Values.Where(u => u.Room == room);
         return Clients.Group(room).SendAsync("UsersInRoom", users);
     }

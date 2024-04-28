@@ -5,18 +5,19 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 //Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
-connection.on("UsersInRoom", (users) => {
-    console.log(users);
-    document.querySelector("chatlist").innerHTML = "";
-    users.forEach(function(user){
-        console.log(`USERID: ${user.userId}, ROOM ${user.room}`);
-        document.querySelector("chatlist").innerHTML += `\
-        <chatrow>
-            <chatpic>${user.userId}</chatpic>
-            <chatname>${user.room}</chatname>
-        </chatrow>`;
-    });
-});
+// this function will allow radio button selection of chat room
+// connection.on("UsersInRoom", (users) => {
+//     console.log(users);
+//     document.querySelector("chatlist").innerHTML = "";
+//     users.forEach(function(user){
+//         console.log(`USERID: ${user.userId}, ROOM ${user.room}`);
+//         document.querySelector("chatlist").innerHTML += `\
+//         <chatrow>
+//             <chatpic>${user.userId}</chatpic>
+//             <chatname>${user.room}</chatname>
+//         </chatrow>`;
+//     });
+// });
 
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
@@ -41,28 +42,30 @@ connection.start().then(function () {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    console.log("clicked send message");
+    var roomId = document.getElementsByClassName("room-select list-group-item list-group-item-action active")[0].getAttribute("value");
     var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", user, message).catch(function (err) {
+    connection.invoke("SendMessage", roomId, user, message).catch(function (err) {
         return console.error(err.toString());
     });
     scrollToBottom();
     event.preventDefault();
 });
 
-document.getElementById("joinRoom").addEventListener("click", function (event) {
-    var userId = document.getElementById("userInput").value;
-    var room = document.getElementById("roomNumber").value;
-    console.log(`${userId} clicked join room`);
-    connection.invoke("JoinRoom", {userId, room}).catch(function (err) {
-        return console.error(err.toString());
+var roomButtons = document.getElementsByClassName("room-select");
+for(var i=0; i<roomButtons.length; i++){
+    roomButtons[i].addEventListener("click", function (event) {
+        document.getElementById("messagesList").innerHTML = "";
+        var userId = document.getElementById("userInput").value;
+        var room = this.getAttribute("value"); 
+        connection.invoke("JoinRoom", {userId, room}).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
     });
-    event.preventDefault();
-});
+}
 
 function scrollToBottom(){
-    console.log("scroll called");
     var chatwindow = document.querySelector("chatwindow");
     chatwindow.scrollTop = chatwindow.scrollHeight;
 }
