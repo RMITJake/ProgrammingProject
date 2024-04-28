@@ -5,20 +5,6 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 //Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
-// this function will allow radio button selection of chat room
-// connection.on("UsersInRoom", (users) => {
-//     console.log(users);
-//     document.querySelector("chatlist").innerHTML = "";
-//     users.forEach(function(user){
-//         console.log(`USERID: ${user.userId}, ROOM ${user.room}`);
-//         document.querySelector("chatlist").innerHTML += `\
-//         <chatrow>
-//             <chatpic>${user.userId}</chatpic>
-//             <chatname>${user.room}</chatname>
-//         </chatrow>`;
-//     });
-// });
-
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     var currentuser = document.getElementById("userInput").value;
@@ -52,6 +38,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     event.preventDefault();
 });
 
+// Radio buttons will be loaded from the database for the user/doctor rooms
 var roomButtons = document.getElementsByClassName("room-select");
 for(var i=0; i<roomButtons.length; i++){
     roomButtons[i].addEventListener("click", function (event) {
@@ -64,6 +51,19 @@ for(var i=0; i<roomButtons.length; i++){
         event.preventDefault();
     });
 }
+// this function will allow radio button selection of chat room
+// connection.on("UsersInRoom", (users) => {
+//     console.log(users);
+//     document.querySelector("chatlist").innerHTML = "";
+//     users.forEach(function(user){
+//         console.log(`USERID: ${user.userId}, ROOM ${user.room}`);
+//         document.querySelector("chatlist").innerHTML += `\
+//         <chatrow>
+//             <chatpic>${user.userId}</chatpic>
+//             <chatname>${user.room}</chatname>
+//         </chatrow>`;
+//     });
+// });
 
 function scrollToBottom(){
     var chatwindow = document.querySelector("chatwindow");
