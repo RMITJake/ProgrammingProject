@@ -1,5 +1,6 @@
 using PatientConnect.Hubs;
 using PatientConnect.Data;
+using PatientConnect.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddSignalR();
+builder.Services.AddSingleton<IDictionary<string, Connection>>(option => new Dictionary<string, Connection>());
 
 builder.Services.AddDbContext<PatientConnectContext>(options =>
 {

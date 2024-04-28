@@ -5,6 +5,19 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 //Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
+connection.on("UsersInRoom", (users) => {
+    console.log(users);
+    document.querySelector("chatlist").innerHTML = "";
+    users.forEach(function(user){
+        console.log(`USERID: ${user.userId}, ROOM ${user.room}`);
+        document.querySelector("chatlist").innerHTML += `\
+        <chatrow>
+            <chatpic>${user.userId}</chatpic>
+            <chatname>${user.room}</chatname>
+        </chatrow>`;
+    });
+});
+
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     var currentuser = document.getElementById("userInput").value;
@@ -28,10 +41,28 @@ connection.start().then(function () {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
+    console.log("clicked send message");
     var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
     connection.invoke("SendMessage", user, message).catch(function (err) {
         return console.error(err.toString());
     });
+    scrollToBottom();
     event.preventDefault();
 });
+
+document.getElementById("joinRoom").addEventListener("click", function (event) {
+    var userId = document.getElementById("userInput").value;
+    var room = document.getElementById("roomNumber").value;
+    console.log(`${userId} clicked join room`);
+    connection.invoke("JoinRoom", {userId, room}).catch(function (err) {
+        return console.error(err.toString());
+    });
+    event.preventDefault();
+});
+
+function scrollToBottom(){
+    console.log("scroll called");
+    var chatwindow = document.querySelector("chatwindow");
+    chatwindow.scrollTop = chatwindow.scrollHeight;
+}

@@ -1,5 +1,11 @@
 <chat>
     <link rel="stylesheet" href="~/css/chat.css" asp-append-version="true" />
+
     <partial name="./ChatList.cshtml"></partial>
     <partial name="./ActiveChat.cshtml"></partial>
+    <div>
+        <input type="text" id="roomNumber" placeholder="Room number..." />
+        <input type="button" id="joinRoom" value="Join Room" />
+    </div>
+    <script src="~/js/chat.js"></script>
 </chat>
