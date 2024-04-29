@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<div style="width: 1440px; height: 2840px; position: relative; background: white">
     <div style="width: 1353px; height: 1203px; left: 39px; top: 209px; position: absolute">
         <div style="width: 387px; height: 525px; left: 0px; top: 122px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
@@ -14,3 +15,38 @@
         <div style="width: 760px; height: 208px; left: 386px; top: 0px; position: absolute; color: black; font-size: 60px; font-family: Yaldevi Colombo SemiBold; font-weight: 600; word-wrap: break-word">For Healthcare  Providers</div>
     </div>
 </div>
+=======
+﻿@{
+    ViewData["Title"] = "How it works";
+    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
+    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
+    String bannerimage = "banner-image.jpg";
+}
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+
+<banner>
+    <bannertext>
+        How it works
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
+
+<specialtyselection>
+    <profiledescription>
+        PatientConnect simplifies remote medical consultations, bridging the gap between patients and healthcare providers, 
+        ultimately improving healthcare access for all.
+        <ol>
+            <li>Registration: Patients and healthcare providers register on PatientConnect, providing necessary information.</li>
+            <li>Appointment Scheduling: Patients select available slots and schedule appointments with healthcare providers.</li>
+            <li>Consultation Initiation: At the scheduled time, patients start the consultation, and healthcare providers accept.</li>
+            <li>Secure Communication: Text-based consultations take place within the platform, ensuring confidentiality.</li>
+            <li>Consultation End: After the consultation, patients end the session, and healthcare providers confirm.</li>
+            <li>Feedback: Patients provide feedback on the consultation experience, contributing to quality improvement.</li>
+            <li>Admin Management: Admins oversee appointments and user management, ensuring smooth operation.</li>
+            <li>Continuous Improvement: We gather feedback to refine our platform, enhancing user experience and service quality.</li>
+        </ol>
+    </profiledescription>
+
+</specialtyselection>
+>>>>>>> main

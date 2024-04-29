@@ -1,4 +1,5 @@
 ﻿@{
+<<<<<<< HEAD
     ViewData["Title"] = "Contact";
 }
 
@@ -11,3 +12,26 @@
         <div style="width: 400px; height: 208px; left: 529px; top: 0px; position: absolute; color: black; font-size: 60px; font-family: Yaldevi Colombo SemiBold; font-weight: 600; word-wrap: break-word">Contact Us</div>
     </div>
 </div>
+=======
+    ViewData["Title"] = "Contact Us";
+    String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
+    String[] imagepaths = { "Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
+    String bannerimage = "banner-image.jpg";
+}
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+
+<banner>
+    <bannertext>
+        Contact Us
+    </bannertext>
+    <img src="~/img/@bannerimage" />
+</banner>
+
+<specialtyselection>
+    <profiledescription>
+        Contact us using the email provided - developers@medibyte.com.au
+    </profiledescription>
+
+</specialtyselection>
+>>>>>>> main

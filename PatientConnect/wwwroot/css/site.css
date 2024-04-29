@@ -9,7 +9,11 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
+<<<<<<< HEAD
   color: #0366d6;
+=======
+  color: var(--pri-bg);
+>>>>>>> main
 }
 
 .btn-primary {
@@ -61,8 +65,16 @@ html {
 
 body {
   /* Margin bottom by footer height */
+<<<<<<< HEAD
   margin-bottom: 60px;
 }
+=======
+  /* margin-bottom: 60px; */
+  background: rgb(211,231,240);
+  background: linear-gradient(45deg, rgba(211,231,240,1) 38%, rgba(187,217,253,1) 57%);
+}
+
+>>>>>>> main
 .footer {
   position: absolute;
   bottom: 0;
@@ -71,6 +83,17 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+<<<<<<< HEAD
+=======
+socialmedia {
+  display: grid;
+  color: var(--white);
+  width: 100%;
+  background-color: var(--pri-hi);
+  justify-content: center;
+}
+
+>>>>>>> main
 /* Make ReSharper ignore .control-label as UnknownCssClass. */
 /* ReSharper disable once DeclarationIsEmpty */
 .control-label { }

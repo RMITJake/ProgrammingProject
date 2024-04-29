@@ -5,8 +5,13 @@
 .modal-grid{
     display: grid;
     grid-template:
+<<<<<<< HEAD
     "modal-header modal-header" 1fr
     "modal-left modal-right" 3fr / 1fr 1fr;
+=======
+    "modal-header" 1fr
+    "modal-body" 3fr;
+>>>>>>> main
 }
 .modal-header{
     display: grid;
@@ -15,6 +20,7 @@
     align-content: center;
 }
 
+<<<<<<< HEAD
 .modal-left{
     display: grid;
     grid-area: modal-left;
@@ -32,6 +38,16 @@
 .profile-icon{
     width: 50%;
     filter: invert(96%) sepia(97%) saturate(0%) hue-rotate(33deg) brightness(105%) contrast(103%);
+=======
+.modal-body{
+    display: grid;
+}
+
+.profile-icon {
+    width: 80%;
+    background-color: var(--pri-hi);
+    border-radius: 20px;
+>>>>>>> main
 }
 
 .form-group.submit{

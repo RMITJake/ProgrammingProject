@@ -1,0 +1,20 @@
+@model List<User>
+
+@foreach(var doctor in Model){
+    <chatnowcard>
+        <profilephoto>
+            @if(doctor.ProfilePicture == null)
+            {
+                <img src="/img/doctor.png" />
+            } else{
+                <img src="@doctor.ProfilePicture" />
+            }
+        </profilephoto>
+        <profiledescription>
+            <h4>Dr @doctor.FirstName @doctor.LastName</h4>
+            <p>Specialty: @doctor.Specialisation</p>
+            <p>@doctor.Rating% Rating</p>
+        </profiledescription>
+        <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+    </chatnowcard>
+}

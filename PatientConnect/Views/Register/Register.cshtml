@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@{
     ViewData["Title"] = "Register";
 }
@@ -45,3 +46,92 @@
         <div style="width: 262px; height: 52px; left: 416px; top: 136px; position: absolute; text-align: center"><span style="color: black; font-size: 25px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">or  </span><span style="color: #0500FF; font-size: 25px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word"> </span><span style="color: #0500FF; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 600; word-wrap: break-word">Login</span></div>
     </div>
 </div>
+=======
+@model User
+
+<div class="modal-grid">
+    <div class="modal-header">
+        <h4 class="modal-title">Register</h4>
+    </div><!-- modal-header-->
+    @* <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left--> *@
+    <div class="modal-body">
+        <form asp-action="Register" asp-controller="Register">
+            <div class="form-group">
+                @* <label for="Name">First name</label> *@
+                <input asp-for="FirstName" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                @* <label for="Name">Last name</label> *@
+                <input asp-for="LastName" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                @* <label asp-for="Email">Email</label> *@
+                <input asp-for="Email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                @* <label asp-for="City">City</label> *@
+                <input asp-for="City" class="form-control" placeholder="City">
+            </div>
+            <div class="form-group">
+                @* <label asp-for="PostCode">Post Code</label> *@
+                <input asp-for="PostCode" class="form-control" placeholder="Post Code">
+            </div>
+            <div class="form-group">
+                @* <label for="Name">Phone number</label> *@
+                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <p>I am a: </p>
+                <select asp-for="UserType" asp-items="Html.GetEnumSelectList<UserType>()" class="form-control" id="Role" onchange="toggleSpecializationField()" required>
+                </select>
+            </div>
+            <div class="form-group" id="SpecializationField" style="display: none;">
+                <select class="form-control" id="Specialization" name="Specialization">
+                    <option value="Default">Select Specialisation</option>
+                    <option value="InternalMedicine">Internal Medicine</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Psychiatry">Psychiatry</option>
+                    <option value="Surgery">Surgery</option>
+                    <option value="OBGYN">OB/GYN</option>
+                </select>
+            </div>
+            <div class="form-group" id="AgeField">
+                <input type="text" class="form-control" id="Age" name="Age" placeholder="Age">
+            </div>
+             <div class="form-group" id="ProviderNumberField" style="display: none;">
+                <input type="text" class="form-control" id="ProviderNumber" name="ProviderNumber" placeholder="Provider Number">
+            </div>
+            <div class="form-group submit">
+                <input type="submit" value="Register" class="btn registerbutton">
+            </div>
+        </form>
+    </div><!-- modal-body-->
+</div>
+
+<script>
+    function toggleSpecializationField() {
+        var roleSelect = document.getElementById("Role");
+        var specializationField = document.getElementById("SpecializationField");
+        var ageField = document.getElementById("AgeField");
+        var providerNumberField = document.getElementById("ProviderNumberField");
+
+
+        if (roleSelect.value === '2') {
+            specializationField.style.display = "block";
+            providerNumberField.style.display = "none";
+            ageField.style.display = "none";
+        }
+        else if (roleSelect.value === '1') {
+            ageField.style.display = "block";
+            specializationField.style.display = "none";
+            providerNumberField.style.display = "none";
+        } 
+        else {
+            providerNumberField.style.display = "none";
+            specializationField.style.display = "none";
+            ageField.style.display = "none";
+        }
+    }
+</script>
+
+>>>>>>> main

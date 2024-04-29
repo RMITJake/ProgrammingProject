@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --pri-bg: white;
     --sec-bg: ;
@@ -6,10 +7,27 @@
     --sec-hi: #30C675;
     --ter-hi: #004F24;
     --black: black;
+=======
+:root {
+    --pri-bg: #03045E;
+    --sec-bg: #BBE7FF;
+    --ter-bg: yellow;
+    --pri-hi: #003779;
+    --sec-hi: #4399FF;
+    --ter-hi: #BBE7FF;
+    --cardgrey: #F5F5F5;
+    --boxshadow: #888888;
+    --black: black;
+    --white: white;
+>>>>>>> main
 }
 
 .btn-pri-hi{
     color: var(--pri-bg);
     background-color: var(--pri-hi);
     border-color: var(--pri-hi);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

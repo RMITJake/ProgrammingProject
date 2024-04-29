@@ -1,0 +1,50 @@
+﻿.aboutcontainer {
+    width: 1440px;
+    height: 2504px;
+    position: relative;
+    background: white;
+}
+
+.box {
+    width: 1367px;
+    height: 615px;
+    position: absolute;
+    border-radius: 20px;
+    border: 1px black solid;
+    background: white;
+}
+
+.box-content {
+    width: 1367px;
+    height: 615px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 20px;
+    border: 1px black solid;
+}
+
+.text {
+    color: black;
+    font-size: 60px;
+    font-family: 'Inria Serif', serif;
+    font-style: italic;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.mission-vision {
+    left: 32px;
+    top: 175px;
+}
+
+.our-team {
+    left: 32px;
+    top: 826px;
+}
+
+.sponsors-partners {
+    left: 41px;
+    top: 1477px;
+}
