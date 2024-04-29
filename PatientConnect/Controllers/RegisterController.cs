@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PatientConnect.Data;
-using PatientConnect.DTOs;
+using PatientConnect.ViewModels;
 using PatientConnect.Models;
 using SimpleHashing.Net;
 using System.Net;
@@ -25,10 +25,14 @@ public class RegisterController : Controller
 
     [HttpPost]
     [Route("/Register")]
-    public IActionResult Register(User newUser)
+    public IActionResult Register(RegisterVM newUser)
     {
         if (ModelState.IsValid)
         {
+            if(newUser.Password != newUser.PasswordConfirm){
+                return View(newUser);
+            }
+
             var userCheck = _context.Users.Where(u => u.Email == newUser.Email).FirstOrDefault();
             if(userCheck != null){
                 return View();
@@ -53,14 +57,12 @@ public class RegisterController : Controller
                 user.Specialisation = newUser.Specialisation;
             }
 
-            String rawPassword = "123456";
-
             int loginId = _context.Logins.OrderByDescending(id => id.LoginID).FirstOrDefault().LoginID+1;
             var login = new Login
             {
                 LoginID = loginId,
                 UserID = userId,
-                PasswordHash = _simpleHash.Compute(rawPassword)
+                PasswordHash = _simpleHash.Compute(newUser.Password)
             };
 
             try{
@@ -92,5 +94,6 @@ public class RegisterController : Controller
         }   
 
         return View(newUser);
+        // return RedirectToAction("Index", "Home");
     }
 }
