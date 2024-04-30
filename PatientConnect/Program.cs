@@ -2,6 +2,7 @@ using PatientConnect.Hubs;
 using PatientConnect.Data;
 using PatientConnect.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +19,7 @@ builder.Services.AddSingleton<IDictionary<string, Connection>>(option => new Dic
 
 builder.Services.AddDbContext<PatientConnectContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
-
-    // Enable lazy loading.
-    options.UseLazyLoadingProxies();
+    options.UseMySql(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)), new MySqlServerVersion(new Version(10, 11, 6)));
 });
 
 // Store session into Web-Server memory.
