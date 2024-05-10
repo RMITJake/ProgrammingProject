@@ -1,5 +1,4 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
 a.navbar-brand {
   white-space: normal;
@@ -9,11 +8,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-<<<<<<< HEAD
-  color: #0366d6;
-=======
   color: var(--pri-bg);
->>>>>>> main
 }
 
 .btn-primary {
@@ -56,8 +51,7 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
@@ -65,35 +59,71 @@ html {
 
 body {
   /* Margin bottom by footer height */
-<<<<<<< HEAD
-  margin-bottom: 60px;
-}
-=======
   /* margin-bottom: 60px; */
   background: rgb(211,231,240);
   background: linear-gradient(45deg, rgba(211,231,240,1) 38%, rgba(187,217,253,1) 57%);
 }
 
->>>>>>> main
+
+/* footer */
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    white-space: nowrap;
+    line-height: 60px;
+    padding: 20px 0;
+    height: 410px;
+    position: relative;
+    transform: translateY(-100%);
 }
 
-<<<<<<< HEAD
-=======
-socialmedia {
-  display: grid;
-  color: var(--white);
-  width: 100%;
-  background-color: var(--pri-hi);
-  justify-content: center;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
 }
 
->>>>>>> main
+.footer-banner {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    margin-right: 300px;
+    margin-bottom: 20px;
+}
+
+footer h2, h3 {
+    font-family: "Roboto Serif", serif;
+    color: #03045E;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    width: 100%;
+    background-color: var(--pri-hi);
+    padding-top: 30px;
+}
+
+.icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-bottom: 30px; 
+}
+
+.text-row {
+    text-align: center;
+    font-size: 14px;
+}
+
+
 /* Make ReSharper ignore .control-label as UnknownCssClass. */
 /* ReSharper disable once DeclarationIsEmpty */
 .control-label { }
