@@ -1,102 +1,113 @@
-<<<<<<< HEAD
-chatnowinnercontainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-=======
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Magra:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rowdies:wght@700&family=Russo+One&family=Sriracha&family=Yatra+One&display=swap');
+
 chatnowinnercontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
->>>>>>> main
     background-color: var(--sec-hi);
-    border-radius: 20px;
+    border-radius: 10px;
     height: 100%;
     padding: 20px;
     grid-gap: 20px;
+    font-family: "Magra", sans-serif;
 }
 
-<<<<<<< HEAD
-chatnowcard{
-    display: grid;
-    grid-template:
-    "profilephoto profiledescription"
-    "profilephoto chatbutton";
-    border-radius: 20px;
-    background-color: var(--pri-bg);
-    padding: 0.3rem;
-}
-
-profilephoto{
-    display: grid;
-    grid-area: profilephoto;
-    border: 1px solid var(--black);
-=======
 chatnowcard {
     display: grid;
     grid-template:
         "profilephoto profiledescription"
         "profilephoto chatbutton" / 2fr 3fr;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
     padding: 0.3rem;
     max-width: 500px;
 }
 
 profilephoto {
-    display: grid;
     grid-area: profilephoto;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 profilephoto > img{
     object-fit: cover;
     width: 100%;
     height: 100%;
->>>>>>> main
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 profiledescription{
+    text-align: center;
     display: grid;
     grid-area: profiledescription;
     margin: 0 2px;
 }
 
-<<<<<<< HEAD
-chatbutton{
-=======
 chatbutton {
->>>>>>> main
     display: grid;
     grid-area: chatbutton;
     margin: 0 2px;
     justify-content: flex-end;
     align-items: flex-end;
-<<<<<<< HEAD
-}
-
-a.chatbutton{
-=======
     color: var(--white);
 }
 
 a.chatbutton {
->>>>>>> main
     display: grid;
     align-items: center;
     justify-items: center;
     width: 115px;
     background: var(--pri-hi);
-    border-radius: 20px;
+    border-radius: 5px;
     color: var(--pri-bg);
     border: 4px var(--pri-hi) solid;
 }
 
 a.chatbutton:hover{
     background: var(--pri-bg);
-<<<<<<< HEAD
-    color: var(--pri-hi);
-=======
     color: var(--ter-hi);
->>>>>>> main
 }
+
+profiledescription h4 {
+    margin-top: 10px;
+}
+
+.doctor-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.specialty, .rating {
+    flex: 1;
+    background: #F0F0F0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.specialty {
+    margin-right: 20px;
+    height: 35px;
+    width: auto;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 35px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.rating i {
+    color: #666;
+    margin-right: 5px;
+}
+
