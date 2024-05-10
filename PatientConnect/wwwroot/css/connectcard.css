@@ -25,6 +25,7 @@ specialtyicon, specialtytitle{
 }
 
 specialtyicon > img{
+    margin-top: 30px;
     height: 160px;
 }
 
@@ -68,7 +69,20 @@ cardbottom{
     margin-bottom: 2px;
 }
 
-profilephoto{
+.connectbutton {
+    display: grid;
+    align-items: center;
+    width: 115px;
+    height: 60px;
+    background: var(--pri-bg);
+    border-radius: 10px;
+    color: var(--white);
+    border: 4px var(--pri-bg) solid;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+}
+
+profilephoto {
     height: 210px;
     width: 320px;
 }
@@ -90,3 +104,29 @@ profiledescription > p{
     display: grid;
     justify-content: center;
 }
+
+
+profiledescription h4 {
+    margin-top: 20px;
+}
+
+.rating {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 35px;
+    width: fit-content;
+    background: #F0F0F0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.rating i {
+    color: #666;
+    margin-right: 5px;
+}
+
