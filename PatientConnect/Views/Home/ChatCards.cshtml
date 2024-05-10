@@ -11,10 +11,22 @@
             }
         </profilephoto>
         <profiledescription>
-            <h4>Dr @doctor.FirstName @doctor.LastName</h4>
-            <p>Specialty: @doctor.Specialisation</p>
-            <p>@doctor.Rating% Rating</p>
+            <h4>Dr. @doctor.FirstName @doctor.LastName</h4>
+            <div class="doctor-info">
+                <div class="specialty">
+                    <p> @doctor.Specialisation</p>
+                </div>
+                <div class="rating">
+                    <p><i class="fas fa-thumbs-up"></i> @doctor.Rating% </p>
+                </div>
+            </div>
+
         </profiledescription>
-        <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+        <chatbutton><a class="chatbutton">CHAT</a></chatbutton>
+        @* // when clicked
+        // > set doctor unavailable
+        // > add chat to db
+        // > send user to chatroom
+        // >  *@
     </chatnowcard>
 }
