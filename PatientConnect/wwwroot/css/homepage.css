@@ -1,87 +1,75 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Magra:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rowdies:wght@700&family=Russo+One&family=Sriracha&family=Yatra+One&display=swap');
 
-main {
-    display: grid;
-    grid-template:
-        "banner" 200px
-        "specialtyselection" 300px
-        "chatnow";
-=======
 main {
     display: grid;
     grid-template: 
-    "banner" 200px
-    "specialtyselection" 300px
+    "banner" 310px
+    "specialtyselection" 310px
     "chatnow";
->>>>>>> main
 }
 
-banner{
+banner {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-<<<<<<< HEAD
-    background-color: var(--ter-hi);
+    grid-template-columns: 3fr 2fr;
+    /* background-color: var(--ter-hi); */
     color: var(--pri-bg);
-    
+    font-size: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 
 bannertext {
     display: grid;
     align-items: center;
     margin-left: 2rem;
-    font-family: "DM Serif Display", serif;
-    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
 }
 
 subtitle {
-    font-size: 1.5rem;
-}
-
-banner img{
-    height: 200px;
-=======
-    /* background-color: var(--ter-hi); */
-    color: var(--pri-bg);
     font-size: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2.5rem;
+    font-family: "Sriracha";
+    font-weight: 700;
+    font-style: normal;
 }
 
-bannertext{
-    display: grid;
-    align-items: center;
-    margin-left: 2rem;
-}
 
 banner img {
-    height: 200px;
+    height: 270px;
     border-radius: 20px;
->>>>>>> main
+    margin-top: 10px;
 }
+
 
 specialtyselectionicons > a{
     color: var(--black);
     text-decoration: none;
 }
 
-specialtyselection{
+specialtyselection {
+    padding: 30px;
+    font-family: "Russo One", sans-serif;
     display: grid;
     grid-area: "specialtyselection";
     grid-template:
-    "specialtyselectionlabel"
-    "specialtyselectionicons";
-<<<<<<< HEAD
-=======
+        "specialtyselectionlabel"
+        "specialtyselectionicons";
     background: var(--white);
     margin-top: 10px;
->>>>>>> main
 }
 
-specialtyselectionicons{
+specialtyselectionicons {
+    padding: 20px;
     display: grid;
     grid-area: specialtyselectionicons;
     grid-template-columns: repeat(5, 1fr);
+    margin-top: 10px;
 }
 
 specialtygroup{
@@ -96,20 +84,17 @@ specialtylabel{
     text-align: center;
 }
 
-specialtygrouplabel{
+specialtygrouplabel {
+    font-family: "Russo One", sans-serif;
     display: grid;
     justify-content: center;
     align-content: center;
+    margin-top: 10px;
 }
 
 chatnowoutercontainer{
     display: grid;
     grid-area: chatnow;
-<<<<<<< HEAD
-    border-radius: 20px;
-    padding: 20px
-=======
     padding: 20px;
     background: var(--white);
->>>>>>> main
 }
