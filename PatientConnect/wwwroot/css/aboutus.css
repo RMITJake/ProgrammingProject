@@ -1,50 +1,65 @@
-﻿.aboutcontainer {
-    width: 1440px;
-    height: 2504px;
-    position: relative;
-    background: white;
+.about-us-container {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 410px;
 }
 
-.box {
-    width: 1367px;
-    height: 615px;
-    position: absolute;
+
+.about-container {
+
+    background: white;
+    align-items: center;
     border-radius: 20px;
-    border: 1px black solid;
-    background: white;
+    padding: 30px;
+    margin-bottom: 40px;
 }
 
-.box-content {
-    width: 1367px;
-    height: 615px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: white;
-    border-radius: 20px;
-    border: 1px black solid;
+h2{
+    margin-bottom: 20px;
 }
 
-.text {
-    color: black;
-    font-size: 60px;
-    font-family: 'Inria Serif', serif;
-    font-style: italic;
-    font-weight: 700;
-    word-wrap: break-word;
+.content {
+    display: flex;
+    justify-content: space-between;
 }
 
-.mission-vision {
-    left: 32px;
-    top: 175px;
+.content-text, .content-image {
+    flex: 1;
+    padding: 10px;
 }
 
-.our-team {
-    left: 32px;
-    top: 826px;
+.content-text {
+    max-width: 70%;
+    font-family: "Magra", sans-serif;
 }
 
-.sponsors-partners {
-    left: 41px;
-    top: 1477px;
+.content-image {
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .content-image img {
+        width: 200px;
+        height: auto;
+    }
+
+.content-image-left {
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-image-left img {
+    width: 200px;
+    height: auto;
+}
+
+.content-text-right {
+    max-width: 70%;
+    font-family: "Magra", sans-serif;
 }
