@@ -1,49 +1,29 @@
-﻿@{
+@{
     ViewData["Title"] = "Home";
-<<<<<<< HEAD
-    String[] specialties = {"Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN"};
-    String[] imagepaths = {"Doctor.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png"};
-    String bannerimage = "banner-image.jpg";
-=======
     String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
     String[] imagepaths = { "InternalMedicine.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
->>>>>>> main
 }
 <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
 
 <banner>
-<<<<<<< HEAD
-    <bannertext>Your Health,<br />Our Connection:<br />
-        <subtitle>Find Your Perfect Doctor Match</subtitle>
-    </bannertext>
-    <img src="~/img/@bannerimage" />
-=======
     <bannertext>
-        Your Health,<br />Our Connection<br />
+        Your Health,<br />Our Connection
         <subtitle>Find Your Perfect Doctor Match</subtitle>
     </bannertext>
-    <img src="/img/banner-image.png" />
->>>>>>> main
+    <img src="/img/banner-image.png" class="banner-image" />
 </banner>
 
 <specialtyselection>
     <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
     <specialtyselectionicons>
-<<<<<<< HEAD
-        @for(int i=0; i < specialties.Length; i++){
-            <a asp-area="" asp-controller="Home" asp-action="Specialty">
-                <specialtygroup>
-                    <specialtyicon><img src="~/img/@imagepaths[i]" /></specialtyicon>
-                    <specialtylabel><h4>@specialties[i]</h4></specialtylabel>
-=======
-        @foreach(int i in Enum.GetValues(typeof(SpecialisationType))){
+        @foreach (int i in Enum.GetValues(typeof(SpecialisationType)))
+        {
             <a asp-controller="Home" asp-action="Doctors" asp-route-specialty="@Enum.GetName(typeof(SpecialisationType), i)">
                 <specialtygroup>
                     @{var logo = "/img/" + @Enum.GetName(typeof(SpecialisationType), i) + ".png";}
                     <specialtyicon><img src="@logo" /></specialtyicon>
                     <specialtylabel><h4>@Enum.GetName(typeof(SpecialisationType), i)</h4></specialtylabel>
->>>>>>> main
                 </specialtygroup>
             </a>
         }
@@ -51,30 +31,15 @@
 </specialtyselection>
 
 <chatnowoutercontainer>
-<<<<<<< HEAD
-    <chatnowinnercontainer>
-        @for(int i=0; i < 6; i++){
-            <chatnowcard>
-                <profilephoto>photo</profilephoto>
-                <profiledescription>
-                    <h3>Dr Card @i</h3>
-                    <p>Dr's specialty</p>
-                    <p>X years | 100% rating</p>
-                </profiledescription>
-                <chatbutton><a class="chatbutton">Chat</a></chatbutton>
-            </chatnowcard>
-        }
-    </chatnowinnercontainer>
-</chatnowoutercontainer>
-=======
     <specialtygrouplabel><h2>Available Doctors</h2></specialtygrouplabel>
     <chatnowinnercontainer>
-        @if(@ViewBag.Doctors.Count == 0){
+        @if (@ViewBag.Doctors.Count == 0)
+        {
             <p>No doctors available.</p>
-        } else {
+        }
+        else
+        {
             <partial name="ChatCards.cshtml" model="ViewBag.Doctors"></partial>
         }
     </chatnowinnercontainer>
 </chatnowoutercontainer>
-
->>>>>>> main
