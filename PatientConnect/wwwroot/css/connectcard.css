@@ -130,3 +130,78 @@ profiledescription h4 {
     margin-right: 5px;
 }
 
+@media (max-width: 767px) {
+    connectcontainer {
+        margin: 0 10px;
+        grid-template:
+            'connectheader'
+            'cardcontainer';
+    }
+
+    cardcontainer {
+        grid-template-columns: 1fr;
+        margin: 0 1em;
+        padding: 1em 0;
+    }
+
+    cardouter {
+        width: 100%;
+        height: auto;
+    }
+
+    profilephoto {
+        width: 100%;
+    }
+
+        profilephoto > img {
+            border-radius: 20px 20px 0 0;
+        }
+
+    .connectbutton {
+        width: auto;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    specialtyicon > img {
+        height: 120px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    connectcontainer {
+        margin: 0 15px;
+        grid-template:
+            'connectheader'
+            'cardcontainer';
+    }
+
+    cardcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 20px;
+        padding: 20px 0;
+    }
+
+    cardouter {
+        width: 290px;
+        height: 400px;
+    }
+
+    profilephoto {
+        width: 290px;
+    }
+
+        profilephoto > img {
+            border-radius: 20px 20px 0 0;
+        }
+
+    .connectbutton {
+        width: auto;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    specialtyicon > img {
+        height: 140px;
+    }
+}
