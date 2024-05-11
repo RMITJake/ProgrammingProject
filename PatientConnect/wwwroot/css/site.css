@@ -131,3 +131,61 @@ footer h3 {
 /* Make ReSharper ignore .navbar-toggleable-sm as UnknownCssClass. */
 /* ReSharper disable once DeclarationIsEmpty */
 .navbar-toggleable-sm { }
+
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links, .footer-banner {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    button.accept-policy, .btn-primary {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        padding: 5px 10px;
+    }
+
+    .icons-row, .text-row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-links, .footer-banner {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    button.accept-policy, .btn-primary {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        padding: 8px 16px; 
+    }
+
+    .icons-row, .text-row {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
