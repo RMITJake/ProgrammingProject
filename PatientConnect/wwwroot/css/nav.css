@@ -1,47 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .flex-end{
     display: flex;
     justify-content: flex-end;
 }
 
-<<<<<<< HEAD
-.loginbutton{
-    display: grid;
-    align-items: center;
-    width: 125px;
-    background: var(--pri-bg);
-    border-radius: 20px;
-    border: 4px var(--pri-hi) solid;
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 700;
-}
-
-.loginbutton:hover{
-    background: var(--pri-hi);
-    border: 4px var(--pri-hi) solid;
-}
-
-.registerbutton{
-    display: grid;
-    align-items: center;
-    width: 115px;
-    background: var(--pri-hi);
-    border-radius: 20px;
-    color: var(--black);
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 700;
-    border: 4px var(--pri-hi) solid;
-}
-
-.registerbutton:hover{
-    background: var(--pri-bg);
-    /* border: 4px var(--pri-hi) solid; */
-=======
-.navbar-brand{
+.navbar-brand {
+    margin-top: 10px;
     display: grid;
     align-items: center;
     height: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
 }
 
 a > img{
@@ -56,11 +26,12 @@ a > img{
     background: var(--white);
     border-radius: 20px;
     border: 4px var(--pri-bg) solid;
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 600;
     color: var(--pri-bg);
     margin-right: .25em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
 }
 
 .loginbutton:hover{
@@ -75,14 +46,77 @@ a > img{
     background: var(--pri-bg);
     border-radius: 20px;
     color: var(--white);
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 600;
     border: 4px var(--pri-bg) solid;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
 }
 
 .registerbutton:hover {
     background: var(--white);
     color: var(--pri-bg);
->>>>>>> main
 }
+
+@media (max-width: 767px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+        height: auto; 
+        margin-bottom: 10px;
+    }
+
+    a > img {
+        height: auto;
+        max-height: 40px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: flex;
+
+        margin-bottom: 10px; 
+    }
+
+    .loginbutton, .registerbutton {
+        font-size: 18px;
+        width: 45%; 
+        line-height: 35px;
+        border-radius: 15px;
+        margin: 5px; 
+    }
+
+    .button-container {
+        display: flex;
+        width: 100%; 
+        justify-content: space-evenly;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-brand {
+        font-size: 24px;
+        height: 45px;
+    }
+
+    a > img {
+        height: 45px;
+    }
+
+    .loginbutton, .registerbutton {
+        font-size: 22px;
+        width: 110px;
+        line-height: 38px;
+        border-radius: 18px;
+    }
+
+    .flex-end {
+        justify-content: space-between;
+    }
+}
+
