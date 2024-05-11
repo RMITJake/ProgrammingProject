@@ -63,3 +63,66 @@ h2{
     max-width: 70%;
     font-family: "Magra", sans-serif;
 }
+
+@media (max-width: 767px) {
+    .about-us-container {
+        width: 95%;
+        padding-bottom: 100px;
+    }
+
+    .about-container {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-text, .content-image, .content-image-left {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+        .content-image img, .content-image-left img {
+            width: 50%;
+            height: auto;
+            padding: 20px;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-us-container {
+        width: 90%;
+        padding-bottom: 200px;
+    }
+
+    .about-container {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .content-text, .content-image, .content-image-left {
+        flex: 1;
+        max-width: 50%;
+        padding: 10px;
+    }
+
+        .content-image img, .content-image-left img {
+            width: 70%;
+            height: auto; 
+        }
+
+    .content-image, .content-image-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
