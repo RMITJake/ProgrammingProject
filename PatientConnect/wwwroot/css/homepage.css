@@ -98,3 +98,114 @@ chatnowoutercontainer{
     padding: 20px;
     background: var(--white);
 }
+
+@media (max-width: 767px) {
+    main {
+        display: block;
+    }
+
+    banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-bottom-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+    }
+
+    bannertext {
+        flex: 1;
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    subtitle {
+        font-size: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    banner img {
+        width: 50%;
+        height: auto;
+        max-width: 50%;
+    }
+
+    specialtyselectionicons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    specialtygroup {
+        grid-template-rows: 1fr;
+    }
+
+        specialtygroup img {
+            width: 80px;
+            height: 80px;
+        }
+
+        specialtygroup h4 {
+            font-size: smaller;
+        }
+
+    chatnowoutercontainer {
+        padding: 10px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        grid-template:
+            "banner" auto
+            "specialtyselection" auto
+            "chatnow" auto;
+    }
+
+    banner {
+        grid-template-columns: 2fr 1fr;
+        font-size: 2rem;
+        padding: 15px;
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 35%;
+    }
+
+    bannertext {
+        font-size: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    subtitle {
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+
+    banner img {
+        height: auto;
+        width: 100%;
+        max-width: 90%;
+        margin-top: 5px;
+    }
+
+    .specialtyselectionicons {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        font-size: 14px;
+    }
+
+
+    specialtygroup img {
+        width: 100px;
+        height: 100px;
+    }
+
+    specialtygroup h4 {
+        font-size: 1rem;
+    }
+
+    chatnowoutercontainer {
+        padding: 15px;
+    }
+}
