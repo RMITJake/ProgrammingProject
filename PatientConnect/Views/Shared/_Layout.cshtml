@@ -26,7 +26,7 @@
                 }
                 <div class="flex-end">
                     @if(!loggedIn){
-                        <button type="button" class="loginbutton" data-toggle="modal" data-target="#loginModal">
+                        <button type="button" class="loginbutton" id="loginbutton" data-toggle="modal" data-target="#loginModal">
                             Login
                         </button>
                         <button type="button" class="registerbutton" data-toggle="modal" data-target="#registerModal">
@@ -38,6 +38,8 @@
                         </button>
                     }
                 </div>
+
+
                 <!-- Login Modal -->
                 <div class="modal fade" id="loginModal" role="dialog">
                     <div class="modal-dialog">
@@ -65,7 +67,7 @@
     @* </div> *@
 
     <footer>
-        <banner>
+        <bannertext>
             <bannertext>
                 <h2>PatientConnect</h2>
                 Your Health, Our Connection<br />
@@ -76,8 +78,8 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">Terms of Service</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="">Privacy Policy</a>
-            </banner>
-        </banner>
+            </bannertext>
+        </bannertext>
         <socialmedia>
             <a>Facebook</a>
             <a>X</a>
