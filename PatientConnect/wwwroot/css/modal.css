@@ -28,4 +28,14 @@
 .form-group.submit{
     display: grid;
     justify-content: center;
+    margin-top: 20px;
+}
+
+#loginForm {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.registerbutton {
+    width: 120px;
 }

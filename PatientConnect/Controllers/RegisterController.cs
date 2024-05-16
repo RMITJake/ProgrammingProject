@@ -23,18 +23,29 @@ public class RegisterController : Controller
     [Route("/Register")]
     public IActionResult Register() => View();
 
-    [HttpPost]
+    
     [Route("/Register")]
-    public IActionResult Register(RegisterVM newUser)
+    [HttpPost]
+    public async Task<IActionResult> Register(RegisterVM newUser)
     {
+
+        Console.WriteLine("In post register");
         if (ModelState.IsValid)
         {
-            if(newUser.Password != newUser.PasswordConfirm){
-                return View(newUser);
+            if (newUser.Password != newUser.PasswordConfirm) {
+
+                Console.WriteLine("Passwords do not match");
+                ModelState.AddModelError("PasswordMismatch", "Passwords do not match");
+                //return View(newUser);
+                return View();
+
             }
 
-            var userCheck = _context.Users.Where(u => u.Email == newUser.Email).FirstOrDefault();
-            if(userCheck != null){
+            var userCheck = await _context.Users.Where(u => u.Email == newUser.Email).FirstOrDefaultAsync();
+            if (userCheck != null) {
+
+                Console.WriteLine("Email already in use");
+                ModelState.AddModelError("EmailError", "Email already in use");
                 return View();
             }
 
@@ -52,7 +63,8 @@ public class RegisterController : Controller
                 UserType = newUser.UserType,
                 Age = newUser.Age,
             };
-            if(newUser.UserType == UserType.Doctor){
+
+            if (newUser.UserType == UserType.Doctor){
                 user.ProviderNumber = newUser.ProviderNumber;
                 user.Specialisation = newUser.Specialisation;
             }

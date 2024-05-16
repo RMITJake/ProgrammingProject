@@ -44,6 +44,7 @@ public class User
 
     // Email is the user's email address
     [StringLength(150)]
+    [EmailAddress(ErrorMessage = "Invalid Email address")]
     public string Email { get; set; }
 
     // City is the user's city

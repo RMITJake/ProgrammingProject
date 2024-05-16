@@ -1,48 +1,58 @@
 @model PatientConnect.ViewModels.RegisterVM
 
+@{
+    ViewData["Title"] = "Registration";
+}
+@* <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon"></div><!-- modal-left--> *@
 <div class="modal-grid">
     <div class="modal-header">
         <h4 class="modal-title">Register</h4>
     </div><!-- modal-header-->
-    @* <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left--> *@
-    <div class="modal-body">
+    <div class="modal-body" id="loginModalBody">
         @* <form id="RegistrationForm" asp-action="Temp" asp-controller="Register"> *@
-        <form id="form">
+        <form id="registerForm" asp-action="Register" asp-controller="Register">
             <div class="form-group">
                 @* <label asp-for="Email">Email</label> *@
-                <input asp-for="Email" class="form-control" placeholder="Email">
+                <input asp-for="Email" class="form-control" placeholder="Email" required>
+            </div>
+
+            @Html.ValidationMessage("EmailError", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <input type="password" asp-for="Password" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <input type="password" asp-for="Password" class="form-control" placeholder="Password">
+                <input type="password" asp-for="PasswordConfirm" class="form-control" placeholder="Confirm Password" required>
             </div>
-            <div class="form-group">
-                <input type="password" asp-for="PasswordConfirm" class="form-control" placeholder="Confirm Password">
-            </div>
+
+            @Html.ValidationMessage("PasswordMismatch", new { @class = "text-danger" })
+
             <hr />
             <div class="form-group">
                 @* <label for="Name">First name</label> *@
-                <input asp-for="FirstName" class="form-control" placeholder="First Name">
+                <input asp-for="FirstName" class="form-control" placeholder="First Name" required>
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 @* <label for="Name">Last name</label> *@
-                <input asp-for="LastName" class="form-control" placeholder="Last Name">
+                <input asp-for="LastName" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="form-group">
                 @* <label asp-for="City">City</label> *@
-                <input asp-for="City" class="form-control" placeholder="City">
+                <input asp-for="City" class="form-control" placeholder="City" required>
             </div>
             <div class="form-group">
                 @* <label asp-for="PostCode">Post Code</label> *@
-                <input asp-for="PostCode" class="form-control" placeholder="Post Code">
+                <input asp-for="PostCode" class="form-control" placeholder="Post Code" required>
             </div>
             <div class="form-group">
                 @* <label for="Name">Phone number</label> *@
-                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
+                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
                 <p>I am a: </p>
-                <select asp-for="UserType" asp-items="Html.GetEnumSelectList<UserType>()" class="form-control" id="Role" onchange="toggleSpecializationField()" required>
+                <select asp-for="UserType" asp-items="Html.GetEnumSelectList<UserType>()"
+                        class="form-control" id="Role" onchange="toggleSpecializationField()">
                 </select>
             </div>
             <div class="form-group" id="SpecializationField" style="display: none;">
@@ -58,15 +68,16 @@
             <div class="form-group" id="AgeField">
                 <input type="text" class="form-control" id="Age" name="Age" placeholder="Age">
             </div>
-             <div class="form-group" id="ProviderNumberField" style="display: none;">
+            <div class="form-group" id="ProviderNumberField" style="display: none;">
                 <input type="text" class="form-control" id="ProviderNumber" name="ProviderNumber" placeholder="Provider Number">
             </div>
             @* <div class="form-group submit"> *@
             <div class="form-group">
-                <input type="submit" value="Register" class="btn registerbutton" />
+                <input type="submit" value="Register" class="btn registerbutton" style="width: 150px">
             </div>
         </form>
     </div><!-- modal-body-->
+    
 </div>
 
 @section Scripts {

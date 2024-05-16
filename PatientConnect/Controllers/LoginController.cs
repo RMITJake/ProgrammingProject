@@ -36,11 +36,14 @@ public class LoginController : Controller
     //    if (login == null || string.IsNullOrEmpty(loginVM.Password) || !_simpleHash.Verify(loginVM.Password, login.PasswordHash))
     //    {
     //        ModelState.AddModelError("LoginFailed", "Login failed, please try again.");
-    //        return View();
+    //        //return View();
+    //        ViewBag.LoginError = "login error";
     //    }
-
-    //    HttpContext.Session.SetInt32("UserID", login.UserID);
-    //    HttpContext.Session.SetString("Name", user.FirstName);
+    //    else
+    //    {
+    //        HttpContext.Session.SetInt32("UserID", login.UserID);
+    //        HttpContext.Session.SetString("Name", user.FirstName);
+    //    }
 
     //    // return RedirectToAction("Index", "Connect");
     //    return RedirectToAction("Index", "Home");
