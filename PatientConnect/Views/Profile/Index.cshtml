@@ -1,0 +1,128 @@
+﻿@model PatientConnect.ViewModels.RegisterVM;
+
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<div class="container">
+<h1 style="margin: 0 auto">@Html.DisplayFor(model => model.FirstName)'s Profile</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div class="profile-container">
+
+    <!-- img is currently default image -->
+    <img src="~/img/User.png" alt="Your profile image" />
+
+    <div class="profile-section">
+        <h3>Edit Profile</h3>
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.UserType)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.UserTypeString)
+            </dd>
+        </dl>
+
+
+
+        <form asp-controller="Profile" asp-action="EditProfile" style="margin-right: 20px">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserID" />
+
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PostCode" class="control-label"></label>
+                <input asp-for="PostCode" class="form-control" />
+                <span asp-validation-for="PostCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-dark" />
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="profile-section">
+
+        <h3>Edit Password</h3>
+
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </dl>
+
+        <form asp-controller="Profile" asp-action="ChangeLogin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserID" />
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PasswordNew" class="control-label"></label>
+                <input asp-for="PasswordNew" class="form-control" type="password" />
+                <span asp-validation-for="PasswordNew" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PasswordConfirm" class="control-label"></label>
+                <input asp-for="PasswordConfirm" class="form-control" type="password" />
+                <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+@* not working as when I pass in LoginVM, it is asking for RegisterVM. When I pass in RegisterVM, it asks for LoginVM *@

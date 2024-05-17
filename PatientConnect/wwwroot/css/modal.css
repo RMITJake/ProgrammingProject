@@ -5,7 +5,7 @@
 .modal-grid{
     display: grid;
     grid-template:
-    "modal-header" 1fr
+    "modal-header" 0fr
     "modal-body" 3fr;
 }
 .modal-header{
@@ -31,11 +31,12 @@
     margin-top: 20px;
 }
 
-#loginForm {
+#loginForm, #registerForm {
     width: 450px;
     margin: 0 auto;
 }
 
 .registerbutton {
+    margin: 0 auto;
     width: 120px;
 }

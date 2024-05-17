@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/PatientConnect.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="/css/nav.css" asp-append-version="true" />
     <link rel="stylesheet" href="/css/modal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/profile.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -33,8 +34,11 @@
                             Register
                         </button>
                     } else {
-                        <button type="button" class="registerbutton" onclick="location.href='@Url.Action("Logout", "Login")'">
+                        <button type="button" class="loginbutton" onclick="location.href='@Url.Action("Logout", "Login")'">
                            Logout 
+                        </button>
+                        <button type="button" class="registerbutton" onclick="location.href='@Url.Action("Index", "Profile")'">
+                            Profile
                         </button>
                     }
                 </div>

@@ -6,6 +6,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace PatientConnect.Models;
 
@@ -36,10 +37,12 @@ public class User
 
     // FirstName is the user's first name
     [Required, StringLength(50)]
+    [DisplayName("First Name")]
     public string FirstName { get; set; }
 
     // LastName is the user's last name
     [Required, StringLength(50)]
+    [DisplayName("Last Name")]
     public string LastName { get; set; }
 
     // Email is the user's email address
@@ -53,19 +56,23 @@ public class User
 
     // PostCode is the user's post code
     [StringLength(4)]
+    [DisplayName("Post Code")]
     public string PostCode { get; set; }
 
     // PhoneNumber is the user's phone number
     [RegularExpression("^(?:\\+?(61))? ?(?:\\((?=.*\\)))?(0?[2-57-8])\\)? ?(\\d\\d(?:[- ](?=\\d{3})|(?!\\d\\d[- ]?\\d[- ]))\\d\\d[- ]?\\d[- ]?\\d{3})$")]
+    [DisplayName("Phone Number")]
     public string PhoneNumber { get; set; }
 
     // UserType is the user's type
+    [DisplayName("Account Type")]
     public UserType UserType { get; set; }
 
     // if doctor - Specialisation is doctor's specialisation
     public SpecialisationType? Specialisation { get; set; }
 
     // if doctor - ProviderNumber is doctor's provider number
+    [DisplayName("Provider No.")]
     public int? ProviderNumber { get; set; }
 
     // if patient - Age is patient's age

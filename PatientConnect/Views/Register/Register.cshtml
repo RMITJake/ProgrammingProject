@@ -12,16 +12,18 @@
         @* <form id="RegistrationForm" asp-action="Temp" asp-controller="Register"> *@
         <form id="registerForm" asp-action="Register" asp-controller="Register">
             <div class="form-group">
-                @* <label asp-for="Email">Email</label> *@
+                <label asp-for="Email" class="control-label">Email</label>
                 <input asp-for="Email" class="form-control" placeholder="Email" required>
             </div>
 
             @Html.ValidationMessage("EmailError", new { @class = "text-danger" })
 
             <div class="form-group">
+                <label asp-for="Password" class="control-label">Password</label>
                 <input type="password" asp-for="Password" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
+                <label asp-for="PasswordConfirm" class="control-label">Confirm Password</label>
                 <input type="password" asp-for="PasswordConfirm" class="form-control" placeholder="Confirm Password" required>
             </div>
 
@@ -29,34 +31,34 @@
 
             <hr />
             <div class="form-group">
-                @* <label for="Name">First name</label> *@
+                <label asp-for="FirstName" class="control-label">First name</label>
                 <input asp-for="FirstName" class="form-control" placeholder="First Name" required>
-                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @* <label for="Name">Last name</label> *@
+                <label asp-for="LastName" class="control-label">Last name</label>
                 <input asp-for="LastName" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="form-group">
-                @* <label asp-for="City">City</label> *@
+                <label asp-for="City" class="control-label">City</label>
                 <input asp-for="City" class="form-control" placeholder="City" required>
             </div>
             <div class="form-group">
-                @* <label asp-for="PostCode">Post Code</label> *@
+                <label asp-for="PostCode" class="control-label">Post Code</label>
                 <input asp-for="PostCode" class="form-control" placeholder="Post Code" required>
             </div>
             <div class="form-group">
-                @* <label for="Name">Phone number</label> *@
+                <label asp-for="PhoneNumber" class="control-label">Phone number</label>
                 <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-                <p>I am a: </p>
+                <label asp-for="UserType" class="control-label">I am a:</label>
                 <select asp-for="UserType" asp-items="Html.GetEnumSelectList<UserType>()"
-                        class="form-control" id="Role" onchange="toggleSpecializationField()">
+                        class="form-control" id="Role" onchange="toggleSpecialisationField()">
                 </select>
             </div>
-            <div class="form-group" id="SpecializationField" style="display: none;">
-                <select class="form-control" id="Specialization" name="Specialization">
+            <div class="form-group" id="SpecialisationField" style="display: none;">
+                <label asp-for="Specialisation" class="control-label">Specialisation</label>
+                <select asp-for="Specialisation" class="form-control" id="Specialisation">
                     <option value="Default">Select Specialisation</option>
                     <option value="InternalMedicine">Internal Medicine</option>
                     <option value="Pediatrics">Pediatrics</option>
@@ -66,6 +68,7 @@
                 </select>
             </div>
             <div class="form-group" id="AgeField">
+                <label asp-for="Age" class="control-label">Age</label>
                 <input type="text" class="form-control" id="Age" name="Age" placeholder="Age">
             </div>
             <div class="form-group" id="ProviderNumberField" style="display: none;">
@@ -98,26 +101,26 @@
         });
     });
 
-    function toggleSpecializationField() {
+    function toggleSpecialisationField() {
         var roleSelect = document.getElementById("Role");
-        var specializationField = document.getElementById("SpecializationField");
+        var specialisationField = document.getElementById("SpecialisationField");
         var ageField = document.getElementById("AgeField");
         var providerNumberField = document.getElementById("ProviderNumberField");
 
 
         if (roleSelect.value === '2') {
-            specializationField.style.display = "block";
+            specialisationField.style.display = "block";
             providerNumberField.style.display = "none";
             ageField.style.display = "none";
         }
         else if (roleSelect.value === '1') {
             ageField.style.display = "block";
-            specializationField.style.display = "none";
+            specialisationField.style.display = "none";
             providerNumberField.style.display = "none";
         } 
         else {
             providerNumberField.style.display = "none";
-            specializationField.style.display = "none";
+            specialisationField.style.display = "none";
             ageField.style.display = "none";
         }
     }
