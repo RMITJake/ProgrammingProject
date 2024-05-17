@@ -18,19 +18,21 @@ public class ChatHub : Hub
     public async Task SendMessage(string roomId, string user, string message)
     {
         // validate that user is part of the room
-        // await Clients.Group(_connections[Context.ConnectionId].Room).SendAsync("ReceiveMessage", user, message);
+        HttpContext httpContext = Context.GetHttpContext();
+        user = httpContext.Session.GetString("Name");
         await Clients.Group(roomId).SendAsync("ReceiveMessage", user, message);
     }
 
     public async Task JoinRoom(Connection userConnection)
     {
-        await Clients.All.SendAsync("ReceiveMessage", "SYSTEM MESSAGE ", $"{userConnection.UserId} has joined room {userConnection.Room}");
 
+        HttpContext httpContext = Context.GetHttpContext();
+        string userName = httpContext.Session.GetString("Name");
         await Groups.AddToGroupAsync(Context.ConnectionId, userConnection.Room);
         
         _connections[Context.ConnectionId] = userConnection;
 
-        await Clients.Groups(userConnection.Room).SendAsync("ReceiveMessage", "ROOM SYSTEM MESSAGE", $"{userConnection.UserId} has joined {userConnection.Room}");
+        await Clients.Groups(userConnection.Room).SendAsync("ReceiveMessage", "SYSTEM MESSAGE", $"{userName} has joined {userConnection.Room}");
 
         await SendUsersConnected(userConnection.Room);
     }

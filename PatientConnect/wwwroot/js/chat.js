@@ -8,7 +8,9 @@ document.getElementById("sendButton").disabled = true;
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     var currentuser = document.getElementById("userInput").value;
-    if(currentuser == user){
+    if (user == "SYSTEM MESSAGE"){
+        li.classList.add("system");
+    }else if(currentuser == user){
         li.classList.add("sent");
     } else {
         li.classList.add("received");
@@ -18,7 +20,11 @@ connection.on("ReceiveMessage", function (user, message) {
     // is not interpreted as markup. If you're assigning in any other way, you 
     // should be aware of possible script injection concerns.
     var time = (new Date).toLocaleString();
-    li.textContent = `${time} ${user} says ${message}`;
+    if (user == "SYSTEM MESSAGE"){
+        li.textContent = `${time} ${user} ${message}`;
+    } else {
+        li.textContent = `${time} ${user} says ${message}`;
+    }
 });
 
 connection.start().then(function () {
