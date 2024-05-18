@@ -16,4 +16,28 @@ public class ChatController : Controller
         ViewData["Rooms"] = rooms;
         return View();
     }
+
+    public async Task<IActionResult> NewConnection(int doctorId)
+    {
+        User currentUser = _context.Users.Where(u => u.UserID == HttpContext.Session.GetInt32("UserID")).FirstOrDefault();
+        User doctor = _context.Users.Where(u => u.UserID == doctorId).FirstOrDefault();
+
+        string roomName = $"Dr {doctor.FirstName} {doctor.LastName}, {currentUser.FirstName} {currentUser.LastName}";
+
+        _context.Connections.AddRange(
+            new Connection
+            {
+                UserId = currentUser.UserID.ToString(),
+                Room = roomName
+            },
+            new Connection
+            {
+                UserId = doctor.UserID.ToString(),
+                Room = roomName
+            }
+        );
+        _context.SaveChanges();
+
+        return RedirectToAction("Index");
+    }
 }
