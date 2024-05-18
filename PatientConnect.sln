@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientConnect", "PatientConnect\PatientConnect.csproj", "{EC27B5B6-A94E-4011-A786-B92DE5BADD47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminWebAPI", "AdminWebAPI\AdminWebAPI.csproj", "{B41BB47E-A02C-45D0-9800-5A7D2D03C45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EC27B5B6-A94E-4011-A786-B92DE5BADD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC27B5B6-A94E-4011-A786-B92DE5BADD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC27B5B6-A94E-4011-A786-B92DE5BADD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41BB47E-A02C-45D0-9800-5A7D2D03C45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41BB47E-A02C-45D0-9800-5A7D2D03C45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41BB47E-A02C-45D0-9800-5A7D2D03C45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41BB47E-A02C-45D0-9800-5A7D2D03C45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

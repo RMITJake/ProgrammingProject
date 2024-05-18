@@ -1,0 +1,31 @@
+.modal-content{
+    border-radius: 20px;
+}
+
+.modal-grid{
+    display: grid;
+    grid-template:
+    "modal-header" 1fr
+    "modal-body" 3fr;
+}
+.modal-header{
+    display: grid;
+    grid-area: modal-header;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-body{
+    display: grid;
+}
+
+.profile-icon {
+    width: 80%;
+    background-color: var(--pri-hi);
+    border-radius: 20px;
+}
+
+.form-group.submit{
+    display: grid;
+    justify-content: center;
+}
