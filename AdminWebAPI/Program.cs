@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<PatientConnectContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(McbaContext))));
+    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext))));
 
 builder.Services.AddScoped<UserManager>();
 
