@@ -15,11 +15,11 @@ public class ChatHub : Hub
         _connections = connections;
     }
 
-    public async Task SendMessage(string roomId, string user, string message)
+    public async Task SendMessage(string roomId, string message)
     {
         // validate that user is part of the room
         HttpContext httpContext = Context.GetHttpContext();
-        user = httpContext.Session.GetString("Name");
+        string user = httpContext.Session.GetString("Name");
         await Clients.Group(roomId).SendAsync("ReceiveMessage", user, message);
     }
 

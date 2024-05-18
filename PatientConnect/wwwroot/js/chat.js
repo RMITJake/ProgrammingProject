@@ -35,9 +35,8 @@ connection.start().then(function () {
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
     var roomId = document.getElementsByClassName("room-select list-group-item list-group-item-action active")[0].getAttribute("value");
-    var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", roomId, user, message).catch(function (err) {
+    connection.invoke("SendMessage", roomId, message).catch(function (err) {
         return console.error(err.toString());
     });
     scrollToBottom();
