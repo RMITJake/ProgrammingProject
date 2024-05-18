@@ -5,7 +5,6 @@ using System;
 >>>>>>> main
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PatientConnect.Data;
 
@@ -21,12 +20,24 @@ namespace PatientConnect.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.8")
-                .HasAnnotation("Proxies:ChangeTracking", false)
-                .HasAnnotation("Proxies:CheckEquality", false)
-                .HasAnnotation("Proxies:LazyLoading", true)
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            modelBuilder.Entity("PatientConnect.Models.Connection", b =>
+                {
+                    b.Property<int>("ConnectionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Room")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ConnectionId");
+
+                    b.ToTable("Connections");
+                });
 
             modelBuilder.Entity("PatientConnect.Models.Login", b =>
                 {
@@ -51,12 +62,7 @@ namespace PatientConnect.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Logins", t =>
-                        {
-                            t.HasCheckConstraint("CH_Login_LoginID", "len(LoginID) = 8");
-
-                            t.HasCheckConstraint("CH_Login_PasswordHash", "len(PasswordHash) = 94");
-                        });
+                    b.ToTable("Logins");
                 });
 
             modelBuilder.Entity("PatientConnect.Models.User", b =>
@@ -72,39 +78,39 @@ namespace PatientConnect.Migrations
 >>>>>>> main
                     b.Property<string>("City")
                         .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("varchar(40)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
 <<<<<<< HEAD
 =======
                     b.Property<bool?>("IsAvailable")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
 >>>>>>> main
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PostCode")
                         .HasMaxLength(4)
-                        .HasColumnType("nvarchar(4)");
+                        .HasColumnType("varchar(4)");
 
 <<<<<<< HEAD
 =======
                     b.Property<string>("ProfilePicture")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("ProviderNumber")
                         .HasColumnType("int");

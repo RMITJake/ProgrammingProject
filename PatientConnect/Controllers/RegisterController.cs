@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-=======
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
->>>>>>> main
 using PatientConnect.Data;
-using PatientConnect.DTOs;
+using PatientConnect.ViewModels;
 using PatientConnect.Models;
 using SimpleHashing.Net;
 using System.Net;
@@ -17,11 +14,7 @@ namespace PatientConnect.Controllers;
 //[AllowAnonymous]
 public class RegisterController : Controller
 {
-<<<<<<< HEAD
-    private static readonly ISimpleHash s_simpleHash = new SimpleHash();
-=======
     private static readonly ISimpleHash _simpleHash = new SimpleHash();
->>>>>>> main
 
     private readonly PatientConnectContext _context;
 
@@ -32,17 +25,14 @@ public class RegisterController : Controller
 
     [HttpPost]
     [Route("/Register")]
-    public IActionResult Register(User newUser)
+    public IActionResult Register(RegisterVM newUser)
     {
         if (ModelState.IsValid)
         {
-<<<<<<< HEAD
-            // Map the DTO to the User model
-            int id = _context.Users.OrderByDescending(id => id.UserID).FirstOrDefault().UserID+1;
-            var user = new User
-            {
-                UserID = id,
-=======
+            if(newUser.Password != newUser.PasswordConfirm){
+                return View(newUser);
+            }
+
             var userCheck = _context.Users.Where(u => u.Email == newUser.Email).FirstOrDefault();
             if(userCheck != null){
                 return View();
@@ -53,16 +43,12 @@ public class RegisterController : Controller
             var user = new User
             {
                 UserID = userId,
->>>>>>> main
                 FirstName = newUser.FirstName,
                 LastName = newUser.LastName,
                 Email = newUser.Email,
                 City = newUser.City,
                 PostCode = newUser.PostCode,
                 PhoneNumber = newUser.PhoneNumber,
-<<<<<<< HEAD
-                UserType = newUser.UserType
-=======
                 UserType = newUser.UserType,
                 Age = newUser.Age,
             };
@@ -71,23 +57,17 @@ public class RegisterController : Controller
                 user.Specialisation = newUser.Specialisation;
             }
 
-            String rawPassword = "123456";
-
             int loginId = _context.Logins.OrderByDescending(id => id.LoginID).FirstOrDefault().LoginID+1;
             var login = new Login
             {
                 LoginID = loginId,
                 UserID = userId,
-                PasswordHash = _simpleHash.Compute(rawPassword)
->>>>>>> main
+                PasswordHash = _simpleHash.Compute(newUser.Password)
             };
 
             try{
                 _context.Add(user);
-<<<<<<< HEAD
-=======
                 _context.Add(login);
->>>>>>> main
                 _context.SaveChanges();
             } catch(Exception e){
                 Console.WriteLine(e);
@@ -108,15 +88,12 @@ public class RegisterController : Controller
 
             smtpClient.Send(message);
 
-<<<<<<< HEAD
-            return RedirectToAction("RegistrationSuccess");
-=======
             // login.PasswordHash = rawPassword;
             // return RedirectToAction("Login", "Login", login);
             return RedirectToAction("Index", "Home");
->>>>>>> main
         }   
 
         return View(newUser);
+        // return RedirectToAction("Index", "Home");
     }
 }

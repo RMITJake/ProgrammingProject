@@ -1,26 +1,25 @@
+using PatientConnect.Hubs;
 using PatientConnect.Data;
+using PatientConnect.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql;
 
 var builder = WebApplication.CreateBuilder(args);
 
-<<<<<<< HEAD
-=======
 builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("AllowAll", builder =>
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader());
-    });
+{
+    options.AddPolicy("AllowAll", builder =>
+    builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
->>>>>>> main
-// Add services to the container.
+builder.Services.AddSignalR();
+builder.Services.AddSingleton<IDictionary<string, Connection>>(option => new Dictionary<string, Connection>());
+
 builder.Services.AddDbContext<PatientConnectContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)));
-
-    // Enable lazy loading.
-    options.UseLazyLoadingProxies();
+    options.UseMySql(builder.Configuration.GetConnectionString(nameof(PatientConnectContext)), new MySqlServerVersion(new Version(10, 11, 6)));
 });
 
 // Store session into Web-Server memory.
@@ -54,21 +53,15 @@ using(var scope = app.Services.CreateScope())
 if(!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
 
-<<<<<<< HEAD
+
 app.UseHttpsRedirection();
-=======
-//app.UseHttpsRedirection();
 app.UseCors("AllowAll");
->>>>>>> main
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.UseSession();
+app.MapHub<ChatHub>("/chatHub");
 
 app.MapDefaultControllerRoute();
 
-<<<<<<< HEAD
 app.Run();
-=======
-app.Run();
->>>>>>> main
