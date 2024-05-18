@@ -27,10 +27,6 @@ connection.on("ReceiveMessage", function (user, message) {
     }
 });
 
-connection.on("ReceiveRooms", function(rooms){
-    console.log(rooms);
-});
-
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
 }).catch(function (err) {
@@ -44,9 +40,6 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     scrollToBottom();
-    connection.invoke("SendRooms").catch(function (err) {
-        return console.error(err.toString());
-    });
     event.preventDefault();
 });
 
