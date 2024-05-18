@@ -42,4 +42,15 @@ public class ChatHub : Hub
         var users = _connections.Values.Where(u => u.Room == room);
         return Clients.Group(room).SendAsync("UsersInRoom", users);
     }
+
+    public async Task SendRooms(){
+        HttpContext httpContext = Context.GetHttpContext();
+        int? userId = httpContext.Session.GetInt32("UserID");
+        Console.WriteLine($"userid in chathub sendrooms {userId}");
+        List<Connection> rooms = _context.Connections.Where(u => u.UserId.Equals(userId.ToString())).ToList();
+        foreach(var room in rooms){
+            Console.WriteLine($"{room.Room}");
+        }
+        await Clients.Client(Context.ConnectionId).SendAsync("ReceiveMessage", rooms);
+    }
 }
