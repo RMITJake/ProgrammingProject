@@ -1,0 +1,52 @@
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-brand{
+    display: grid;
+    align-items: center;
+    height: 50px;
+}
+
+a > img{
+    height: 50px;
+    /* height: 100%; */
+}
+
+.loginbutton {
+    display: grid;
+    align-items: center;
+    width: 125px;
+    background: var(--white);
+    border-radius: 20px;
+    border: 4px var(--pri-bg) solid;
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 600;
+    color: var(--pri-bg);
+    margin-right: .25em;
+}
+
+.loginbutton:hover{
+    background: var(--pri-bg);
+    color: var(--white);
+}
+
+.registerbutton {
+    display: grid;
+    align-items: center;
+    width: 115px;
+    background: var(--pri-bg);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 600;
+    border: 4px var(--pri-bg) solid;
+}
+
+.registerbutton:hover {
+    background: var(--white);
+    color: var(--pri-bg);
+}
