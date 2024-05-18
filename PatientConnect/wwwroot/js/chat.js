@@ -7,7 +7,7 @@ document.getElementById("sendButton").disabled = true;
 
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
-    var currentuser = document.getElementById("userInput").value;
+    var currentuser = document.getElementById("userInput").innerHTML;
     if (user == "SYSTEM MESSAGE"){
         li.classList.add("system");
     }else if(currentuser == user){
@@ -27,6 +27,10 @@ connection.on("ReceiveMessage", function (user, message) {
     }
 });
 
+connection.on("ReceiveRooms", function(rooms){
+    console.log(rooms);
+});
+
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
 }).catch(function (err) {
@@ -40,6 +44,9 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     scrollToBottom();
+    connection.invoke("SendRooms").catch(function (err) {
+        return console.error(err.toString());
+    });
     event.preventDefault();
 });
 
@@ -48,9 +55,8 @@ var roomButtons = document.getElementsByClassName("room-select");
 for(var i=0; i<roomButtons.length; i++){
     roomButtons[i].addEventListener("click", function (event) {
         document.getElementById("messagesList").innerHTML = "";
-        var userId = document.getElementById("userInput").value;
         var room = this.getAttribute("value"); 
-        connection.invoke("JoinRoom", {userId, room}).catch(function (err) {
+        connection.invoke("JoinRoom", {room}).catch(function (err) {
             return console.error(err.toString());
         });
         event.preventDefault();

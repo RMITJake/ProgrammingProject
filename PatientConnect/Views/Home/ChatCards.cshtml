@@ -14,8 +14,9 @@
             <h4>Dr @doctor.FirstName @doctor.LastName</h4>
             <p>Specialty: @doctor.Specialisation</p>
             <p>@doctor.Rating% Rating</p>
+            <p>@doctor.UserID</p>
         </profiledescription>
-        <chatbutton><a class="chatbutton">Chat</a></chatbutton>
+        <chatbutton><a class="chatbutton" asp-controller="Chat" asp-action="NewConnection" asp-route-doctorId="@doctor.UserID">Chat</a></chatbutton>
         @* // when clicked
         // > set doctor unavailable
         // > add chat to db

@@ -1,15 +1,10 @@
 <chat>
     <link rel="stylesheet" href="~/css/chat.css" asp-append-version="true" />
     <chatlist>
-        @* <chatrow> *@
-            @* <chatpic>pic</chatpic> *@
-            @* <chatname>name</chatname> *@
-        @* </chatrow> *@
         <chatrow class="list-group" id="list-tab" role="tablist">
-            <a class="room-select list-group-item list-group-item-action" id="1" data-toggle="list" role="tab" aria-controls="room1" value="1">Room 1</a>
-            <a class="room-select list-group-item list-group-item-action" id="2" data-toggle="list" role="tab" aria-controls="room2" value="2">Room 2</a>
-            <a class="room-select list-group-item list-group-item-action" id="3" data-toggle="list" role="tab" aria-controls="room3" value="3">Room 3</a>
-            <a class="room-select list-group-item list-group-item-action" id="4" data-toggle="list" role="tab" aria-controls="room4" value="4">Room 4</a>
+        @foreach(var room in ViewData["Rooms"] as IEnumerable<PatientConnect.Models.Connection>){
+                <a class="room-select list-group-item list-group-item-action" id="1" data-toggle="list" role="tab" aria-controls="@room.Room" value="@room.Room">@room.Room</a>
+        }
         </chatrow>
     </chatlist>
 
@@ -24,10 +19,7 @@
             <input type="text" id="messageInput" placeholder="Type message here..." />
             <input type="button" id="sendButton" value="Send Message" />
         </messagepane>
-        <div>
-            User
-            <input type="text" id="userInput" />
-        </div>
+        <p style="display:none;" id="userInput">@ViewData["CurrentUser"]</p>
     </activechat>
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/chat.js"></script>
