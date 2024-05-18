@@ -19,6 +19,23 @@ namespace PatientConnect.Migrations
                 .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("PatientConnect.Models.Connection", b =>
+                {
+                    b.Property<int>("ConnectionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Room")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ConnectionId");
+
+                    b.ToTable("Connections");
+                });
+
             modelBuilder.Entity("PatientConnect.Models.Login", b =>
                 {
                     b.Property<int>("LoginID")

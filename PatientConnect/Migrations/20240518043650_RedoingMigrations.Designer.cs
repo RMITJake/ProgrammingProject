@@ -11,8 +11,8 @@ using PatientConnect.Data;
 namespace PatientConnect.Migrations
 {
     [DbContext(typeof(PatientConnectContext))]
-    [Migration("20240430100840_InitalMigration")]
-    partial class InitalMigration
+    [Migration("20240518043650_RedoingMigrations")]
+    partial class RedoingMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,6 +21,23 @@ namespace PatientConnect.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("PatientConnect.Models.Connection", b =>
+                {
+                    b.Property<int>("ConnectionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Room")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ConnectionId");
+
+                    b.ToTable("Connections");
+                });
 
             modelBuilder.Entity("PatientConnect.Models.Login", b =>
                 {

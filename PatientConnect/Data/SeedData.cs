@@ -18,7 +18,7 @@ public static class SeedData
                 UserID = 2100,
                 FirstName = "Jake",
                 LastName = "Kent",
-                Email = "jake.kent@test.patientconnect.dev",
+                Email = "jake@test.dev",
                 City = "Sydney",
                 PostCode = "2000",
                 UserType = UserType.Doctor,
@@ -159,7 +159,7 @@ public static class SeedData
                 LoginID = 13005700,
                 UserID = 2100,
                 PasswordHash =
-                    "Rfc2898DeriveBytes$50000$MrW2CQoJvjPMlynGLkGFrg==$x8iV0TiDbEXndl0Fg8V3Rw91j5f5nztWK1zu7eQa0EE="
+                    "Rfc2898DeriveBytes$50000$2/qCxenCcRA4tpx++uNzUA==$m6mxOKqUqrYi7nJWhXu+zVDsFuPiiXrodok4IX2EZSU="
             },
             new Login
             {
@@ -224,6 +224,20 @@ public static class SeedData
                 PasswordHash =
                     "Rfc2898DeriveBytes$50000$jDBijGZNWLh+0MOXnp68Yw==$4bQ9SJGtRQJolToCjFTPsVzRtH8QQUpEsioJ6Y3ewN4="
             });
+        context.Connections.AddRange(
+            new Connection
+            {
+                ConnectionId = 100,
+                UserId = "2100",
+                Room = "testroom"
+            },
+            new Connection
+            {
+                ConnectionId = 101,
+                UserId = "2102",
+                Room = "testroom"
+            }
+        );
 
         context.SaveChanges();
     }
