@@ -3,5 +3,9 @@ namespace PatientConnect.Controllers;
 
 public class ChatController : Controller
 {
-    public IActionResult Index() => View();
+    public IActionResult Index()
+    {
+        ViewData["CurrentUser"] = HttpContext.Session.GetString("Name");
+        return View();
+    }
 }
