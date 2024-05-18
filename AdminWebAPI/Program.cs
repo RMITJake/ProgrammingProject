@@ -15,7 +15,7 @@ builder.Services.AddScoped<UserManager>();
 // Configure the default client.
 builder.Services.AddHttpClient(Options.DefaultName, client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5100");
+    client.BaseAddress = new Uri("http://localhost:5200");
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
 

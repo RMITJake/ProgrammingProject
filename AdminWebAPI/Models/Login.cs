@@ -10,7 +10,7 @@ public class Login
 {
     // LoginID is required
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
-    public int LoginID { get; set; }
+    public string LoginID { get; set; }
 
     // UserID is a foreign key to the User table
     public int UserID { get; set; }
