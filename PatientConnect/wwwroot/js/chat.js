@@ -8,9 +8,9 @@ document.getElementById("sendButton").disabled = true;
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     var currentuser = document.getElementById("userInput").innerHTML;
-    if (user == "SYSTEM MESSAGE"){
+    if (user == "SYSTEM MESSAGE") {
         li.classList.add("system");
-    }else if(currentuser == user){
+    } else if (currentuser == user) {
         li.classList.add("sent");
     } else {
         li.classList.add("received");
@@ -20,7 +20,7 @@ connection.on("ReceiveMessage", function (user, message) {
     // is not interpreted as markup. If you're assigning in any other way, you 
     // should be aware of possible script injection concerns.
     var time = (new Date).toLocaleString();
-    if (user == "SYSTEM MESSAGE"){
+    if (user == "SYSTEM MESSAGE") {
         li.textContent = `${time} ${user} ${message}`;
     } else {
         li.textContent = `${time} ${user} says ${message}`;
@@ -45,11 +45,11 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 
 // Radio buttons will be loaded from the database for the user/doctor rooms
 var roomButtons = document.getElementsByClassName("room-select");
-for(var i=0; i<roomButtons.length; i++){
+for (var i = 0; i < roomButtons.length; i++) {
     roomButtons[i].addEventListener("click", function (event) {
         document.getElementById("messagesList").innerHTML = "";
-        var room = this.getAttribute("value"); 
-        connection.invoke("JoinRoom", {room}).catch(function (err) {
+        var room = this.getAttribute("value");
+        connection.invoke("JoinRoom", { room }).catch(function (err) {
             return console.error(err.toString());
         });
         event.preventDefault();
@@ -69,7 +69,7 @@ for(var i=0; i<roomButtons.length; i++){
 //     });
 // });
 
-function scrollToBottom(){
+function scrollToBottom() {
     var chatwindow = document.querySelector("chatwindow");
     chatwindow.scrollTop = chatwindow.scrollHeight;
 }

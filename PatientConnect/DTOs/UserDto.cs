@@ -16,14 +16,11 @@ namespace PatientConnect.DTOs
         public string PostCode { get; set; }
 
         public UserType UserType { get; set; }
-<<<<<<< HEAD
-=======
 
         public SpecialisationType Specialisation { get; set; }
 
         public int ProviderNumber { get; set; }
 
         public int Age { get; set; }
->>>>>>> main
     }
 }

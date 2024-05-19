@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj": {}
+    "C:\\Data\\code\\ProgrammingProject\\PatientConnect\\PatientConnect.csproj": {}
   },
   "projects": {
-    "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj": {
+    "C:\\Data\\code\\ProgrammingProject\\PatientConnect\\PatientConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj",
+        "projectUniqueName": "C:\\Data\\code\\ProgrammingProject\\PatientConnect\\PatientConnect.csproj",
         "projectName": "PatientConnect",
-        "projectPath": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/PatientConnect.csproj",
-        "packagesPath": "/Users/tannypark/.nuget/packages/",
-        "outputPath": "/Users/tannypark/Documents/GitHub/ProgrammingProject/PatientConnect/obj/",
+        "projectPath": "C:\\Data\\code\\ProgrammingProject\\PatientConnect\\PatientConnect.csproj",
+        "packagesPath": "C:\\Users\\jake\\.nuget\\packages\\",
+        "outputPath": "C:\\Data\\code\\ProgrammingProject\\PatientConnect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tannypark/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jake\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -57,13 +61,39 @@
               "target": "Package",
               "version": "[7.0.8, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.9.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.7, )"
             },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.7, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "SimpleHashing.Net": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.5.8, )"
             }
           },
           "imports": [
@@ -77,6 +107,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.17, 7.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.17, 7.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.17, 7.0.17]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.17, 7.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

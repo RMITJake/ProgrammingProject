@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-﻿using System.ComponentModel.DataAnnotations;
-=======
 ﻿// Purpose: This file contains the User class, which represents a user in the system. 
 // The User class contains the following properties: UserID, FirstName, LastName, Email, City, PostCode, PhoneNumber, and UserType. 
 // The User class also contains a list of appointments. The User class also contains a UserType enum, which represents the type of user.
@@ -8,44 +5,12 @@
 // The User class is used to represent a user in the system.
 
 using System.ComponentModel.DataAnnotations;
->>>>>>> main
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatientConnect.Models;
 
 public enum UserType
 {
-<<<<<<< HEAD
-    Patient = 1,
-    Doctor = 2
-}
-public class User
-{
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
-    public int UserID { get; set; }
-
-    [Required, StringLength(50)]
-    public string FirstName { get; set; }
-
-    [Required, StringLength(50)]
-    public string LastName { get; set; }
-
-    [StringLength(150)]
-    public string Email { get; set; }
-
-    [StringLength(40)]
-    public string City { get; set; }
-
-    [StringLength(4)]
-    public string PostCode { get; set; }
-
-    [RegularExpression("^(?:\\+?(61))? ?(?:\\((?=.*\\)))?(0?[2-57-8])\\)? ?(\\d\\d(?:[- ](?=\\d{3})|(?!\\d\\d[- ]?\\d[- ]))\\d\\d[- ]?\\d[- ]?\\d{3})$")]
-    public string PhoneNumber { get; set; }
-
-    public UserType UserType { get; set; }
-
-    // appointments list
-=======
     // Patient is a user who is a patient
     Patient = 1,
     // Doctor is a user who is a doctor
@@ -111,5 +76,4 @@ public class User
     public string? ProfilePicture { get; set; }
 
     public int? Rating { get; set; }
->>>>>>> main
 }

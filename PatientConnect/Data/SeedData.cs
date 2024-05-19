@@ -16,37 +16,6 @@ public static class SeedData
             new User
             {
                 UserID = 2100,
-<<<<<<< HEAD
-                FirstName = "Matthew",
-                LastName = "Bolger",
-                Email = "matthew.bloger@test.patientconnect.dev",
-                City = "Melbourne",
-                PostCode = "3000",
-                UserType = UserType.Patient
-            },
-            new User
-            {
-                UserID = 2200,
-                FirstName = "Rodney",
-                LastName = "Cocker",
-                Email = "Rodney.Cocker@test.patientconnect.dev",
-                City = "Melbourne",
-                PostCode = "3005",
-                UserType = UserType.Doctor
-            },
-            new User
-            {
-                UserID = 2300,
-                FirstName = "Shekhar",
-                LastName = "Kalra",
-                UserType = UserType.Doctor
-            });
-
-        context.Logins.AddRange(
-            new Login
-            {
-                LoginID = "12345678",
-=======
                 FirstName = "Jake",
                 LastName = "Kent",
                 Email = "jake@test.dev",
@@ -188,29 +157,19 @@ public static class SeedData
             new Login
             {
                 LoginID = 13005700,
->>>>>>> main
                 UserID = 2100,
                 PasswordHash =
                     "Rfc2898DeriveBytes$50000$2/qCxenCcRA4tpx++uNzUA==$m6mxOKqUqrYi7nJWhXu+zVDsFuPiiXrodok4IX2EZSU="
             },
             new Login
             {
-<<<<<<< HEAD
-                LoginID = "38074569",
-                UserID = 2200,
-=======
                 LoginID = 13005701,
                 UserID = 2101,
->>>>>>> main
                 PasswordHash =
                     "Rfc2898DeriveBytes$50000$fB5lteA+LLB0mKVz9EBA7A==$Tx0nXJ8aJjBU/mS2ssFIMs3m7vaiyitRmBRvBAYWauw="
             },
             new Login
             {
-<<<<<<< HEAD
-                LoginID = "17963428",
-                UserID = 2300,
-=======
                 LoginID = 13005702,
                 UserID = 2102,
                 PasswordHash =
@@ -262,7 +221,6 @@ public static class SeedData
             {
                 LoginID = 13005709,
                 UserID = 2109,
->>>>>>> main
                 PasswordHash =
                     "Rfc2898DeriveBytes$50000$jDBijGZNWLh+0MOXnp68Yw==$4bQ9SJGtRQJolToCjFTPsVzRtH8QQUpEsioJ6Y3ewN4="
             });
