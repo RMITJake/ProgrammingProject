@@ -51,6 +51,7 @@ chatbutton {
     justify-content: flex-end;
     align-items: flex-end;
     color: var(--white);
+    
 }
 
 a.chatbutton {
@@ -60,14 +61,15 @@ a.chatbutton {
     width: 115px;
     background: var(--pri-hi);
     border-radius: 5px;
-    color: var(--pri-bg);
+    color: white;
     border: 4px var(--pri-hi) solid;
+    text-decoration: none;
 }
 
-a.chatbutton:hover{
-    background: var(--pri-bg);
-    color: var(--ter-hi);
-}
+    a.chatbutton:hover {
+        background: var(--pri-bg);
+        color: white;
+    }
 
 profiledescription h4 {
     margin-top: 10px;
