@@ -1,9 +1,13 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
+using PatientConnect.Models;
+=======
 using Microsoft.EntityFrameworkCore;
 using PatientConnect.Data;
 using PatientConnect.Models;
 using PatientConnect.ViewModels;
+>>>>>>> main
 
 namespace PatientConnect.Controllers;
 
@@ -11,6 +15,9 @@ namespace PatientConnect.Controllers;
 //[AllowAnonymous]
 public class HomeController : Controller
 {
+<<<<<<< HEAD
+    public IActionResult Index() => View();
+=======
 
     private readonly PatientConnectContext _context;
 
@@ -29,6 +36,7 @@ public class HomeController : Controller
         var doctors = _context.Users.FirstOrDefault();
         return PartialView(doctors);
     }
+>>>>>>> main
 
     [Route("/aboutus")]
     public IActionResult AboutUs() => View();
@@ -42,6 +50,8 @@ public class HomeController : Controller
     [Route("/internalmedicine")]
     public IActionResult Specialty() => View();
 
+<<<<<<< HEAD
+=======
     [Route("/doctors/{specialty?}")]
     public IActionResult Doctors(string? specialty){
         int index = 0;
@@ -56,6 +66,7 @@ public class HomeController : Controller
     }
 
 
+>>>>>>> main
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error() =>
         View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

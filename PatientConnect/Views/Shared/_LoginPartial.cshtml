@@ -1,0 +1,24 @@
+@model Login
+
+<div class="modal-grid">
+    <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">or Register</button>
+    </div><!-- modal-header-->
+    <div class="modal-left"><img src="/img/profile-icon.svg" class="profile-icon" /></div><!-- modal-left-->
+    <div class="modal-right">
+        <form asp-action="Login" asp-controller="Login">
+            <div class="form-group">
+                @* <label for="Name">Full name</label> *@
+                <input asp-for="UserID" class="form-control" placeholder="Login">
+            </div>
+            <div class="form-group">
+                @* <label asp-for="Email">Email</label> *@
+                <input asp-for="PasswordHash" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group submit">
+                <input type="submit" value="Login" class="btn btn-pri-hi">
+            </div>
+        </form>
+    </div><!-- modal-right-->
+</div>

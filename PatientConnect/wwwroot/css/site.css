@@ -1,5 +1,4 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
 a.navbar-brand {
   white-space: normal;
@@ -52,8 +51,7 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
@@ -66,21 +64,65 @@ body {
   background: linear-gradient(45deg, rgba(211,231,240,1) 38%, rgba(187,217,253,1) 57%);
 }
 
+
+/* footer */
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    white-space: nowrap;
+    line-height: 60px;
+    padding: 20px 0;
+    height: 410px;
+    position: relative;
+    transform: translateY(-100%);
 }
 
-socialmedia {
-  display: grid;
-  color: var(--white);
-  width: 100%;
-  background-color: var(--pri-hi);
-  justify-content: center;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
 }
+
+.footer-banner {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    margin-right: 300px;
+    margin-bottom: 20px;
+}
+
+footer h2, h3 {
+    font-family: "Roboto Serif", serif;
+    color: #03045E;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    width: 100%;
+    background-color: var(--pri-hi);
+    padding-top: 30px;
+}
+
+.icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-bottom: 30px; 
+}
+
+.text-row {
+    text-align: center;
+    font-size: 14px;
+}
+
 
 /* Make ReSharper ignore .control-label as UnknownCssClass. */
 /* ReSharper disable once DeclarationIsEmpty */
@@ -89,3 +131,61 @@ socialmedia {
 /* Make ReSharper ignore .navbar-toggleable-sm as UnknownCssClass. */
 /* ReSharper disable once DeclarationIsEmpty */
 .navbar-toggleable-sm { }
+
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links, .footer-banner {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    button.accept-policy, .btn-primary {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        padding: 5px 10px;
+    }
+
+    .icons-row, .text-row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-links, .footer-banner {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    button.accept-policy, .btn-primary {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        padding: 8px 16px; 
+    }
+
+    .icons-row, .text-row {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

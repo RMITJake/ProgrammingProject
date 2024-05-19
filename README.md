@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# ProgrammingProject
+Programming Project 1 Assessment Repository
+=======
 # PatientConnect
 
 PatientConnect is a web-based platform developed by MediByte (RMIT Programming Project Team 2) to facilitate remote medical consultations between patients and healthcare professionals. 
@@ -43,3 +47,4 @@ https://patientconnect.dev
 - Stephen Chung
 - Tae Yoon Park
 - Vignesh Menon
+>>>>>>> main

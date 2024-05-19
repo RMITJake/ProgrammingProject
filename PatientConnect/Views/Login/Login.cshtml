@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+﻿@model Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div style="width: 1440px; height: 2011px; position: relative; background: white">
+    <div style="width: 1365px; height: 1062px; left: 36px; top: 175px; position: absolute; background: #E5E5E5; border-radius: 20px"></div>
+    <div style="width: 1285px; height: 781.71px; left: 163px; top: 321px; position: absolute">
+        <div style="width: 1112px; height: 766px; left: 0px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.92); box-shadow: 15px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px"></div>
+        <div style="width: 226px; height: 238px; padding-top: 13.45px; padding-bottom: 191.95px; padding-left: 12.77px; padding-right: 182.27px; left: 1014px; top: 43px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+            <div style="width: 30.96px; height: 32.60px; background: black"></div>
+        </div>
+        <div style="width: 556px; height: 614px; left: 0px; top: 152px; position: absolute">
+            <div style="width: 556px; height: 614px; left: 0px; top: 0px; position: absolute; background: #61D094; border-radius: 50px"></div>
+            <img style="width: 276px; height: 219.63px; left: 122px; top: 197px; position: absolute" src="/img/User.png" />
+        </div>
+        <div style="width: 308px; height: 72px; left: 480px; top: 35px; position: absolute; color: black; font-size: 55px; font-family: Inter; font-weight: 700; word-wrap: break-word">Login</div>
+        <div style="width: 737px; height: 552.71px; left: 548px; top: 229px; position: absolute">
+            <form asp-action="Login">
+                <div class="form-group" style="width: 463px; height: 84px; left: 0px; top: 0px; position: absolute">
+                    <input asp-for="LoginID" style="width: 362px; height: 84px; left: 99px; top: 0px; position: absolute; text-align: center; color: #787878; font-size: 45px; font-family: Inter; font-weight: 700; border: 0px" placeholder="Email" />
+                    <span asp-validation-for="LoginID" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="width: 463px; height: 84px; left: 0px; top: 140px; position: absolute">
+                    <input asp-for="PasswordHash" style="width: 362px; height: 84px; left: 99px; top: 0px; position: absolute; text-align: center; color: #787878; font-size: 45px; font-family: Inter; font-weight: 700; border: 0px" placeholder="Password" id="Password" name="Password" type="password" class="form-control"
+                           data-val="true" data-val-required="The Password field is required." />
+                    @Html.ValidationMessage("Password", new { @class = "text-danger" })
+                </div>
+                <div style="width: 262px; height: 52px; left: 87px; top: 240px; position: absolute; text-align: center; color: #0500FF; font-size: 25px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">Forgot password?</div>
+                <div class="form-group" style="width: 626px; height: 181.71px; left: 111px; top: 371px; position: absolute">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+                @Html.ValidationMessage("LoginFailed", new { @class = "text-danger" })
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+=======
 @model LoginVM
 
 <div class="modal-grid">
@@ -22,3 +69,4 @@
         </form>
     </div><!-- modal-body-->
 </div>
+>>>>>>> main

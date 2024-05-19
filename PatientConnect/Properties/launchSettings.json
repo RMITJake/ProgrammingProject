@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+=======
 ﻿{
   "iisSettings": {
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
+>>>>>>> main
     "iisExpress": {
       "applicationUrl": "http://localhost:49891",
       "sslPort": 44335
@@ -24,4 +31,8 @@
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

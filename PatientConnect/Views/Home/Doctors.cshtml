@@ -23,11 +23,13 @@
                 </cardtop>
                 <cardbottom>
                     <profiledescription>
-                        <h4>Dr @doctor.FirstName @doctor.LastName</h4>
+                        <h4>Dr. @doctor.FirstName @doctor.LastName</h4>
                         @* <p>Specialty: @doctor.Specialisation</p> *@
-                        <p>@doctor.Rating% Rating</p>
+                        <div class="rating">
+                            <p><i class="fas fa-thumbs-up"></i> @doctor.Rating% </p>
+                        </div>
                     </profiledescription>
-                    <button class="registerbutton">Connect</button>
+                    <button class="connectbutton">Connect</button>
                 </cardbottom>
             </cardouter>
             @* } *@

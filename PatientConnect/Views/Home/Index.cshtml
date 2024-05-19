@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Home";
     String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
     String[] imagepaths = { "InternalMedicine.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
@@ -8,16 +8,17 @@
 
 <banner>
     <bannertext>
-        Your Health,<br />Our Connection<br />
+        Your Health,<br />Our Connection
         <subtitle>Find Your Perfect Doctor Match</subtitle>
     </bannertext>
-    <img src="/img/banner-image.png" />
+    <img src="/img/banner-image.png" class="banner-image" />
 </banner>
 
 <specialtyselection>
     <specialtygrouplabel><h2>Find a doctor or Specialty</h2></specialtygrouplabel>
     <specialtyselectionicons>
-        @foreach(int i in Enum.GetValues(typeof(SpecialisationType))){
+        @foreach (int i in Enum.GetValues(typeof(SpecialisationType)))
+        {
             <a asp-controller="Home" asp-action="Doctors" asp-route-specialty="@Enum.GetName(typeof(SpecialisationType), i)">
                 <specialtygroup>
                     @{var logo = "/img/" + @Enum.GetName(typeof(SpecialisationType), i) + ".png";}
@@ -32,9 +33,12 @@
 <chatnowoutercontainer>
     <specialtygrouplabel><h2>Available Doctors</h2></specialtygrouplabel>
     <chatnowinnercontainer>
-        @if(@ViewBag.Doctors.Count == 0){
+        @if (@ViewBag.Doctors.Count == 0)
+        {
             <p>No doctors available.</p>
-        } else {
+        }
+        else
+        {
             <partial name="ChatCards.cshtml" model="ViewBag.Doctors"></partial>
         }
     </chatnowinnercontainer>

@@ -1,16 +1,22 @@
 <chat>
     <link rel="stylesheet" href="~/css/chat.css" asp-append-version="true" />
     <chatlist>
+        <searchbar>
+            <input type="text" placeholder="Search Here..." />
+        </searchbar>
         <chatrow class="list-group" id="list-tab" role="tablist">
-        @foreach(var room in ViewData["Rooms"] as IEnumerable<PatientConnect.Models.Connection>){
-                <a class="room-select list-group-item list-group-item-action" id="1" data-toggle="list" role="tab" aria-controls="@room.Room" value="@room.Room">@room.Room</a>
-        }
+            @foreach (var room in ViewData["Rooms"] as IEnumerable<PatientConnect.Models.Connection>)
+            {
+                <a class="room-select list-group-item list-group-item-action" id="1" data-toggle="list" role="tab" aria-controls="@room.Room" value="@room.Room">
+                    @room.Room
+                </a>
+            }
         </chatrow>
     </chatlist>
 
     <activechat>
         <chatheader>
-            <h4 style="text-align: center;">PatientConnect Chat</h4>
+            <h4>PatientConnect Chat</h4>
         </chatheader>
         <chatwindow>
             <ul id="messagesList"></ul>
