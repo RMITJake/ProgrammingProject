@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Home";
     String[] specialties = { "Internal Medicine", "Pediatrics", "Psychiatry", "Surgery", "OB/GYN" };
     String[] imagepaths = { "InternalMedicine.png", "Pediatrics.png", "Psychiatry.png", "Surgery.png", "OBGYN.png" };
@@ -11,7 +11,7 @@
         Your Health,<br />Our Connection
         <subtitle>Find Your Perfect Doctor Match</subtitle>
     </bannertext>
-    <img src="/img/banner-image.png" class="banner-image" />
+    <img src="/img/banner-image.png" class="banner-image" alt="banner image"/>
 </banner>
 
 <specialtyselection>
@@ -22,7 +22,7 @@
             <a asp-controller="Home" asp-action="Doctors" asp-route-specialty="@Enum.GetName(typeof(SpecialisationType), i)">
                 <specialtygroup>
                     @{var logo = "/img/" + @Enum.GetName(typeof(SpecialisationType), i) + ".png";}
-                    <specialtyicon><img src="@logo" /></specialtyicon>
+                    <specialtyicon><img src="@logo" alt="specialty logo"/></specialtyicon>
                     <specialtylabel><h4>@Enum.GetName(typeof(SpecialisationType), i)</h4></specialtylabel>
                 </specialtygroup>
             </a>
