@@ -84,7 +84,7 @@ a > img{
 
     .loginbutton, .registerbutton {
         font-size: 18px;
-        width: 45%; 
+        width: 100%; 
         line-height: 35px;
         border-radius: 15px;
         margin: 5px; 
