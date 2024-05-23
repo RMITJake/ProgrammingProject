@@ -226,3 +226,76 @@ activechat messagepane {
         }
 
 
+@media (max-width: 820px) {
+    chat {
+        flex-direction: column;
+        margin: 20px 10px;
+        height: calc(100vh - 100px);
+    }
+
+    chatlist {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    activechat {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+
+    chatlist .room-select {
+        flex-direction: row;
+    }
+
+    activechat chatwindow ul li {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 414px) {
+    chat {
+        flex-direction: column;
+        margin: 10px 5px;
+        height: calc(100vh - 80px);
+    }
+
+    chatlist {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    activechat {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+
+    chatlist .room-select {
+        flex-direction: row;
+    }
+
+    activechat chatwindow ul li {
+        margin-bottom: 10px;
+    }
+
+    chatlist searchbar input {
+        padding: 5px;
+    }
+
+    activechat chatwindow {
+        padding: 10px;
+    }
+
+    activechat messagepane input[type="text"] {
+        padding: 5px;
+    }
+
+    activechat messagepane input[type="button"] {
+        padding: 5px 10px;
+    }
+}
